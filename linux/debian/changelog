@@ -1,0 +1,38 @@
+xkb-qwerty-fr (0.5) unstable; urgency=low
+
+  * Bug fixed: trigger was missing with xkb files.
+  * Extras xml used.
+  * Layout: Ironic point updated.
+
+ -- Julien Blitte <julien.blitte@gmail.com>  Sat, 10 Nov 2012 22:00:00 +0100
+
+xkb-qwerty-fr (0.4) unstable; urgency=low
+
+  * Layout: Added useful greek letters, math symbols.
+  * Layout: Thorn letter moved and capital removed.
+  * Layout: Added ogonek diacritic.
+  * Keymap is now full.
+  * Now based on basic US layout.
+
+ -- Julien Blitte <julien.blitte@gmail.com>  Sat, 1 May 2010 14:00:00 +0200
+
+xkb-qwerty-fr (0.3) unstable; urgency=low
+
+  * Bug fixed: dpkg-reconfigure was not working properly.
+
+ -- Julien Blitte <julien.blitte@gmail.com>  Sat, 2 Nov 2009 16:30:00 +0100
+
+xkb-qwerty-fr (0.2) unstable; urgency=low
+
+  * Compliant with evdev.
+  * Added as a variant of us layouts.
+
+ -- Julien Blitte <julien.blitte@gmail.com>  Sat, 25 Apr 2009 13:30:00 +0200
+
+xkb-qwerty-fr (0.1b) unstable; urgency=low
+
+  * Initial Debian package.
+  * Lintian 1.23.46 satisfied.
+
+ -- Julien Blitte <julien.blitte@gmail.com>  Wed, 24 Sep 2008 17:45:00 +0200
+

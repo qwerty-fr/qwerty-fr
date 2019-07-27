@@ -1,0 +1,105 @@
+.TH xkb-qwerty-fr 7 "2012-11-10" 0.5 "Qwerty french keyboard"
+.SH "NOM"
+qwerty-fr - French qwerty keyboard mapping
+.SH "DESCRIPTION"
+Keymap for french users of qwerty keyboard.
+All french characters are directly accessible with AltGr and smartly mapped.
+You also can compose french characters using dead keys with AltGr to. 
+
+.SH "ENABLING THE QWERTY-FR KEYMAP"
+.SS "Command line"
+Use the command setxkbmap: setxkbmap us qwerty-fr
+.SS "Gnome"
+In menu System/Preferences, open Keyboard property. In this window, section Layout, click on the button add.
+Then select layout USA and choose variant "With french symbols" and set it as default keymap.
+.SS "KDE"
+In control panel, select the layout USA and variant "With french symbols", set it as default keymap, then validate.
+
+.SH "EXTENDED CHARACTERS"
+.SS "Direct characters"
+.TP
+Grave accent
+Press AltGr + corresponding letter. (This works for letters e, u, i, o and a.)
+.TP
+Acute accent
+Press AltGr + key left the corresponding letter. (This works for the letter e.)
+.TP
+Circumflex
+Press AltGr + key above the corresponding letter. (This works for letters e, y, u, i, o and a.)
+.TP
+Diaeresis
+Press AltGr + key bellow the corresponding letter. (This works for letters e, y, u, i, o and a.)
+.TP
+Cedilla
+Press AltGr + corresponding letter. (This works for the letter c.)
+.TP
+Stuck e
+Press AltGr + key right the corresponding letter. (This works for letters o and a.)
+
+.SS "Composed characters"
+First, press the dead key with corresponding diacritics and in a second time the character to compose with.
+.TP
+Grave accent dead key
+AltGr + inverted quote
+.TP
+Acute accent dead key
+AltGr + quote
+.TP
+Circumflex dead key
+AltGr + 6
+.TP
+Diaeresis dead key
+AltGr + double quote (AltGr + Shift + quote)
+.TP
+Cedilla dead key
+AltGr + comma
+.TP
+Ogonek dead key
+AltGr + Shift + comma
+.TP
+Tild dead key
+AltGr + tild (AltGr + Shift + inverted quote)
+.TP
+Ring dead key
+Shift + degree (AltGr + Shift + dot)
+.TP
+Caron dead key
+Shift + circumflex dead key (AltGr + Shift + 6)
+.TP
+Macron dead key
+AltGr + number sign (AltGr + Shift + 3)
+.TP
+Double acute dead key
+AltGr + at sign (AltGr + Shift + 2)
+
+.SS "Uppercase characters with diacritics"
+.TP
+In case of generating a direct character:
+Press shift modifier while pressing other keys.
+.TP
+In case of generating a composed character:
+First press corresponding diacritics dead key then press shift + the character to compose with.
+.TP
+Using Caps locks...
+is the last way you can use to write in uppercase.
+
+.SH "OVERALL VIEW"
+An overall view is available in the utf8 text file /usr/share/doc/xkb-qwerty-fr/keymap.txt
+
+.SH "TESTING TEXT"
+You should be able to retype this french text without dead keys :
+
+"Dès Noël où un zéphyr haï me vêt de glaçons würmiens je dîne d'exquis rôtis de bœuf au kir à l'aÿ d'âge mûr & cæera !"
+
+(Jacques André - Petites leçons de typographie)
+
+.SH "FILES"
+.TP
+/etc/X11/xkb/symbols/us
+The file containing the mapping of characters.
+.SH "SEE ALSO"
+setxkbmap(1)
+.SH "AUTHOR"
+This package is maintained by Julien Blitte <julien.blitte@gmail.com>.
+All files of the package are released under GNU/GPL 2.0 License.
+

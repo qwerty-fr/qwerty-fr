@@ -1,0 +1,145 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+my $dir = "/usr/share/X11/xkb";
+my ($mode) = @ARGV;
+
+sub remove_variant
+{
+	my ($input, $output, $layout, $variant) = @_;
+
+	my $line;
+	my $level;
+	my $match;
+
+	open (IN, $input) || return 0;
+	open (OUT, ">$output") || return 0;
+
+	$level = 0;
+	$match = 0;
+	while ($line = <IN>)
+	{
+		if (($line =~ m/<layoutList>/) && ($level eq 0))
+		{
+			$level++;
+		}
+
+		if (($line =~ m/<layout>/) && ($level eq 1))
+		{
+			$level++;
+			$match = 0;
+		}
+
+		if (($line =~ m/<name>$layout<\/name>/) && ($level eq 2))
+		{
+			$match = 1;
+		}
+
+		if (($line =~ m/<variantList>/) && ($level eq 2))
+		{
+			$level++;
+		}
+
+		if (($line =~ m/<variant>/) && ($level eq 3))
+		{
+			# read completely next variant
+			while ($line !~ m/<\/variant>/)
+			{
+				my $line_cat;
+
+				unless ($line_cat = <IN>)
+				{
+					last;
+				}
+				else
+				{
+					$line .= $line_cat;
+				}
+			}
+
+			# correct entry
+			if ($line =~ m/<name>$variant<\/name>/)
+			{
+				# drop
+				$line = '';
+			}
+		}
+
+		print OUT $line;
+
+		if (($line =~ m/<\/variantList>/) && ($level eq 3))
+		{
+			$level--;
+		}
+
+		if (($line =~ m/<\/layout>/) && ($level eq 2))
+		{
+			$level--;
+		}
+	}
+
+	close(OUT);
+	close(IN);
+
+	return 1;
+}
+
+sub remove_xml
+{
+	my ($file) = @_;
+	
+	my $temp = "$file.qwerty-fr";
+
+	if ( ! -f "$file")
+	{
+		return 0;
+	}
+
+	&remove_variant($file, $temp, "us", "qwerty-fr") || die("Error configuring '$file'!");
+
+	unlink($file) && rename($temp, $file);
+
+	return 1;
+}
+
+# retore using backup file
+if (-f "$dir/symbols/us.qwerty-fr")
+{
+	`cat "$dir/symbols/us.qwerty-fr" > "$dir/symbols/us"`;
+
+	if ($mode ne "upgrade")
+	{
+		unlink("$dir/symbols/us.qwerty-fr");
+	}
+}
+
+
+# evdev
+if (-f "$dir/rules/evdev.extras.xml")
+{
+	&remove_xml("$dir/rules/evdev.extras.xml");
+
+	# "Bug #1029979 workaround.\n";
+	&remove_xml("$dir/rules/evdev.xml");
+}
+elsif (-f "$dir/rules/evdev.xml")
+{
+	&remove_xml("$dir/rules/evdev.xml");
+}
+
+# base
+if (-f "$dir/rules/base.extras.xml")
+{
+	&remove_xml("$dir/rules/base.extras.xml");
+}
+elsif (-f "$dir/rules/base.xml")
+{
+	&remove_xml("$dir/rules/base.xml");
+}
+elsif (-f "$dir/base.xml")
+{
+	&remove_xml("$dir/base.xml");
+}
+

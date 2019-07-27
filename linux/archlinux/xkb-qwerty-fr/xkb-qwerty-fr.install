@@ -1,0 +1,5 @@
+post_install() {
+	cat << EOF
+==> See http://marin.jb.free.fr/qwerty-fr/manual/ to complete xkb-qwerty-fr installation
+EOF
+}

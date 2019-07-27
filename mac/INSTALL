@@ -1,0 +1,6 @@
+On OS X 10.4 and later:
+
+System wide:
+    Copy the file ``qwerty-fr.bundle'' to the folder /Library/Keyboard Layouts/
+Local:
+    Copy the file ``qwerty-fr.bundle'' to the folder ~/Library/Keyboard Layouts/
