@@ -71,7 +71,7 @@ LAYOUT		;an extra '@' at the end is a dead key
 33	OEM_COMMA	0	002c	003c	-1	00b8@	02db@		// <, , ¸, ˛, ''
 34	OEM_PERIOD	0	002e	003e	-1	00b0	02da@		// >, , °, ˚, ''
 35	OEM_2		0	002f	003f	-1	0295	00bf		// /, ?, , ʕ, ¿
-39	SPACE		0	0020	0020	-1	00a0	00a0		// [SP], [SP], , [NBSP], [NBSP]
+39	SPACE		0	0020	0020	-1	00a0	202f		// [SP], [SP], , [NBSP], [NNBSP]
 56	OEM_102	0	003c	003e	001c	2264	2265		// <, >, [FS], ≤, ≥
 53	DECIMAL	0	002e	002e	-1	002e	002e		// ., , ., ., ''
 
