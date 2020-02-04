@@ -429,7 +429,7 @@
             <key code="46" output="µ"/>
             <key code="47" output="°"/>
             <key code="48" output="&#x0009;"/>
-            <key code="49" output=" "/>
+            <key code="49" output="&#x00a0;"/>
             <key code="50" action="1"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
@@ -541,7 +541,7 @@
             <key code="46" output="µ"/>
             <key code="47" output="°"/>
             <key code="48" output="&#x0009;"/>
-            <key code="49" output=" "/>
+            <key code="49" output="&#x202f;"/>
             <key code="50" output="`"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
