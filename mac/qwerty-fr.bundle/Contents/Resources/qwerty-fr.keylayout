@@ -49,7 +49,7 @@
             <key code="2" output="d"/>
             <key code="3" output="f"/>
             <key code="4" output="h"/>
-            <key code="5" output="g"/>
+            <key code="5" action="g"/>
             <key code="6" action="z"/>
             <key code="7" action="x"/>
             <key code="8" output="c"/>
@@ -79,10 +79,10 @@
             <key code="32" action="18"/>
             <key code="33" output="["/>
             <key code="34" action="15"/>
-            <key code="35" output="p"/>
+            <key code="35" action="p"/>
             <key code="36" output="&#x000D;"/>
             <key code="37" output="l"/>
-            <key code="38" output="j"/>
+            <key code="38" action="j"/>
             <key code="39" output="&#x0027;"/>
             <key code="40" action="k"/>
             <key code="41" output=";"/>
@@ -161,7 +161,7 @@
             <key code="2" output="D"/>
             <key code="3" output="F"/>
             <key code="4" output="H"/>
-            <key code="5" output="G"/>
+            <key code="5" action="G"/>
             <key code="6" action="Z"/>
             <key code="7" action="X"/>
             <key code="8" output="C"/>
@@ -191,10 +191,10 @@
             <key code="32" action="11"/>
             <key code="33" output="{"/>
             <key code="34" action="8"/>
-            <key code="35" output="P"/>
+            <key code="35" action="P"/>
             <key code="36" output="&#x000D;"/>
             <key code="37" output="L"/>
-            <key code="38" output="J"/>
+            <key code="38" action="J"/>
             <key code="39" output="&#x0022;"/>
             <key code="40" action="K"/>
             <key code="41" output=":"/>
@@ -542,7 +542,7 @@
             <key code="47" output="°"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" output="&#x202f;"/>
-            <key code="50" output="`"/>
+            <key code="50" action="`"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
@@ -1036,6 +1036,7 @@
             <when state="s3" output="Ô"/>
             <when state="s4" output="Ö"/>
             <when state="s5" output="Õ"/>
+            <when state="tilde" output="Õ"/>
         </action>
         <action id="11">
             <when state="none" output="U"/>
@@ -1044,11 +1045,13 @@
             <when state="s2" output="Ù"/>
             <when state="s3" output="Û"/>
             <when state="s4" output="Ü"/>
+            <when state="tilde" output="Ũ"/>
         </action>
         <action id="12">
             <when state="none" output="Y"/>
             <when state="grave accent" output="Ỳ"/>
             <when state="s4" output="Ÿ"/>
+            <when state="tilde" output="Ỹ"/>
         </action>
         <action id="13">
             <when state="none" output="a"/>
@@ -1058,6 +1061,7 @@
             <when state="s3" output="â"/>
             <when state="s4" output="ä"/>
             <when state="s5" output="ã"/>
+            <when state="tilde" output="ã"/>
         </action>
         <action id="14">
             <when state="none" output="e"/>
@@ -1066,6 +1070,7 @@
             <when state="s2" output="è"/>
             <when state="s3" output="ê"/>
             <when state="s4" output="ë"/>
+            <when state="tilde" output="ẽ"/>
         </action>
         <action id="15">
             <when state="none" output="i"/>
@@ -1074,10 +1079,12 @@
             <when state="s2" output="ì"/>
             <when state="s3" output="î"/>
             <when state="s4" output="ï"/>
+            <when state="tilde" output="ĩ"/>
         </action>
         <action id="16">
             <when state="none" output="n"/>
             <when state="s5" output="ñ"/>
+            <when state="tilde" output="ñ"/>
         </action>
         <action id="17">
             <when state="none" output="o"/>
@@ -1087,6 +1094,7 @@
             <when state="s3" output="ô"/>
             <when state="s4" output="ö"/>
             <when state="s5" output="õ"/>
+            <when state="tilde" output="õ"/>
         </action>
         <action id="18">
             <when state="none" output="u"/>
@@ -1095,11 +1103,13 @@
             <when state="s2" output="ù"/>
             <when state="s3" output="û"/>
             <when state="s4" output="ü"/>
+            <when state="tilde" output="ũ"/>
         </action>
         <action id="19">
             <when state="none" output="y"/>
             <when state="grave accent" output="ỳ"/>
             <when state="s4" output="ÿ"/>
+            <when state="tilde" output="ỹ"/>
         </action>
         <action id="2">
             <when state="none" next="s3"/>
@@ -1132,6 +1142,7 @@
             <when state="s3" output="Â"/>
             <when state="s4" output="Ä"/>
             <when state="s5" output="Ã"/>
+            <when state="tilde" output="Ã"/>
         </action>
         <action id="7">
             <when state="none" output="E"/>
@@ -1140,6 +1151,7 @@
             <when state="s2" output="È"/>
             <when state="s3" output="Ê"/>
             <when state="s4" output="Ë"/>
+            <when state="tilde" output="Ẽ"/>
         </action>
         <action id="8">
             <when state="none" output="I"/>
@@ -1148,10 +1160,20 @@
             <when state="s2" output="Ì"/>
             <when state="s3" output="Î"/>
             <when state="s4" output="Ï"/>
+            <when state="tilde" output="Ĩ "/>
         </action>
         <action id="9">
             <when state="none" output="N"/>
             <when state="s5" output="Ñ"/>
+            <when state="tilde" output="Ñ"/>
+        </action>
+        <action id="G">
+            <when state="none" output="G"/>
+            <when state="tilde" output="G̃"/>
+        </action>
+        <action id="J">
+            <when state="none" output="J"/>
+            <when state="tilde" output="J̃"/>
         </action>
         <action id="K">
             <when state="none" output="K"/>
@@ -1160,10 +1182,16 @@
         <action id="M">
             <when state="none" output="M"/>
             <when state="grave accent" output="M̀"/>
+            <when state="tilde" output="M̃"/>
+        </action>
+        <action id="P">
+            <when state="none" output="P"/>
+            <when state="tilde" output="P̃"/>
         </action>
         <action id="R">
             <when state="none" output="R"/>
             <when state="grave accent" output="R̀"/>
+            <when state="tilde" output="R̃"/>
         </action>
         <action id="S">
             <when state="none" output="S"/>
@@ -1176,6 +1204,7 @@
         <action id="V">
             <when state="none" output="V"/>
             <when state="grave accent" output="V̀"/>
+            <when state="tilde" output="Ṽ"/>
         </action>
         <action id="W">
             <when state="none" output="W"/>
@@ -1189,6 +1218,17 @@
             <when state="none" output="Z"/>
             <when state="grave accent" output="Z̀"/>
         </action>
+        <action id="`">
+            <when state="none" next="tilde"/>
+        </action>
+        <action id="g">
+            <when state="none" output="g"/>
+            <when state="tilde" output="g̃"/>
+        </action>
+        <action id="j">
+            <when state="none" output="j"/>
+            <when state="tilde" output="j̃"/>
+        </action>
         <action id="k">
             <when state="none" output="k"/>
             <when state="grave accent" output="k̀"/>
@@ -1196,6 +1236,11 @@
         <action id="m">
             <when state="none" output="m"/>
             <when state="grave accent" output="m̀"/>
+            <when state="tilde" output="m̃"/>
+        </action>
+        <action id="p">
+            <when state="none" output="p"/>
+            <when state="tilde" output="p̃"/>
         </action>
         <action id="q">
             <when state="none" output="q"/>
@@ -1203,6 +1248,7 @@
         <action id="r">
             <when state="none" output="r"/>
             <when state="grave accent" output="r̀"/>
+            <when state="tilde" output="r̃"/>
         </action>
         <action id="s">
             <when state="none" output="s"/>
@@ -1215,6 +1261,7 @@
         <action id="v">
             <when state="none" output="v"/>
             <when state="grave accent" output="v̀"/>
+            <when state="tilde" output="ṽ"/>
         </action>
         <action id="w">
             <when state="none" output="w"/>
@@ -1236,5 +1283,6 @@
         <when state="s3" output="ì"/>
         <when state="s4" output="ù"/>
         <when state="s5" output="ñ"/>
+        <when state="tilde" output="~"/>
     </terminators>
 </keyboard>
