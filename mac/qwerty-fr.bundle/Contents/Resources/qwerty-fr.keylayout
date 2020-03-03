@@ -423,7 +423,7 @@
             <key code="40" output="ï"/>
             <key code="41" output="¶"/>
             <key code="42" output="|"/>
-            <key code="43" output=""/>
+            <key code="43" action="cedilla"/>
             <key code="44" output="⸮"/>
             <key code="45" output="ñ"/>
             <key code="46" output="µ"/>
@@ -1031,6 +1031,7 @@
         <action id="10">
             <when state="none" output="O"/>
             <when state="acute accent" output="Ó"/>
+            <when state="cedilla" output="O̧"/>
             <when state="grave accent" output="Ò"/>
             <when state="s1" output="Ó"/>
             <when state="s2" output="Ò"/>
@@ -1042,6 +1043,7 @@
         <action id="11">
             <when state="none" output="U"/>
             <when state="acute accent" output="Ú"/>
+            <when state="cedilla" output="U̧"/>
             <when state="grave accent" output="Ù"/>
             <when state="s1" output="Ú"/>
             <when state="s2" output="Ù"/>
@@ -1059,6 +1061,7 @@
         <action id="13">
             <when state="none" output="a"/>
             <when state="acute accent" output="á"/>
+            <when state="cedilla" output="a̧"/>
             <when state="grave accent" output="à"/>
             <when state="s1" output="á"/>
             <when state="s2" output="à"/>
@@ -1070,6 +1073,7 @@
         <action id="14">
             <when state="none" output="e"/>
             <when state="acute accent" output="é"/>
+            <when state="cedilla" output="ȩ"/>
             <when state="grave accent" output="è"/>
             <when state="s1" output="é"/>
             <when state="s2" output="è"/>
@@ -1080,6 +1084,7 @@
         <action id="15">
             <when state="none" output="i"/>
             <when state="acute accent" output="í"/>
+            <when state="cedilla" output="i̧"/>
             <when state="grave accent" output="ì"/>
             <when state="s1" output="í"/>
             <when state="s2" output="ì"/>
@@ -1090,12 +1095,14 @@
         <action id="16">
             <when state="none" output="n"/>
             <when state="acute accent" output="ń"/>
+            <when state="cedilla" output="ņ"/>
             <when state="s5" output="ñ"/>
             <when state="tilde" output="ñ"/>
         </action>
         <action id="17">
             <when state="none" output="o"/>
             <when state="acute accent" output="ó"/>
+            <when state="cedilla" output="o̧"/>
             <when state="grave accent" output="ò"/>
             <when state="s1" output="ó"/>
             <when state="s2" output="ò"/>
@@ -1107,6 +1114,7 @@
         <action id="18">
             <when state="none" output="u"/>
             <when state="acute accent" output="ú"/>
+            <when state="cedilla" output="u̧"/>
             <when state="grave accent" output="ù"/>
             <when state="s1" output="ú"/>
             <when state="s2" output="ù"/>
@@ -1147,6 +1155,7 @@
         <action id="6">
             <when state="none" output="A"/>
             <when state="acute accent" output="Á"/>
+            <when state="cedilla" output="A̧"/>
             <when state="grave accent" output="À"/>
             <when state="s1" output="Á"/>
             <when state="s2" output="À"/>
@@ -1158,6 +1167,7 @@
         <action id="7">
             <when state="none" output="E"/>
             <when state="acute accent" output="É"/>
+            <when state="cedilla" output="Ȩ"/>
             <when state="grave accent" output="È"/>
             <when state="s1" output="É"/>
             <when state="s2" output="È"/>
@@ -1168,6 +1178,7 @@
         <action id="8">
             <when state="none" output="I"/>
             <when state="acute accent" output="Í"/>
+            <when state="cedilla" output="I̧"/>
             <when state="grave accent" output="Ì"/>
             <when state="s1" output="Í"/>
             <when state="s2" output="Ì"/>
@@ -1178,20 +1189,24 @@
         <action id="9">
             <when state="none" output="N"/>
             <when state="acute accent" output="Ń"/>
+            <when state="cedilla" output="Ņ"/>
             <when state="s5" output="Ñ"/>
             <when state="tilde" output="Ñ"/>
         </action>
         <action id="B">
             <when state="none" output="B"/>
             <when state="acute accent" output="B́"/>
+            <when state="cedilla" output="B̧"/>
         </action>
         <action id="C">
             <when state="none" output="C"/>
             <when state="acute accent" output="Ć"/>
+            <when state="cedilla" output="Ç"/>
         </action>
         <action id="D">
             <when state="none" output="D"/>
             <when state="acute accent" output="D́"/>
+            <when state="cedilla" output="Ḑ"/>
         </action>
         <action id="F">
             <when state="none" output="F"/>
@@ -1200,11 +1215,13 @@
         <action id="G">
             <when state="none" output="G"/>
             <when state="acute accent" output="Ǵ"/>
+            <when state="cedilla" output="Ģ"/>
             <when state="tilde" output="G̃"/>
         </action>
         <action id="H">
             <when state="none" output="H"/>
             <when state="acute accent" output="H́"/>
+            <when state="cedilla" output="Ḩ"/>
         </action>
         <action id="J">
             <when state="none" output="J"/>
@@ -1214,15 +1231,18 @@
         <action id="K">
             <when state="none" output="K"/>
             <when state="acute accent" output="Ḱ"/>
+            <when state="cedilla" output="Ķ"/>
             <when state="grave accent" output="K̀"/>
         </action>
         <action id="L">
             <when state="none" output="L"/>
             <when state="acute accent" output="Ĺ"/>
+            <when state="cedilla" output="Ļ"/>
         </action>
         <action id="M">
             <when state="none" output="M"/>
             <when state="acute accent" output="Ḿ"/>
+            <when state="cedilla" output="M̧"/>
             <when state="grave accent" output="M̀"/>
             <when state="tilde" output="M̃"/>
         </action>
@@ -1234,21 +1254,25 @@
         <action id="Q">
             <when state="none" output="Q"/>
             <when state="acute accent" output="Q́"/>
+            <when state="cedilla" output="Q̧"/>
         </action>
         <action id="R">
             <when state="none" output="R"/>
             <when state="acute accent" output="Ŕ"/>
+            <when state="cedilla" output="Ŗ"/>
             <when state="grave accent" output="R̀"/>
             <when state="tilde" output="R̃"/>
         </action>
         <action id="S">
             <when state="none" output="S"/>
             <when state="acute accent" output="Ś"/>
+            <when state="cedilla" output="Ş"/>
             <when state="grave accent" output="S̀"/>
         </action>
         <action id="T">
             <when state="none" output="T"/>
             <when state="acute accent" output="T́"/>
+            <when state="cedilla" output="Ţ"/>
             <when state="grave accent" output="T̀"/>
         </action>
         <action id="V">
@@ -1265,11 +1289,13 @@
         <action id="X">
             <when state="none" output="X"/>
             <when state="acute accent" output="X́"/>
+            <when state="cedilla" output="X̧"/>
             <when state="grave accent" output="X̀"/>
         </action>
         <action id="Z">
             <when state="none" output="Z"/>
             <when state="acute accent" output="Ź"/>
+            <when state="cedilla" output="Z̧"/>
             <when state="grave accent" output="Z̀"/>
         </action>
         <action id="`">
@@ -1278,14 +1304,20 @@
         <action id="b">
             <when state="none" output="b"/>
             <when state="acute accent" output="b́"/>
+            <when state="cedilla" output="b̧"/>
         </action>
         <action id="c">
             <when state="none" output="c"/>
             <when state="acute accent" output="ć"/>
+            <when state="cedilla" output="ç"/>
+        </action>
+        <action id="cedilla">
+            <when state="none" next="cedilla"/>
         </action>
         <action id="d">
             <when state="none" output="d"/>
             <when state="acute accent" output="d́"/>
+            <when state="cedilla" output="ḑ"/>
         </action>
         <action id="f">
             <when state="none" output="f"/>
@@ -1294,11 +1326,13 @@
         <action id="g">
             <when state="none" output="g"/>
             <when state="acute accent" output="ǵ"/>
+            <when state="cedilla" output="ģ"/>
             <when state="tilde" output="g̃"/>
         </action>
         <action id="h">
             <when state="none" output="h"/>
             <when state="acute accent" output="h́"/>
+            <when state="cedilla" output="ḩ"/>
         </action>
         <action id="j">
             <when state="none" output="j"/>
@@ -1308,15 +1342,18 @@
         <action id="k">
             <when state="none" output="k"/>
             <when state="acute accent" output="ḱ"/>
+            <when state="cedilla" output="ķ"/>
             <when state="grave accent" output="k̀"/>
         </action>
         <action id="l">
             <when state="none" output="l"/>
             <when state="acute accent" output="ĺ"/>
+            <when state="cedilla" output="ļ"/>
         </action>
         <action id="m">
             <when state="none" output="m"/>
             <when state="acute accent" output="ḿ"/>
+            <when state="cedilla" output="m̧"/>
             <when state="grave accent" output="m̀"/>
             <when state="tilde" output="m̃"/>
         </action>
@@ -1328,21 +1365,25 @@
         <action id="q">
             <when state="none" output="q"/>
             <when state="acute accent" output="q́"/>
+            <when state="cedilla" output="q̧"/>
         </action>
         <action id="r">
             <when state="none" output="r"/>
             <when state="acute accent" output="ŕ"/>
+            <when state="cedilla" output="ŗ"/>
             <when state="grave accent" output="r̀"/>
             <when state="tilde" output="r̃"/>
         </action>
         <action id="s">
             <when state="none" output="s"/>
             <when state="acute accent" output="ś"/>
+            <when state="cedilla" output="ş"/>
             <when state="grave accent" output="s̀"/>
         </action>
         <action id="t">
             <when state="none" output="t"/>
             <when state="acute accent" output="t́"/>
+            <when state="cedilla" output="ţ"/>
             <when state="grave accent" output="t̀"/>
         </action>
         <action id="v">
@@ -1359,11 +1400,13 @@
         <action id="x">
             <when state="none" output="x"/>
             <when state="acute accent" output="x́"/>
+            <when state="cedilla" output="x̧"/>
             <when state="grave accent" output="x̀"/>
         </action>
         <action id="z">
             <when state="none" output="z"/>
             <when state="acute accent" output="ź"/>
+            <when state="cedilla" output="z̧"/>
             <when state="grave accent" output="z̀"/>
         </action>
         <action id="ˊ">
@@ -1372,6 +1415,7 @@
     </actions>
     <terminators>
         <when state="acute accent" output="&#x0027;"/>
+        <when state="cedilla" output="¸"/>
         <when state="grave accent" output="`"/>
         <when state="s1" output="è"/>
         <when state="s2" output="`"/>
