@@ -539,7 +539,7 @@
             <key code="44" output="¿"/>
             <key code="45" output="Ñ"/>
             <key code="46" output="µ"/>
-            <key code="47" output="°"/>
+            <key code="47" action="°"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" output="&#x202f;"/>
             <key code="50" action="`"/>
@@ -1036,6 +1036,7 @@
             <when state="circumflex" output="Ô"/>
             <when state="diaeresis" output="Ö"/>
             <when state="grave accent" output="Ò"/>
+            <when state="ring" output="O̊"/>
             <when state="s1" output="Ó"/>
             <when state="s2" output="Ò"/>
             <when state="s3" output="Ô"/>
@@ -1051,6 +1052,7 @@
             <when state="circumflex" output="Û"/>
             <when state="diaeresis" output="Ü"/>
             <when state="grave accent" output="Ù"/>
+            <when state="ring" output="Ů"/>
             <when state="s1" output="Ú"/>
             <when state="s2" output="Ù"/>
             <when state="s3" output="Û"/>
@@ -1064,6 +1066,7 @@
             <when state="circumflex" output="Ŷ"/>
             <when state="diaeresis" output="Ÿ"/>
             <when state="grave accent" output="Ỳ"/>
+            <when state="ring" output="Y̊"/>
             <when state="s4" output="Ÿ"/>
             <when state="tilde" output="Ỹ"/>
         </action>
@@ -1075,6 +1078,7 @@
             <when state="circumflex" output="â"/>
             <when state="diaeresis" output="ä"/>
             <when state="grave accent" output="à"/>
+            <when state="ring" output="å"/>
             <when state="s1" output="á"/>
             <when state="s2" output="à"/>
             <when state="s3" output="â"/>
@@ -1090,6 +1094,7 @@
             <when state="circumflex" output="ê"/>
             <when state="diaeresis" output="ë"/>
             <when state="grave accent" output="è"/>
+            <when state="ring" output="e̊"/>
             <when state="s1" output="é"/>
             <when state="s2" output="è"/>
             <when state="s3" output="ê"/>
@@ -1104,6 +1109,7 @@
             <when state="circumflex" output="î"/>
             <when state="diaeresis" output="ï"/>
             <when state="grave accent" output="ì"/>
+            <when state="ring" output="i̊"/>
             <when state="s1" output="í"/>
             <when state="s2" output="ì"/>
             <when state="s3" output="î"/>
@@ -1128,6 +1134,7 @@
             <when state="circumflex" output="ô"/>
             <when state="diaeresis" output="ö"/>
             <when state="grave accent" output="ò"/>
+            <when state="ring" output="o̊"/>
             <when state="s1" output="ó"/>
             <when state="s2" output="ò"/>
             <when state="s3" output="ô"/>
@@ -1143,6 +1150,7 @@
             <when state="circumflex" output="û"/>
             <when state="diaeresis" output="ü"/>
             <when state="grave accent" output="ù"/>
+            <when state="ring" output="ů"/>
             <when state="s1" output="ú"/>
             <when state="s2" output="ù"/>
             <when state="s3" output="û"/>
@@ -1156,6 +1164,7 @@
             <when state="circumflex" output="ŷ"/>
             <when state="diaeresis" output="ÿ"/>
             <when state="grave accent" output="ỳ"/>
+            <when state="ring" output="ẙ"/>
             <when state="s4" output="ÿ"/>
             <when state="tilde" output="ỹ"/>
         </action>
@@ -1190,6 +1199,7 @@
             <when state="circumflex" output="Â"/>
             <when state="diaeresis" output="Ä"/>
             <when state="grave accent" output="À"/>
+            <when state="ring" output="Å"/>
             <when state="s1" output="Á"/>
             <when state="s2" output="À"/>
             <when state="s3" output="Â"/>
@@ -1205,6 +1215,7 @@
             <when state="circumflex" output="Ê"/>
             <when state="diaeresis" output="Ë"/>
             <when state="grave accent" output="È"/>
+            <when state="ring" output="E̊"/>
             <when state="s1" output="É"/>
             <when state="s2" output="È"/>
             <when state="s3" output="Ê"/>
@@ -1219,6 +1230,7 @@
             <when state="circumflex" output="Î"/>
             <when state="diaeresis" output="Ï"/>
             <when state="grave accent" output="Ì"/>
+            <when state="ring" output="I̊"/>
             <when state="s1" output="Í"/>
             <when state="s2" output="Ì"/>
             <when state="s3" output="Î"/>
@@ -1257,6 +1269,7 @@
             <when state="caron" output="Ď"/>
             <when state="cedilla" output="Ḑ"/>
             <when state="circumflex" output="D̂"/>
+            <when state="ring" output="D̊"/>
         </action>
         <action id="F">
             <when state="none" output="F"/>
@@ -1269,6 +1282,7 @@
             <when state="caron" output="Ǧ"/>
             <when state="cedilla" output="Ģ"/>
             <when state="circumflex" output="Ĝ"/>
+            <when state="ring" output="G̊"/>
             <when state="tilde" output="G̃"/>
         </action>
         <action id="H">
@@ -1285,6 +1299,7 @@
             <when state="caron" output="J̌"/>
             <when state="circumflex" output="Ĵ"/>
             <when state="diaeresis" output="J̈"/>
+            <when state="ring" output="J̊"/>
             <when state="tilde" output="J̃"/>
         </action>
         <action id="K">
@@ -1327,6 +1342,7 @@
             <when state="caron" output="Q̌"/>
             <when state="cedilla" output="Q̧"/>
             <when state="diaeresis" output="Q̈"/>
+            <when state="ring" output="Q̊"/>
         </action>
         <action id="R">
             <when state="none" output="R"/>
@@ -1345,6 +1361,7 @@
             <when state="circumflex" output="Ŝ"/>
             <when state="diaeresis" output="S̈"/>
             <when state="grave accent" output="S̀"/>
+            <when state="ring" output="S̊"/>
         </action>
         <action id="T">
             <when state="none" output="T"/>
@@ -1362,6 +1379,7 @@
             <when state="circumflex" output="V̂"/>
             <when state="diaeresis" output="V̈"/>
             <when state="grave accent" output="V̀"/>
+            <when state="ring" output="V̊"/>
             <when state="tilde" output="Ṽ"/>
         </action>
         <action id="W">
@@ -1371,6 +1389,7 @@
             <when state="circumflex" output="Ŵ"/>
             <when state="diaeresis" output="Ẅ"/>
             <when state="grave accent" output="Ẁ"/>
+            <when state="ring" output="W̊"/>
         </action>
         <action id="X">
             <when state="none" output="X"/>
@@ -1380,6 +1399,7 @@
             <when state="circumflex" output="X̂"/>
             <when state="diaeresis" output="Ẍ"/>
             <when state="grave accent" output="X̀"/>
+            <when state="ring" output="X̊"/>
         </action>
         <action id="Z">
             <when state="none" output="Z"/>
@@ -1424,6 +1444,7 @@
             <when state="caron" output="ď"/>
             <when state="cedilla" output="ḑ"/>
             <when state="circumflex" output="d̂"/>
+            <when state="ring" output="d̊"/>
         </action>
         <action id="f">
             <when state="none" output="f"/>
@@ -1436,6 +1457,7 @@
             <when state="caron" output="ǧ"/>
             <when state="cedilla" output="ģ"/>
             <when state="circumflex" output="ĝ"/>
+            <when state="ring" output="g̊"/>
             <when state="tilde" output="g̃"/>
         </action>
         <action id="h">
@@ -1452,6 +1474,7 @@
             <when state="caron" output="ǰ"/>
             <when state="circumflex" output="ĵ"/>
             <when state="diaeresis" output="j̈"/>
+            <when state="ring" output="j̊"/>
             <when state="tilde" output="j̃"/>
         </action>
         <action id="k">
@@ -1494,6 +1517,7 @@
             <when state="caron" output="q̌"/>
             <when state="cedilla" output="q̧"/>
             <when state="diaeresis" output="q̈"/>
+            <when state="ring" output="q̊"/>
         </action>
         <action id="r">
             <when state="none" output="r"/>
@@ -1512,6 +1536,7 @@
             <when state="circumflex" output="ŝ"/>
             <when state="diaeresis" output="s̈"/>
             <when state="grave accent" output="s̀"/>
+            <when state="ring" output="s̊"/>
         </action>
         <action id="t">
             <when state="none" output="t"/>
@@ -1529,6 +1554,7 @@
             <when state="circumflex" output="v̂"/>
             <when state="diaeresis" output="v̈"/>
             <when state="grave accent" output="v̀"/>
+            <when state="ring" output="v̊"/>
             <when state="tilde" output="ṽ"/>
         </action>
         <action id="w">
@@ -1538,6 +1564,7 @@
             <when state="circumflex" output="ŵ"/>
             <when state="diaeresis" output="ẅ"/>
             <when state="grave accent" output="ẁ"/>
+            <when state="ring" output="ẘ"/>
         </action>
         <action id="x">
             <when state="none" output="x"/>
@@ -1547,6 +1574,7 @@
             <when state="circumflex" output="x̂"/>
             <when state="diaeresis" output="ẍ"/>
             <when state="grave accent" output="x̀"/>
+            <when state="ring" output="x̊"/>
         </action>
         <action id="z">
             <when state="none" output="z"/>
@@ -1560,6 +1588,9 @@
         <action id="¨">
             <when state="none" next="diaeresis"/>
         </action>
+        <action id="°">
+            <when state="none" next="ring"/>
+        </action>
         <action id="ˊ">
             <when state="none" next="acute accent"/>
         </action>
@@ -1571,6 +1602,7 @@
         <when state="circumflex" output="ˆ"/>
         <when state="diaeresis" output="¨"/>
         <when state="grave accent" output="`"/>
+        <when state="ring" output="˚"/>
         <when state="s1" output="è"/>
         <when state="s2" output="`"/>
         <when state="s3" output="ì"/>
