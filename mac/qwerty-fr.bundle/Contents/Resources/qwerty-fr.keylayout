@@ -383,13 +383,13 @@
             <key code="0" output="à"/>
             <key code="1" output="æ"/>
             <key code="2" output="ë"/>
-            <key code="3" output=""/>
+            <key code="3" output="ε"/>
             <key code="4" output="ÿ"/>
-            <key code="5" output=""/>
+            <key code="5" output="α"/>
             <key code="6" output="ä"/>
             <key code="7" output="×"/>
             <key code="8" output="ç"/>
-            <key code="9" output="√"/>
+            <key code="9" output="ω"/>
             <key code="10" output="§"/>
             <key code="11" output="ß"/>
             <key code="12" output="â"/>
@@ -397,7 +397,7 @@
             <key code="14" output="è"/>
             <key code="15" output="®"/>
             <key code="16" output="¥"/>
-            <key code="17" output="†"/>
+            <key code="17" output="π"/>
             <key code="18" output="¹"/>
             <key code="19" output="²"/>
             <key code="20" output="³"/>
@@ -422,7 +422,7 @@
             <key code="39" action="ˊ"/>
             <key code="40" output="ï"/>
             <key code="41" output="¶"/>
-            <key code="42" output="|"/>
+            <key code="42" output="¦"/>
             <key code="43" action="cedilla"/>
             <key code="44" output="⸮"/>
             <key code="45" output="ñ"/>
@@ -495,23 +495,23 @@
             <key code="0" output="À"/>
             <key code="1" output="Æ"/>
             <key code="2" output="Ë"/>
-            <key code="3" output=""/>
+            <key code="3" output="Δ"/>
             <key code="4" output="Ÿ"/>
-            <key code="5" output=""/>
+            <key code="5" output="β"/>
             <key code="6" output="Ä"/>
             <key code="7" output="÷"/>
             <key code="8" output="Ç"/>
-            <key code="9" output=""/>
+            <key code="9" output="Ω"/>
             <key code="10" output="±"/>
             <key code="11" output="ß"/>
             <key code="12" output="Â"/>
             <key code="13" output="É"/>
             <key code="14" output="È"/>
             <key code="15" output="©"/>
-            <key code="16" output="Á"/>
-            <key code="17" output="ˇ"/>
+            <key code="16" output="¤"/>
+            <key code="17" output="Π"/>
             <key code="18" output="¡"/>
-            <key code="19" output=""/>
+            <key code="19" output="˝"/>
             <key code="20" output="¯"/>
             <key code="21" output="Ê"/>
             <key code="22" action="caron"/>
