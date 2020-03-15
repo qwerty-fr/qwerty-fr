@@ -8,7 +8,7 @@ Keyboard layout based on the QWERTY layout with extra symbols and diacritics so 
 
 This layout is entirely compatible with the QWERTY layout. All the keys of the QWERTY layout are kept in the same location. This means that anyone using a QWERTY layout can type on the QWERTY-fr layout without even knowing that they are not typing on a QWERTY layout.
 
-In order to type special characters with diacritics, there are a few simple rules to know (<kbd>AltGr</kbd> corresponds to <kbd>Option ⌥</kbd> on macOS):
+In order to type special characters with diacritics, there are a few simple rules to know. <kbd>AltGr</kbd> corresponds to <kbd>Option ⌥</kbd> on macOS, and <kbd>Ctrl</kbd> <kbd>Alt</kbd> on Windows (useful if you don't have the <kbd>AltGr</kbd> key):
 
 | Diacritic                              | How to type it                                                                                        |
 |----------------------------------------|-------------------------------------------------------------------------------------------------------|
@@ -22,12 +22,12 @@ In order to type special characters with diacritics, there are a few simple rule
 
 **Note**: You can combine all of those with <kbd>Shift ⇧</kbd> and <kbd>Caps Lock</kbd>. So for example:
 - <kbd>AltGr</kbd> <kbd>Shift ⇧</kbd> <kbd>C</kbd> outputs `Ç`.
-- <kbd>AltGr</kbd> <kbd>Shift ⇧</kbd> <kbd>Z</kbd> outputs `É`.
+- <kbd>AltGr</kbd> <kbd>Shift ⇧</kbd> <kbd>W</kbd> outputs `É`.
 
 These two letters are impossible to type with an AZERTY layout. But with QWERTY-fr they are easy to type!
 
 
-**Note 2**: You can type a [Non-breaking space](https://en.wikipedia.org/wiki/Non-breaking_space) by pressing <kbd>AltGr</kbd> <kbd>Space</kbd>. And a [Narrow non-breaking space](https://fr.wikipedia.org/wiki/Espace_fine_ins%C3%A9cable) (FR) by pressing <kbd>AltGr</kbd> <kbd>Shift ⇧</kbd> <kbd>Space</kbd>. Learn about when you should use them when typing French [here](https://typographisme.net/post/Les-espaces-typographiques-et-le-web) (FR).
+**Note 2**: You can type a [non-breaking space](https://en.wikipedia.org/wiki/Non-breaking_space) by pressing <kbd>AltGr</kbd> <kbd>Space</kbd>. And a [narrow non-breaking space (fr)](https://fr.wikipedia.org/wiki/Espace_fine_ins%C3%A9cable) by pressing <kbd>AltGr</kbd> <kbd>Shift ⇧</kbd> <kbd>Space</kbd>. Learn about when you should use them when typing French [here (fr)](https://typographisme.net/post/Les-espaces-typographiques-et-le-web).
 
 ## Installation
 
