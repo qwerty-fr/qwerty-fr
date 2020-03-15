@@ -421,7 +421,7 @@
             <key code="38" output="ü"/>
             <key code="39" output="ˊ"/>
             <key code="40" output="ï"/>
-            <key code="41" output="¶"/>
+            <key code="41" output="·"/>
             <key code="42" output="|"/>
             <key code="43" output=""/>
             <key code="44" output="⸮"/>
@@ -630,7 +630,7 @@
             <key code="23" output="∞"/>
             <key code="24" output="≠"/>
             <key code="25" output="ª"/>
-            <key code="26" output="¶"/>
+            <key code="26" output="·"/>
             <key code="27" output="–"/>
             <key code="28" output="•"/>
             <key code="29" output="º"/>
@@ -742,7 +742,7 @@
             <key code="23" output="∞"/>
             <key code="24" output="≠"/>
             <key code="25" output="ª"/>
-            <key code="26" output="¶"/>
+            <key code="26" output="·"/>
             <key code="27" output="–"/>
             <key code="28" output="•"/>
             <key code="29" output="º"/>
