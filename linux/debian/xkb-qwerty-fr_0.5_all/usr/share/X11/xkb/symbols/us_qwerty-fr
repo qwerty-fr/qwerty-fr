@@ -43,7 +43,7 @@ xkb_symbols "qwerty-fr"
     key <AC07> { [ j,            J,           udiaeresis,      Udiaeresis      ] };
     key <AC08> { [ k,            K,           idiaeresis,      Idiaeresis      ] };
     key <AC09> { [ l,            L,           odiaeresis,      Odiaeresis      ] };
-    key <AC10> { [ semicolon,    colon,       paragraph,       section         ] };
+    key <AC10> { [ semicolon,    colon,       periodcentered,  section         ] };
     key <AC11> { [ apostrophe,   quotedbl,    dead_acute,      dead_diaeresis  ] };
     key <BKSL> { [ backslash,    bar,         brokenbar,       oslash          ] };
 
@@ -59,7 +59,7 @@ xkb_symbols "qwerty-fr"
     key <AB09> { [ period,       greater,     degree,          dead_abovering  ] };
     key <AB10> { [ slash,        question,    0x01002E2E,      questiondown    ] };
 
-    key <SPCE> { [ space,        space,       nobreakspace,    nobreakspace    ] };
+    key <SPCE> { [ space,        space,       nobreakspace,    0x100202F       ] }; // espace insécable fine
 
 };
 
