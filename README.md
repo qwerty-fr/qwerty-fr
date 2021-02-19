@@ -65,6 +65,6 @@ Use your favorite AUR helper to install it. Or in the directory containing the `
 The easiest way to contribute to this project is to spread the word!
 
 If you want to contribute by fixing issues with the layout, adding new keys, etc. we use the following software to edit the layouts:
-- **Windows**: [Microsoft Keyboard Layout Creator](https://www.microsoft.com/en-us/download/details.aspx?id=22339).
+- **Windows**: [Microsoft Keyboard Layout Creator](https://www.microsoft.com/en-us/download/details.aspx?id=102134).
 - **Mac**: [Ukelele](https://software.sil.org/ukelele/).
 - **Linux**: manually editing files.
