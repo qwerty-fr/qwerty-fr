@@ -1,2 +1,2 @@
 #!/bin/sh
-gkbd-keyboard-display -l qwerty-fr
+gkbd-keyboard-display -l us_qwerty-fr
