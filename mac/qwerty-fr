@@ -166,7 +166,7 @@
             <key code="7" output="X"/>
             <key code="8" output="C"/>
             <key code="9" output="V"/>
-            <key code="10" output="±"/>
+            <key code="10" output="≈"/>
             <key code="11" output="B"/>
             <key code="12" output="Q"/>
             <key code="13" output="W"/>
@@ -502,7 +502,7 @@
             <key code="7" output="÷"/>
             <key code="8" output="Ç"/>
             <key code="9" output=""/>
-            <key code="10" output="±"/>
+            <key code="10" output="≈"/>
             <key code="11" output="ß"/>
             <key code="12" output="Â"/>
             <key code="13" output="É"/>
@@ -516,7 +516,7 @@
             <key code="21" output="Ê"/>
             <key code="22" output=""/>
             <key code="23" output="£"/>
-            <key code="24" output="±"/>
+            <key code="24" output="≈"/>
             <key code="25" output="Î"/>
             <key code="26" output="Ŷ"/>
             <key code="27" output="—"/>

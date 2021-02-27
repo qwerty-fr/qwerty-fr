@@ -19,7 +19,7 @@ xkb_symbols "qwerty-fr"
     key <AE09> { [ 9,            parenleft,   icircumflex,     Icircumflex     ] };
     key <AE10> { [ 0,            parenright,  ocircumflex,     Ocircumflex     ] };
     key <AE11> { [ minus,        underscore,  0x1002013,       0x1002014       ] }; // demi-cadratin, cadratin
-    key <AE12> { [ equal,        plus,        notequal,        plusminus       ] };
+    key <AE12> { [ equal,        plus,        notequal,        0x100202F       ] }; // almost equal to
 
     key <AD01> { [ q,            Q,           acircumflex,     Acircumflex     ] };
     key <AD02> { [ w,            W,           eacute,          Eacute          ] };
