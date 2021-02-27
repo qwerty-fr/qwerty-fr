@@ -1,9 +1,10 @@
 BUILD=fakeroot dpkg-deb --build
-RM=rm
+RM=rm -rf
 LINTIAN=lintian
-GZ=gzip -9
+GZ=gzip -f9
 CP=cp
-MV=mv
+MV=mv -f
+MKD=mkdir -p
 
 PKG=xkb-qwerty-fr
 VER=0.5
@@ -15,31 +16,40 @@ PACKAGE=$(PKG_NAME).deb
 .PHONY: deb
 deb: $(PACKAGE)
 
-$(PACKAGE): $(PKG_NAME)/usr/share/man/man7/qwerty-fr.7.gz $(PKG_NAME)/usr/share/doc/xkb-qwerty-fr/changelog.gz $(PKG_NAME)/usr/share/doc/xkb-qwerty-fr/copyright $(PKG_NAME)/usr/share/doc/xkb-qwerty-fr/keymap.txt $(PKG_NAME)/usr/share/X11/xkb/symbols/us_qwerty-fr
+$(PACKAGE): $(PKG_NAME)/DEBIAN $(PKG_NAME)/usr/share/man/man7/qwerty-fr.7.gz $(PKG_NAME)/usr/share/doc/xkb-qwerty-fr/changelog.gz $(PKG_NAME)/usr/share/doc/xkb-qwerty-fr/copyright $(PKG_NAME)/usr/share/doc/xkb-qwerty-fr/keymap.txt $(PKG_NAME)/usr/share/X11/xkb/symbols/us_qwerty-fr
 	$(BUILD) $(PKG_NAME)
 
+$(PKG_NAME)/DEBIAN: DEBIAN
+	$(MKD) $(@D) &&\
+	$(CP) -r $< $(PKG_NAME)/
+
 $(PKG_NAME)/usr/share/man/man7/qwerty-fr.7.gz: ../man/qwerty-fr.7
-	$(CP) $< man.tmp &&
-	$(GZ) man.tmp &&
+	$(MKD) $(@D) &&\
+	$(CP) $< man.tmp &&\
+	$(GZ) man.tmp &&\
 	$(MV) man.tmp.gz $@
 
 $(PKG_NAME)/usr/share/doc/xkb-qwerty-fr/changelog.gz: changelog
-	$(CP) $< changelog.tmp &&
-	$(GZ) changelog.tmp &&
+	$(MKD) $(@D) &&\
+	$(CP) $< changelog.tmp &&\
+	$(GZ) changelog.tmp &&\
 	$(MV) changelog.tmp.gz $@
 
 $(PKG_NAME)/usr/share/doc/xkb-qwerty-fr/copyright: ../copyright
-	$(CP) @< $@
+	$(MKD) $(@D) &&\
+	$(CP) $< $@
 
 $(PKG_NAME)/usr/share/doc/xkb-qwerty-fr/keymap.txt: ../keymap.txt
-	$(CP) @< $@
+	$(MKD) $(@D) &&\
+	$(CP) $< $@
 
 $(PKG_NAME)/usr/share/X11/xkb/symbols/us_qwerty-fr: ../us_qwerty-fr
-	$(CP) @< $@
+	$(MKD) $(@D) &&\
+	$(CP) $< $@
 
 .PHONY: clean
 clean:
-	$(RM) $(PACKAGE)
+	$(RM) $(PKG_NAME) $(PACKAGE)
 
 .PHONY: lintian
 lintian: $(PACKAGE)

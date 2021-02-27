@@ -1,0 +1,224 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+my $dir = "/usr/share/X11/xkb";
+
+my $xml_variant = "<configItem>\n<name>qwerty-fr</name>\n<description>French (qwerty-fr; US with french symbols)</description>\n".
+		"<languageList><iso639Id>fra</iso639Id></languageList>\n</configItem>\n";
+
+my ($mode) = @ARGV;
+
+sub remove_variant
+{
+	my ($input, $output, $layout, $variant) = @_;
+
+	my $line;
+	my $level;
+	my $match;
+
+	open (IN, $input) || return 0;
+	open (OUT, ">$output") || return 0;
+
+	$level = 0;
+	$match = 0;
+	while ($line = <IN>)
+	{
+		if (($line =~ m/<layoutList>/) && ($level eq 0))
+		{
+			$level++;
+		}
+
+		if (($line =~ m/<layout>/) && ($level eq 1))
+		{
+			$level++;
+			$match = 0;
+		}
+
+		if (($line =~ m/<name>$layout<\/name>/) && ($level eq 2))
+		{
+			$match = 1;
+		}
+
+		if (($line =~ m/<variantList>/) && ($level eq 2))
+		{
+			$level++;
+		}
+
+		if (($line =~ m/<variant>/) && ($level eq 3))
+		{
+			# read completely next variant
+			while ($line !~ m/<\/variant>/)
+			{
+				my $line_cat;
+
+				unless ($line_cat = <IN>)
+				{
+					last;
+				}
+				else
+				{
+					$line .= $line_cat;
+				}
+			}
+
+			# correct entry
+			if ($line =~ m/<name>$variant<\/name>/)
+			{
+				# drop
+				$line = '';
+			}
+		}
+
+		print OUT $line;
+
+		if (($line =~ m/<\/variantList>/) && ($level eq 3))
+		{
+			$level--;
+		}
+
+		if (($line =~ m/<\/layout>/) && ($level eq 2))
+		{
+			$level--;
+		}
+	}
+
+	close(OUT);
+	close(IN);
+
+	return 1;
+}
+
+sub add_variant
+{
+	my ($input, $output, $layout, $variant) = @_;
+
+	my $line;
+	my $level;
+	my $match;
+
+	open (IN, $input) || return 0;
+	open (OUT, ">$output") || return 0;
+
+	$level = 0;
+	$match = 0;
+	while ($line = <IN>)
+	{
+		if (($line =~ m/<layoutList>/) && ($level eq 0))
+		{
+			$level++;
+		}
+
+		if (($line =~ m/<layout>/) && ($level eq 1))
+		{
+			$level++;
+			$match = 0;
+		}
+
+		if (($line =~ m/<name>$layout<\/name>/) && ($level eq 2))
+		{
+			$match = 1;
+		}
+
+		if (($line =~ m/<variantList>/) && ($level eq 2))
+		{
+			$level++;
+		}
+
+		if (($level eq 3) && $match)
+		{
+			# some stuff can be written on the same line after tag,
+			# so remove only tag in $line and still print $line after insertion
+			$line =~ s/<variantList>//; $line =~ s/\n//; print OUT "<variantList>\n";
+
+			print OUT "<variant>\n$variant</variant>\n";
+			$level++;
+		}
+
+		print OUT $line;
+
+
+		if (($line =~ m/<\/variantList>/) && ($level eq 3))
+		{
+			$level--;
+		}
+
+		if (($line =~ m/<\/layout>/) && ($level eq 2))
+		{
+			$level--;
+		}
+	}
+
+	close(OUT);
+	close(IN);
+
+	return 1;
+}
+
+sub process_xml
+{
+	my ($file, $variant) = @_;
+	
+	my $temp = "$file.qwerty-fr";
+
+	if ( ! -f "$file")
+	{
+		return 0;
+	}
+
+	&remove_variant($file, $temp, "us", "qwerty-fr") || die("Error configuring '$file'!");
+	&add_variant($temp, $file, "us", $variant) || die("Error configuring '$file'!");
+
+	unlink($temp);
+
+	return 1;
+}
+
+# add variant to us layout
+if (-f "$dir/symbols/us_qwerty-fr")
+{
+	if (($mode eq "triggered") && (-f "$dir/symbols/us.qwerty-fr"))
+	{
+		unlink("$dir/symbols/us.qwerty-fr");
+	}
+
+ 	if ( ! -f "$dir/symbols/us.qwerty-fr")
+	{
+		`cp "$dir/symbols/us" "$dir/symbols/us.qwerty-fr"`;
+	}
+
+	`cat "$dir/symbols/us.qwerty-fr" "$dir/symbols/us_qwerty-fr" > "$dir/symbols/us"`;
+}
+else
+{
+	die("Error! File '$dir/symbols/us_qwerty-fr' not found!\n");
+}
+
+# evdev
+if (-f "$dir/rules/evdev.extra.xml")
+{
+	&process_xml("$dir/rules/evdev.extras.xml", $xml_variant);
+
+	print "Bug #1029979 workaround.\n";
+	&process_xml("$dir/rules/evdev.xml", $xml_variant);
+}
+elsif (-f "$dir/rules/evdev.xml")
+{
+	&process_xml("$dir/rules/evdev.xml", $xml_variant);
+}
+
+# base
+if (-f "$dir/rules/base.extras.xml")
+{
+	&process_xml("$dir/rules/base.extras.xml", $xml_variant);
+}
+elsif (-f "$dir/rules/base.xml")
+{
+	&process_xml("$dir/rules/base.xml", $xml_variant);
+}
+elsif (-f "$dir/base.xml")
+{
+	&process_xml("$dir/base.xml", $xml_variant);
+}
+
