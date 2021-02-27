@@ -1,7 +1,0 @@
-interest /usr/share/X11/xkb/symbols/us
-interest /usr/share/X11/xkb/rules/evdev.extra.xml
-interest /usr/share/X11/xkb/rules/evdev.xml
-interest /usr/share/X11/xkb/rules/base.extra.xml
-interest /usr/share/X11/xkb/rules/base.xml
-interest /usr/share/X11/xkb/base.xml
-
