@@ -166,7 +166,7 @@
             <key code="7" action="X"/>
             <key code="8" action="C"/>
             <key code="9" action="V"/>
-            <key code="10" output="±"/>
+            <key code="10" output="≈"/>
             <key code="11" action="B"/>
             <key code="12" action="Q"/>
             <key code="13" action="W"/>
@@ -421,7 +421,7 @@
             <key code="38" output="ü"/>
             <key code="39" action="ˊ"/>
             <key code="40" output="ï"/>
-            <key code="41" output="¶"/>
+            <key code="41" output="·"/>
             <key code="42" output="¦"/>
             <key code="43" action="cedilla"/>
             <key code="44" output="⸮"/>
@@ -502,7 +502,7 @@
             <key code="7" output="÷"/>
             <key code="8" output="Ç"/>
             <key code="9" output="Ω"/>
-            <key code="10" output="±"/>
+            <key code="10" output="≈"/>
             <key code="11" output="ß"/>
             <key code="12" output="Â"/>
             <key code="13" output="É"/>
@@ -516,7 +516,7 @@
             <key code="21" output="Ê"/>
             <key code="22" action="caron"/>
             <key code="23" output="£"/>
-            <key code="24" output="±"/>
+            <key code="24" output="≈"/>
             <key code="25" output="Î"/>
             <key code="26" output="Ŷ"/>
             <key code="27" output="—"/>
@@ -630,7 +630,7 @@
             <key code="23" output="∞"/>
             <key code="24" output="≠"/>
             <key code="25" output="ª"/>
-            <key code="26" output="¶"/>
+            <key code="26" output="·"/>
             <key code="27" output="–"/>
             <key code="28" output="•"/>
             <key code="29" output="º"/>
@@ -742,7 +742,7 @@
             <key code="23" output="∞"/>
             <key code="24" output="≠"/>
             <key code="25" output="ª"/>
-            <key code="26" output="¶"/>
+            <key code="26" output="·"/>
             <key code="27" output="–"/>
             <key code="28" output="•"/>
             <key code="29" output="º"/>
