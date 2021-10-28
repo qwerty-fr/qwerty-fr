@@ -20,7 +20,7 @@ In order to type special characters with diacritics, there are a few simple rule
 | Ligature <code>œ</code>/<code>æ</code> | Press <kbd>AltGr</kbd> + key right the corresponding letter (works for letters o and a).              |
 
 
-**Note**: You can combine all of those with <kbd>Shift ⇧</kbd> and <kbd>Caps Lock</kbd>. So for example:
+**Note**: Unlike AZERTY, you can combine all the accentuated letters with <kbd>Shift ⇧</kbd> and <kbd>Caps Lock</kbd>. So for example:
 - <kbd>AltGr</kbd> <kbd>Shift ⇧</kbd> <kbd>C</kbd> outputs `Ç`.
 - <kbd>AltGr</kbd> <kbd>Shift ⇧</kbd> <kbd>W</kbd> outputs `É`.
 
