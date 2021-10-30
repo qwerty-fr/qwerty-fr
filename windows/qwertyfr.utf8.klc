@@ -57,7 +57,7 @@ LAYOUT		;an extra '@' at the end is a dead key
 24	J		5	j	J	-1	00fc	00dc		// j, J, , ü, Ü
 25	K		5	k	K	-1	00ef	00cf		// k, K, , ï, Ï
 26	L		5	l	L	-1	00f6	00d6		// l, L, , ö, Ö
-27	OEM_1		0	003b	003a	-1	00b4@	00a7		// ;, :, , ´, §
+27	OEM_1		0	003b	003a	-1	00b4@	02da@		// ;, :, , ´, ˚
 28	OEM_7		0	0027	0022	-1	0060@	00a8@		// ', ", , `, ¨
 29	OEM_3		0	0060	007e	-1	0060@	007e@		// `, ~, , `, ~
 2b	OEM_5		0	005c	007c	001c	00f8	201e		// \, |, [FS], ø, „
@@ -69,7 +69,7 @@ LAYOUT		;an extra '@' at the end is a dead key
 31	N		5	n	N	-1	00f1	00d1		// n, N, , ñ, Ñ
 32	M		1	m	M	-1	00b5	03a3		// m, M, , µ, Σ
 33	OEM_COMMA	0	002c	003c	-1	00b8@	02db@		// <, , ¸, ˛, ''
-34	OEM_PERIOD	0	002e	003e	-1	00b7	02da@		// >, , ·, ˚, ''
+34	OEM_PERIOD	0	002e	003e	-1	00b7	2026		// >, , ·, …, ''
 35	OEM_2		0	002f	003f	-1	0295	00bf		// /, ?, , ʕ, ¿
 39	SPACE		0	0020	0020	-1	00a0	202f		// [SP], [SP], , [NBSP], [NNBSP]
 56	OEM_102	0	003c	003e	001c	2264	2265		// <, >, [FS], ≤, ≥
