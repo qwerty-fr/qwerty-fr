@@ -40,8 +40,8 @@ LAYOUT		;an extra '@' at the end is a dead key
 11	W		5	w	W	-1	00e9	00c9		// w, W, , é, É
 12	E		5	e	E	-1	00e8	00c8		// e, E, , è, È
 13	R		1	r	R	-1	00ae	00a9		// r, R, , ®, ©
-14	T		1	t	T	-1	03c0	03a0		// t, T, , π, Π
-15	Y		1	y	Y	-1	00a5	00a4		// y, Y, , ¥, ¤
+14	T		1	t	T	-1	-1	-1		// t, T, , , 
+15	Y		1	y	Y	-1	-1	-1		// y, Y, , , 
 16	U		5	u	U	-1	00f9	00d9		// u, U, , ù, Ù
 17	I		5	i	I	-1	00ec	00cc		// i, I, , ì, Ì
 18	O		5	o	O	-1	00f2	00d2		// o, O, , ò, Ò
@@ -51,8 +51,8 @@ LAYOUT		;an extra '@' at the end is a dead key
 1e	A		5	a	A	-1	00e0	00c0		// a, A, , à, À
 1f	S		5	s	S	-1	00e6	00c6		// s, S, , æ, Æ
 20	D		5	d	D	-1	00eb	00cb		// d, D, , ë, Ë
-21	F		1	f	F	-1	03b5	0394		// f, F, , ε, Δ
-22	G		1	g	G	-1	03b1@	03b2		// g, G, , α, β
+21	F		1	f	F	-1	-1	-1		// f, F, , , 
+22	G		1	g	G	-1	03b1@	-1		// g, G, , α, 
 23	H		5	h	H	-1	00ff	0178		// h, H, , ÿ, Ÿ
 24	J		5	j	J	-1	00fc	00dc		// j, J, , ü, Ü
 25	K		5	k	K	-1	00ef	00cf		// k, K, , ï, Ï
@@ -64,10 +64,10 @@ LAYOUT		;an extra '@' at the end is a dead key
 2c	Z		5	z	Z	-1	00e4	00c4		// z, Z, , ä, Ä
 2d	X		1	x	X	-1	00d7	00f7		// x, X, , ×, ÷
 2e	C		5	c	C	-1	00e7	00c7		// c, C, , ç, Ç
-2f	V		1	v	V	-1	03c9	03a9		// v, V, , ω, Ω
+2f	V		1	v	V	-1	-1	-1		// v, V, , , 
 30	B		1	b	B	-1	00df	00fe		// b, B, , ß, þ
 31	N		5	n	N	-1	00f1	00d1		// n, N, , ñ, Ñ
-32	M		1	m	M	-1	00b5	03a3		// m, M, , µ, Σ
+32	M		1	m	M	-1	-1	-1		// m, M, , , 
 33	OEM_COMMA	0	002c	003c	-1	00b8@	02db@		// <, , ¸, ˛, ''
 34	OEM_PERIOD	0	002e	003e	-1	00b7	2026		// >, , ·, …, ''
 35	OEM_2		0	002f	003f	-1	2019	00bf		// /, ?, , ’, ¿
