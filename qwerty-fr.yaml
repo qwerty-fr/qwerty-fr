@@ -1,0 +1,42 @@
+# WIP: Kalamine layout to be able to use https://github.com/fabi1cazenave/x-keyboard
+#
+# Known issues:
+# ~ key doesn't work on Windows (Kalamine has a bug where it puts the wrong key code)
+# < key doesn't work on Windows (Kalamine has a bug where it puts the wrong key code)
+# = key doesn't work on Windows (Kalamine has a bug where it puts the wrong key code)
+#
+# ` dead key gets converted to ' dead key on Windows (!!), this is a Kalamine bug
+# ˝ dead key + space gets converted to ” (bug: https://github.com/fabi1cazenave/kalamine/blob/a74e0e5b241e/kalamine/data/dead_keys.yaml#L44)
+# Caps lock doesn't work on accentuated letters such as é (on Windows)
+
+# Hint: Use the fixed-width “Unifont” font in order to edit this file: http://unifoundry.com/unifont/index.html
+
+name: qwerty-fr
+name8: q-fr
+description: QWERTY-fr layout
+url: https://github.com/qwerty-fr/qwerty-fr
+version: 0.6.0
+geometry: ISO
+
+full: |
+  ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━┓
+  │ ~*~ │ ! ¡ │ @*” │ # Ê │ $*¯ │ %*¤ │ ^*ˇ │ & Û │ * Î │ ( Ô │ )   │ _ — │ + ≈ ┃          ┃
+  │ `*` │ 1 ¹ │ 2 ² │ 3 ê │ 4   │ 5 € │ 6*^ │ 7 û │ 8 î │ 9 ô │ 0   │ - – │ = ≠ ┃ ⌫        ┃
+  ┢━━━━━┷━━┱──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┺━━┳━━━━━━━┫
+  ┃        ┃ Q Â │ W É │ E È │ R © │ T   │ Y   │ U Ù │ I Ì │ O Ò │ P Œ │ { “ │ } ” ┃       ┃
+  ┃ ↹      ┃ q â │ w é │ e è │ r ® │ t   │ y   │ u ù │ i ì │ o ò │ p œ │ [ « │ ] » ┃       ┃
+  ┣━━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓  ⏎   ┃
+  ┃         ┃ A À │ S Æ │ D Ë │ F   │ G   │ H Ÿ │ J Ü │ K Ï │ L Ö │ :*˚ │ "*¨ │ | „ ┃      ┃
+  ┃ ⇬       ┃ a à │ s æ │ d ë │ f   │ g*µ │ h ÿ │ j ü │ k ï │ l ö │ ;*´ │ '*` │ \ ø ┃      ┃
+  ┣━━━━━━┳━━┹──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┲━━┷━━━━━┻━━━━━━┫
+  ┃      ┃ > ≥ │ Z À │ X ÷ │ C Ç │ V   │ B þ │ N Ñ │ M   │ <*˛ │ > … │ ? ¿ ┃               ┃
+  ┃ ⇧    ┃ < ≤ │ z ä │ x × │ c ç │ v   │ b ß │ n ñ │ m   │ ,*¸ │ . · │ / ’ ┃ ⇧             ┃
+  ┣━━━━━━┻┳━━━━┷━━┳━━┷━━━━┱┴─────┴─────┴─────┴─────┴─────┴─┲━━━┷━━━┳━┷━━━━━╋━━━━━━━┳━━━━━━━┫
+  ┃       ┃       ┃       ┃                                ┃       ┃       ┃       ┃       ┃
+  ┃ Ctrl  ┃ super ┃ Alt   ┃ ␣                              ┃ AltGr ┃ super ┃ menu  ┃ Ctrl  ┃
+  ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹────────────────────────────────┺━━━━━━━┻━━━━━━━┻━━━━━━━┻━━━━━━━┛
+
+spacebar:
+  shift:       "\u0020"  # SPACE
+  altgr:       "\u00a0"  # NO-BREAK SPACE
+  altgr_shift: "\u202f"  # NARROW NO-BREAK SPACE
