@@ -4,8 +4,6 @@
 <dict>
 	<key>BuildVersion</key>
 	<string>1.0</string>
-	<key>CFBundleVersion</key>
-	<string>1.0</string>
 	<key>ProjectName</key>
 	<string>qwerty-fr</string>
 	<key>SourceVersion</key>
