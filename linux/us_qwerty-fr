@@ -18,8 +18,8 @@ xkb_symbols "qwerty-fr"
     key <AE08> { [ 8,            asterisk,    icircumflex,     Icircumflex     ] };
     key <AE09> { [ 9,            parenleft,   ocircumflex,     Ocircumflex     ] };
     key <AE10> { [ 0,            parenright,  VoidSymbol,      VoidSymbol      ] };
-    key <AE11> { [ minus,        underscore,  0x1002013,       0x1002014       ] }; // demi-cadratin, cadratin
-    key <AE12> { [ equal,        plus,        notequal,        U202F       ] }; // almost equal to
+    key <AE11> { [ minus,        underscore,  0x1002013,       0x1002014       ] }; // –, —
+    key <AE12> { [ equal,        plus,        notequal,        U2248       ] };     // ≈
 
     key <AD01> { [ q,            Q,           acircumflex,     Acircumflex     ] };
     key <AD02> { [ w,            W,           eacute,          Eacute          ] };
