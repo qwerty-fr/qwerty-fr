@@ -1,3 +1,22 @@
+xkb-qwerty-fr (0.6) unstable; urgency=low
+
+  * Layout: Moved circumflex keys ê, û, î, ô one column to the left.
+  * Layout: Removed ŷ key (it can still be done with the dead key ^).
+  * Layout: Removed broken pipe (¦).
+  * Layout: Replaced ± with ≈.
+  * Layout: Replaced ¶ with acute accent dead key (´).
+  * Layout: Replaced § with ring dead key (˚).
+  * Layout: Replaced ring dead key (˚) with ellipsis (…).
+  * Layout: Replaced ring (°) with middle punct (·)
+  * Layout: Replaced irony punctuation (⸮) with typographic apostrophe (’).
+  * Layout: Added greek dead key, removed greek letters from direct access.
+  * Layout: Added currency dead key.
+  * Layout: Added non-breaking, and narrow non-breaking spaces.
+  * MacOS: Finish implementing all the dead keys.
+  * Fixed debian package building.
+
+ -- Paul <devnoname120@gmail.com>  Mon, 15 Nov 2021 22:00:00 +0100
+
 xkb-qwerty-fr (0.5) unstable; urgency=low
 
   * Bug fixed: trigger was missing with xkb files.

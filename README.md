@@ -35,11 +35,11 @@ This keyboard layout is available Windows, Mac, and Linux.
 
 ### Windows
 
-Download the [QWERTY-fr layout](http://marin.jb.free.fr/qwerty-fr/win-qwerty-fr.zip), extract it, and run **setup.exe**.
+Download the [QWERTY-fr layout](https://github.com/qwerty-fr/qwerty-fr/releases/latest), extract it, and run **setup.exe**.
 
 ### Mac
 
-Download the [QWERTY-fr layout](http://marin.jb.free.fr/qwerty-fr/qwerty-fr_mac.tgz) and extract **qwerty-fr.bundle** to :
+Download the [QWERTY-fr layout](https://github.com/qwerty-fr/qwerty-fr/releases/latest) and extract **qwerty-fr.bundle** to :
 - `/Library/Keyboard Layouts/` to install for all users.
 - `~/Library/Keyboard Layouts/` for user-local installation.
 
@@ -51,7 +51,7 @@ You'll need to restart macOS before using it or otherwise you'll encounter bugs.
 
 #### Ubuntu / Debian
 
-Download the [DEB file](http://marin.jb.free.fr/qwerty-fr/xkb-qwerty-fr_0.5_all.deb) and install it.
+Download the [DEB file](https://github.com/qwerty-fr/qwerty-fr/releases/latest) and install it.
 
 **Note**: On Ubuntu and other GNOME-based distributions, you need to [disable the Compose key functionality](https://askubuntu.com/a/1028964) or typing characters with <kbd>AltGr</kbd> won't work at all.
 
