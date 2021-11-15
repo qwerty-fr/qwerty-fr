@@ -8,9 +8,11 @@ Keyboard layout based on the QWERTY layout with extra symbols and diacritics so 
 
 ## 💭 Why?
 
-The official and widely spread keyboard layout in France is [AZERTY](https://upload.wikimedia.org/wikipedia/commons/b/b9/KB_France.svg). Compared to QWERTY, it adds extra letters such as « é » and « ç ». Unfortunately a lot of characters are missing, for example it's impossible to type « É » or « Ç ». It's also impossible to type the French quotation marks (« »), and other special characters such as « œ » and « æ ». French users usually rely on autocorrect to fix the shortcomings of AZERTY, which is unacceptable.
+The official and widely spread keyboard layout in France is [AZERTY](https://upload.wikimedia.org/wikipedia/commons/b/b9/KB_France.svg). Compared to QWERTY, it adds extra letters such as « é » and « ç ». Unfortunately a lot of characters are missing, for example it's impossible to type « É » or « Ç ». It's also impossible to type the French quotation marks (« »), and other special characters such as « œ » and « æ ». French users usually rely on autocorrect to fix the shortcomings of [AZERTY](https://upload.wikimedia.org/wikipedia/commons/b/b9/KB_France.svg), which is unacceptable.
 
-Additionally, [AZERTY](https://upload.wikimedia.org/wikipedia/commons/b/b9/KB_France.svg) swaps letters around for no good reason compared to QWERTY (« A » and « Q » are swapped, « W » and « Z » are swapped as well. Most symbols are shuffled around, and for some reason « ² » has an entire key exlusively dedicated for it (?!). In turn, a lot of software has incompatible shortcuts and sometimes require to remap everything, which is extremely inconvenient.
+Additionally, [AZERTY](https://upload.wikimedia.org/wikipedia/commons/b/b9/KB_France.svg) swaps letters around for no good reason compared to QWERTY — « A » and « Q » are swapped, « W » and « Z » are swapped as well. Almost all symbols are shuffled around as well, and for some reason « ² » has an entire key exclusively dedicated to it (?!).
+
+In turn, a lot of software has incompatible shortcuts and sometimes require to remap everything, which is extremely inconvenient.
 
 In order to fix these issues, QWERTY-fr is a new keyboard layout that is entirely based on QWERTY and brings the best of both worlds — typing English is as fast as before, and extra characters are added so that one can effortlessly type in French (as well German, Spanish, Italian, etc.)
 
