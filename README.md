@@ -51,9 +51,11 @@ You'll need to restart macOS before using it or otherwise you'll encounter bugs.
 
 #### Ubuntu / Debian
 
-Download the [DEB file](https://github.com/qwerty-fr/qwerty-fr/releases/latest) and install it.
+Download the [Linux DEB file](https://github.com/qwerty-fr/qwerty-fr/releases/latest) and install it.
 
 **Note**: On Ubuntu and other GNOME-based distributions, you need to [disable the Compose key functionality](https://askubuntu.com/a/1028964) or typing characters with <kbd>AltGr</kbd> won't work at all.
+
+Alternatively, you can download the [Linux ZIP file](https://github.com/qwerty-fr/qwerty-fr/releases/latest) that you can extract at the root of your filesystem.
 
 #### Archlinux
 
