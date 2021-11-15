@@ -1,4 +1,4 @@
-# [QWERTY-fr](https://qwerty-fr.org/)
+# ⌨ [QWERTY-fr](https://qwerty-fr.org/)
 
 Keyboard layout based on the QWERTY layout with extra symbols and diacritics so that typing both in French and English is easy and fast. It is also easy to learn!
 
@@ -6,7 +6,7 @@ Keyboard layout based on the QWERTY layout with extra symbols and diacritics so 
 
 👉 You can [try this keyboard layout online](https://qwerty-fr.org) without installing it!
 
-## Philosophy overview
+## 💡 Philosophy overview
 
 This layout is entirely compatible with the QWERTY layout. All the keys of the QWERTY layout are kept in the same location. This means that anyone using a QWERTY layout can type on the QWERTY-fr layout without even knowing that they are not typing on a QWERTY layout.
 
@@ -31,7 +31,7 @@ These two letters are impossible to type with an AZERTY layout. But with QWERTY-
 
 **Note 2**: You can type a [non-breaking space](https://en.wikipedia.org/wiki/Non-breaking_space) by pressing <kbd>AltGr</kbd> <kbd>Space</kbd>. And a [narrow non-breaking space (fr)](https://fr.wikipedia.org/wiki/Espace_fine_ins%C3%A9cable) by pressing <kbd>AltGr</kbd> <kbd>Shift ⇧</kbd> <kbd>Space</kbd>. Learn about when you should use them when typing French [here (fr)](https://typographisme.net/post/Les-espaces-typographiques-et-le-web).
 
-## Installation
+## 📦 Installation
 
 This keyboard layout is available Windows, Mac, and Linux.
 
@@ -64,9 +64,9 @@ Alternatively, you can download the [Linux ZIP file](https://github.com/qwerty-f
 There is a user package for this: https://aur.archlinux.org/packages/xkb-qwerty-fr/
 Use your favorite AUR helper to install it. Or in the directory containing the `PKGBUILD` file, run `makepkg -si`.
 
-# Contributing
+# 🤝 Contributing
 
-The easiest way to contribute to this project is to spread the word!
+The easiest way to contribute to this project is to spread the word and the website [qwerty-fr.org](https://qwerty-fr.org).
 
 If you want to contribute by fixing issues with the layout, adding new keys, etc. we use the following software to edit the layouts:
 - **Windows**: [Microsoft Keyboard Layout Creator](https://www.microsoft.com/en-us/download/details.aspx?id=102134) ([mirror](https://web.archive.org/web/20200802184038/https://download.microsoft.com/download/1/1/8/118aedd2-152c-453f-bac9-5dd8fb310870/MSKLC.exe)).
