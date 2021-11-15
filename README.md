@@ -57,12 +57,14 @@ Download the [Linux DEB file](https://github.com/qwerty-fr/qwerty-fr/releases/la
 
 **Note**: On Ubuntu and other GNOME-based distributions, you need to [disable the Compose key functionality](https://askubuntu.com/a/1028964) or typing characters with <kbd>AltGr</kbd> won't work at all.
 
-Alternatively, you can download the [Linux ZIP file](https://github.com/qwerty-fr/qwerty-fr/releases/latest) that you can extract at the root of your filesystem.
-
 #### Archlinux
 
 There is a user package for this: https://aur.archlinux.org/packages/xkb-qwerty-fr/
 Use your favorite AUR helper to install it. Or in the directory containing the `PKGBUILD` file, run `makepkg -si`.
+
+#### Other distros
+
+You can download the [Linux ZIP file](https://github.com/qwerty-fr/qwerty-fr/releases/latest) and then extract it at the root of your filesystem.
 
 # 🤝 Contributing
 
