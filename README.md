@@ -1,8 +1,10 @@
-# QWERTY-fr
+# [QWERTY-fr](https://qwerty-fr.org/)
 
 Keyboard layout based on the QWERTY layout with extra symbols and diacritics so that typing both in French and English is easy and fast. It is also easy to learn!
 
 ![Keyboard layout screenshot](qwerty-fr-keymap.png)
+
+👉 You can [try this keyboard layout online](https://qwerty-fr.org) without installing it!
 
 ## Philosophy overview
 
