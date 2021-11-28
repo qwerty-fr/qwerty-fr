@@ -1,12 +1,12 @@
 # WIP: Kalamine layout to be able to use https://github.com/fabi1cazenave/x-keyboard
 #
+# Use this fork due to the custom dead keys: https://github.com/qwerty-fr/kalamine
+# 
 # Known issues:
 # ~ key doesn't work on Windows (Kalamine has a bug where it puts the wrong key code)
 # < key doesn't work on Windows (Kalamine has a bug where it puts the wrong key code)
 # = key doesn't work on Windows (Kalamine has a bug where it puts the wrong key code)
 #
-# ` dead key gets converted to ' dead key on Windows (!!), this is a Kalamine bug
-# ˝ dead key + space gets converted to ” (bug: https://github.com/fabi1cazenave/kalamine/blob/a74e0e5b241e/kalamine/data/dead_keys.yaml#L44)
 # Caps lock doesn't work on accentuated letters such as é (on Windows)
 
 # Hint: Use the fixed-width “Unifont” font in order to edit this file: http://unifoundry.com/unifont/index.html
@@ -20,14 +20,14 @@ geometry: ISO
 
 full: |
   ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━┓
-  │ ~*~ │ ! ¡ │ @*” │ # Ê │ $*¯ │ %*¤ │ ^*ˇ │ & Û │ * Î │ ( Ô │ )   │ _ — │ + ≈ ┃          ┃
+  │ ~*~ │ ! ¡ │ @*‟ │ # Ê │ $*¯ │ %*¤ │ ^*ˇ │ & Û │ * Î │ ( Ô │ )   │ _ — │ + ≈ ┃          ┃
   │ `*` │ 1 ¹ │ 2 ² │ 3 ê │ 4   │ 5 € │ 6*^ │ 7 û │ 8 î │ 9 ô │ 0   │ - – │ = ≠ ┃ ⌫        ┃
   ┢━━━━━┷━━┱──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┺━━┳━━━━━━━┫
   ┃        ┃ Q Â │ W É │ E È │ R © │ T   │ Y   │ U Ù │ I Ì │ O Ò │ P Œ │ { “ │ } ” ┃       ┃
   ┃ ↹      ┃ q â │ w é │ e è │ r ® │ t   │ y   │ u ù │ i ì │ o ò │ p œ │ [ « │ ] » ┃       ┃
   ┣━━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓  ⏎   ┃
   ┃         ┃ A À │ S Æ │ D Ë │ F   │ G   │ H Ÿ │ J Ü │ K Ï │ L Ö │ :*˚ │ "*¨ │ | „ ┃      ┃
-  ┃ ⇬       ┃ a à │ s æ │ d ë │ f   │ g*µ │ h ÿ │ j ü │ k ï │ l ö │ ;*´ │ '*` │ \ ø ┃      ┃
+  ┃ ⇬       ┃ a à │ s æ │ d ë │ f   │ g*α │ h ÿ │ j ü │ k ï │ l ö │ ;*´ │ '*` │ \ ø ┃      ┃
   ┣━━━━━━┳━━┹──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┲━━┷━━━━━┻━━━━━━┫
   ┃      ┃ > ≥ │ Z À │ X ÷ │ C Ç │ V   │ B þ │ N Ñ │ M   │ <*˛ │ > … │ ? ¿ ┃               ┃
   ┃ ⇧    ┃ < ≤ │ z ä │ x × │ c ç │ v   │ b ß │ n ñ │ m   │ ,*¸ │ . · │ / ’ ┃ ⇧             ┃
@@ -40,3 +40,105 @@ spacebar:
   shift:       "\u0020"  # SPACE
   altgr:       "\u00a0"  # NO-BREAK SPACE
   altgr_shift: "\u202f"  # NARROW NO-BREAK SPACE
+
+# In order for Kalamine to work with the Linux driver, their name must match the XKB definition:
+# 'acute' <=> dead_acute, 'grave' <=> dead_grave, etc.
+# https://help.ubuntu.com/community/GtkDeadKeyTable
+deadkeys:
+  - char: '*`'
+    name: grave
+    base: AaEeIiNnOoUuWwYyЕеИи
+    alt:  ÀàÈèÌìǸǹÒòÙùẀẁỲỳЀѐЍѝ
+    alt_space: '`'  # U+0060 GRAVE ACCENT
+    alt_self:  '`'  # U+0060 GRAVE ACCENT
+  
+  - char: '*‟'
+    name: doublegrave
+    base: AaEeIiOoRrUuѴѴ
+    alt:  ȀȁȄȅȈȉȌȍȐȑȔȕѶѷ
+    alt_space: '‟'  # U+201F HIGH REVERSED-9 QUOTATION MARK
+    alt_self:  '‟'  # U+201F HIGH REVERSED-9 QUOTATION MARK
+  
+  - char: '*´'
+    name: acute
+    base: AaCcEeGgIiKkLlMmNnOoPpRrSsUuWwYyZzΑαΕεΗηΙιΟοΥυΩωГгКк
+    alt:  ÁáĆćÉéǴǵÍíḰḱĹĺḾḿŃńÓóṔṕŔŕŚśÚúẂẃÝýŹźΆάΈέΉήΊίΌόΎύΏώЃѓЌќ
+    alt_space: "´"  # U+0027 APOSTROPHE
+    alt_self:  '´'  # U+00B4 ACUTE ACCENT
+  
+  - char: '*˝'
+    name: doubleacute
+    base: OoUuУу
+    alt:  ŐőŰűӲӳ
+    alt_space: "˝"  # U+201D RIGHT DOUBLE QUOTATION MARK
+    alt_self:  "˝"  # U+02DD DOUBLE ACUTE ACCENT
+  
+  - char: '*^'
+    name: circumflex
+    base: AaCcEeGgHhIiJjOoSsUuWwYyZz0123456789()+-=„,
+    alt:  ÂâĈĉÊêĜĝĤĥÎîĴĵÔôŜŝÛûŴŵŶŷẐẑ⁰¹²³⁴⁵⁶⁷⁸⁹⁽⁾⁺⁻⁼“‘
+    alt_space: '^'  # U+005E CIRCUMFLEX ACCENT
+    alt_self:  '^'  # U+005E CIRCUMFLEX ACCENT
+  
+  - char: '*ˇ'
+    name: caron
+    base: AaCcDdEeGgHhIiKkLlNnOoRrSsTtUuZzƷʒ0123456789()+-=
+    alt:  ǍǎČčĎďĚěǦǧȞȟǏǐǨǩĽľŇňǑǒŘřŠšŤťǓǔŽžǮǯ₀₁₂₃₄₅₆₇₈₉₍₎₊₋₌
+    alt_space: 'ˇ'  # U+02C7 CARON
+    alt_self:  'ˇ'  # U+02C7 CARON
+  
+  - char: '*~'
+    name: tilde
+    base: AaEeIiNnOoUuVvYy<>=
+    alt:  ÃãẼẽĨĩÑñÕõŨũṼṽỸỹ≲≳≃
+    alt_space: '~'  # U+007E TILDE
+    alt_self:  '~'  # U+007E TILDE
+  
+  - char: '*¯'
+    name: macron
+    base: AaÆæEeGgIiOoUuYy
+    alt:  ĀāǢǣĒēḠḡĪīŌōŪūȲȳ
+    alt_space: '¯'  # U+00AF MACRON
+    alt_self:  'ˉ'  # U+02C9 MODIFIER LETTER MACRON
+  
+  - char: '*¨'
+    name: diaeresis
+    base: AaEeHhIiOotUuWwXxYyΙιΥυАаЕеӘәЖжЗзИиІіОоӨөУуЧчЫыЭэ
+    alt:  ÄäËëḦḧÏïÖöẗÜüẄẅẌẍŸÿΪϊΫϋӒӓЁёӚӛӜӝӞӟӤӥЇїӦӧӪӫӰӱӴӵӸӹӬӭ
+    alt_space: '"'  # U+0022 QUOTATION MARK
+    alt_self:  '¨'  # U+00A8 DIAERESIS
+  
+  - char: '*˚'
+    name: abovering
+    base: AaUuwy
+    alt:  ÅåŮůẘẙ
+    alt_space: '˚'  # U+02DA RING ABOVE
+    alt_self:  '˚'  # U+02DA RING ABOVE
+  
+  - char: '*¸'
+    name: cedilla
+    base: CcDdEeGgHhKkLlNnRrSsTt
+    alt:  ÇçḐḑȨȩĢģḨḩĶķĻļŅņŖŗŞşŢţ
+    alt_space: '¸'  # U+00B8 CEDILLA
+    alt_self:  '¸'  # U+00B8 CEDILLA
+  
+  - char: '*˛'
+    name: ogonek
+    base: AaEeIiOoUu
+    alt:  ĄąĘęĮįǪǫŲų
+    alt_space: '˛'  # U+02DB OGONEK
+    alt_self:  '˛'  # U+02DB OGONEK
+  
+  - char: '*α'
+    name: greek
+    base: AaBbDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuWwXxYyZz
+    alt:  ΑαΒβΔδΕεΦφΓγΗηΙιΘθΚκΛλΜμΝνΟοΠπΧχΡρΣσΤτΥυΩωΞξΨψΖζ
+    alt_space: 'α'  # U+00B5 GREEK SMALL LETTER ALPHA
+    alt_self:  'α'  # U+00B5 GREEK SMALL LETTER ALPHA
+  
+  - char: '*¤'
+    name: currency
+    base: bciIlpPrtswy
+    alt:  ฿¢₹₪ł£₱₽₺﷼₩¥
+    alt_space: '¤'  # U+00A4 CURRENCY SIGN
+    alt_self:  '¤'  # U+00A4 CURRENCY SIGN
