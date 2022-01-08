@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-gui-script minSpecVersion="1">
+    <title>qwerty-fr</title>
+    <domains enable_anywhere="false" enable_currentUserHome="true" enable_localSystem="true" />
+    <pkg-ref id="qwerty-fr.pkg"/>
+    <options customize="never" require-scripts="false"/>
+    <choices-outline>
+        <line choice="default">
+            <line choice="org.qwerty-fr.pkg"/>
+        </line>
+    </choices-outline>
+    <choice id="default"/>
+    <choice id="org.qwerty-fr.pkg" visible="false">
+        <pkg-ref id="org.qwerty-fr.pkg"/>
+    </choice>
+    <pkg-ref id="org.qwerty-fr.pkg" onConclusion="RequireRestart">qwerty-fr.pkg</pkg-ref>
+</installer-gui-script>

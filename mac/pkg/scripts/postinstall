@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# Open keyboard preferences pane to help users change their layout
+osascript -e 'tell application "System Preferences" to reveal anchor "InputSources" of pane id "com.apple.preference.keyboard"' -e 'tell application "System Preferences" to activate' || exit 0
