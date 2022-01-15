@@ -52,13 +52,19 @@ Download the [QWERTY-fr layout](https://github.com/qwerty-fr/qwerty-fr/releases/
 
 ### Mac
 
-Download the [QWERTY-fr layout](https://github.com/qwerty-fr/qwerty-fr/releases/latest) and extract **qwerty-fr.bundle** to :
+**Automatic install**:
+
+Download the [QWERTY-fr layout](https://github.com/qwerty-fr/qwerty-fr/releases/latest) PKG. Do a right click on it and then click on ‶Open″.
+
+**Manual install**:
+
+Download the [QWERTY-fr layout](https://github.com/qwerty-fr/qwerty-fr/releases/latest) ZIP file and extract **qwerty-fr.bundle** to :
 - `/Library/Keyboard Layouts/` to install for all users.
 - `~/Library/Keyboard Layouts/` for user-local installation.
 
 You'll need to restart macOS before using it or otherwise you'll encounter bugs.
 
-**Protip**: On Apple keyboards the right <kbd>Option ⌥</kbd> key is often hard to access. You can use [Karabiner-Elements](https://pqrs.org/osx/karabiner/) to switch the right <kbd>Option ⌥</kbd> key with the right <kbd>Commmand ⌘</kbd> key. This makes it easier to type characters!
+**✅ Protip**: On Apple keyboards the right <kbd>Option ⌥</kbd> key is often hard to access. You can use [Karabiner-Elements](https://pqrs.org/osx/karabiner/) to swap the right <kbd>Option ⌥</kbd> key with the right <kbd>Commmand ⌘</kbd> key. [Here is the rule](https://ke-complex-modifications.pqrs.org/#swap_right_cmd_with_right_option) you'll need to import in Karabiner-Elements. This makes it easier to type characters!
 
 ### Linux
 
