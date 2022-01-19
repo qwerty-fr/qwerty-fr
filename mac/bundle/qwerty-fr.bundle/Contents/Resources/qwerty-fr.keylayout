@@ -2,7 +2,7 @@
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
 <!--Last edited by Ukelele version 346 on 2022-01-19 at 23:03 (CET)-->
 <!--Created by Ukelele version 2.1.10 on 2012-02-20 at 23:06 (PST)-->
-<keyboard group="126" id="-2393" name="qwerty-fr" maxout="2">
+<keyboard group="0" id="8657" name="qwerty-fr" maxout="2">
     <layouts>
         <layout first="0" last="17" mapSet="16c" modifiers="f4"/>
         <layout first="18" last="18" mapSet="994" modifiers="f4"/>
@@ -54,7 +54,7 @@
             <key code="7" action="x"/>
             <key code="8" action="c"/>
             <key code="9" action="v"/>
-            <key code="10" output="§"/>
+            <key code="10" output="&#x003C;"/>
             <key code="11" action="b"/>
             <key code="12" action="q"/>
             <key code="13" action="w"/>
@@ -166,7 +166,7 @@
             <key code="7" action="X"/>
             <key code="8" action="C"/>
             <key code="9" action="V"/>
-            <key code="10" output="≈"/>
+            <key code="10" output="&#x003E;"/>
             <key code="11" action="B"/>
             <key code="12" action="Q"/>
             <key code="13" action="W"/>
@@ -502,7 +502,7 @@
             <key code="7" output="÷"/>
             <key code="8" action="Ç"/>
             <key code="9" output=""/>
-            <key code="10" output="≈"/>
+            <key code="10" output="≥"/>
             <key code="11" action="ß"/>
             <key code="12" output="Â"/>
             <key code="13" action="É"/>
@@ -1838,7 +1838,7 @@
             <when state="none" output="Ö"/>
         </action>
         <action id="ß">
-            <when state="none" output="ß"/>
+            <when state="none" output="ẞ"/>
         </action>
         <action id="ç">
             <when state="none" output="ç"/>
