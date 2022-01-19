@@ -65,7 +65,7 @@ LAYOUT		;an extra '@' at the end is a dead key
 2d	X		1	x	X	-1	00d7	00f7		// x, X, , ×, ÷
 2e	C		5	c	C	-1	00e7	00c7		// c, C, , ç, Ç
 2f	V		1	v	V	-1	-1	-1		// v, V, , , 
-30	B		1	b	B	-1	00df	00fe		// b, B, , ß, þ
+30	B		1	b	B	-1	00df	1e9e		// b, B, , ß, ẞ (capital)
 31	N		5	n	N	-1	00f1	00d1		// n, N, , ñ, Ñ
 32	M		1	m	M	-1	-1	-1		// m, M, , , 
 33	OEM_COMMA	0	002c	003c	-1	00b8@	02db@		// <, , ¸, ˛, ''

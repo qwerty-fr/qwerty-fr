@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 346 on 2021-12-30 at 19:29 (CET)-->
+<!--Last edited by Ukelele version 346 on 2022-01-19 at 22:16 (CET)-->
 <!--Created by Ukelele version 2.1.10 on 2012-02-20 at 23:06 (PST)-->
 <keyboard group="0" id="8657" name="qwerty-fr" maxout="2">
     <layouts>
@@ -1761,7 +1761,7 @@
             <when state="none" output="Ö"/>
         </action>
         <action id="ß">
-            <when state="none" output="ß"/>
+            <when state="none" output="ẞ"/>
         </action>
         <action id="Œ">
             <when state="none" output="Œ"/>

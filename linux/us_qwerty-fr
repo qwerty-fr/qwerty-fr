@@ -52,7 +52,7 @@ xkb_symbols "qwerty-fr"
     key <AB02> { [ x,            X,           multiply,        division        ] };
     key <AB03> { [ c,            C,           ccedilla,        Ccedilla        ] };
     key <AB04> { [ v,            V,           VoidSymbol,      VoidSymbol      ] };
-    key <AB05> { [ b,            B,           ssharp,          thorn           ] };
+    key <AB05> { [ b,            B,           ssharp,          U1E9E           ] }; // ß, ẞ (capital)
     key <AB06> { [ n,            N,           ntilde,          Ntilde          ] };
     key <AB07> { [ m,            M,           VoidSymbol,      VoidSymbol      ] };
     key <AB08> { [ comma,        less,        dead_cedilla,    dead_ogonek     ] };
