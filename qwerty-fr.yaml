@@ -110,8 +110,8 @@ deadkeys:
   
   - char: '*˚'
     name: abovering
-    base: AaUuwy
-    alt:  ÅåŮůẘẙ
+    base: AaDdEeGgIiOoQqSsUuVvWwXxYy
+    alt:  ÅåD̊d̊E̊e̊G̊g̊I̊i̊O̊o̊Q̊q̊S̊s̊ŮůV̊v̊W̊ẘX̊x̊Y̊ẙ
     alt_space: '˚'  # U+02DA RING ABOVE
     alt_self:  '˚'  # U+02DA RING ABOVE
   

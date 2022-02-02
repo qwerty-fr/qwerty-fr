@@ -382,6 +382,11 @@ DEADKEY 02db	// ˛
 02db	02db	// ˛ -> ˛
 0020	02db	//   -> ˛
 
+
+// base: AaDdEeGgIiOoQqSsUuVvWwXxYy
+// alt:  ÅåD̊d̊E̊e̊G̊g̊I̊i̊O̊o̊Q̊q̊S̊s̊ŮůV̊v̊W̊ẘX̊x̊Y̊ẙ
+// Most of these characters are not unicode but character + diacritic.
+// Need to figure out if MSKLC supports that.
 DEADKEY 02da	// ˚
 0041	00c5	// A -> Å
 0055	016e	// U -> Ů
