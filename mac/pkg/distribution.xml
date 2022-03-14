@@ -3,7 +3,7 @@
     <title>qwerty-fr</title>
     <domains enable_anywhere="false" enable_currentUserHome="true" enable_localSystem="true" />
     <pkg-ref id="qwerty-fr.pkg"/>
-    <options customize="never" require-scripts="false"/>
+    <options customize="allow" rootVolumeOnly="false" require-scripts="false" hostArchitectures="i386,x86_64,ppc,arm64"/>
     <choices-outline>
         <line choice="default">
             <line choice="org.qwerty-fr.pkg"/>

@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 346 on 2022-01-19 at 22:16 (CET)-->
+<!--Last edited by Ukelele version 351 on 2022-03-17 at 18:11 (CET)-->
 <!--Created by Ukelele version 2.1.10 on 2012-02-20 at 23:06 (PST)-->
 <keyboard group="0" id="8657" name="qwerty-fr" maxout="2">
     <layouts>
@@ -54,7 +54,7 @@
             <key code="7" action="x"/>
             <key code="8" action="c"/>
             <key code="9" action="v"/>
-            <key code="10" output="&#x003C;"/>
+            <key code="10" action="less_extra"/>
             <key code="11" action="b"/>
             <key code="12" action="q"/>
             <key code="13" action="w"/>
@@ -68,16 +68,16 @@
             <key code="21" action="4 1"/>
             <key code="22" action="6 1"/>
             <key code="23" action="5 1"/>
-            <key code="24" output="="/>
+            <key code="24" action="="/>
             <key code="25" action="9 1"/>
             <key code="26" action="7 1"/>
-            <key code="27" output="-"/>
+            <key code="27" action="-"/>
             <key code="28" action="8 1"/>
             <key code="29" action="0 1"/>
-            <key code="30" output="]"/>
+            <key code="30" action="]"/>
             <key code="31" action="17"/>
             <key code="32" action="18"/>
-            <key code="33" output="["/>
+            <key code="33" action="["/>
             <key code="34" action="15"/>
             <key code="35" action="p"/>
             <key code="36" output="&#x000D;"/>
@@ -85,13 +85,13 @@
             <key code="38" action="j"/>
             <key code="39" output="&#x0027;"/>
             <key code="40" action="k"/>
-            <key code="41" output=";"/>
-            <key code="42" output="\"/>
+            <key code="41" action=";"/>
+            <key code="42" action="\"/>
             <key code="43" action=","/>
-            <key code="44" output="/"/>
+            <key code="44" action="/"/>
             <key code="45" action="16"/>
             <key code="46" action="m"/>
-            <key code="47" output="."/>
+            <key code="47" action="."/>
             <key code="48" output="&#x0009;"/>
             <key code="49" action="5"/>
             <key code="50" output="`"/>
@@ -166,7 +166,7 @@
             <key code="7" action="X"/>
             <key code="8" action="C"/>
             <key code="9" action="V"/>
-            <key code="10" output="&#x003E;"/>
+            <key code="10" action="more_extra"/>
             <key code="11" action="B"/>
             <key code="12" action="Q"/>
             <key code="13" action="W"/>
@@ -174,22 +174,22 @@
             <key code="15" action="R"/>
             <key code="16" action="12"/>
             <key code="17" action="T"/>
-            <key code="18" output="!"/>
+            <key code="18" action="!"/>
             <key code="19" output="@"/>
             <key code="20" output="#"/>
             <key code="21" output="$"/>
             <key code="22" output="^"/>
             <key code="23" output="%"/>
-            <key code="24" output="+"/>
+            <key code="24" action="+"/>
             <key code="25" output="("/>
             <key code="26" output="&#x0026;"/>
             <key code="27" output="_"/>
-            <key code="28" output="*"/>
+            <key code="28" action="*"/>
             <key code="29" output=")"/>
-            <key code="30" output="}"/>
+            <key code="30" action="}"/>
             <key code="31" action="10"/>
             <key code="32" action="11"/>
-            <key code="33" output="{"/>
+            <key code="33" action="{"/>
             <key code="34" action="8"/>
             <key code="35" action="P"/>
             <key code="36" output="&#x000D;"/>
@@ -198,12 +198,12 @@
             <key code="39" output="&#x0022;"/>
             <key code="40" action="K"/>
             <key code="41" output=":"/>
-            <key code="42" output="|"/>
-            <key code="43" output="&#x003C;"/>
-            <key code="44" output="?"/>
+            <key code="42" action="|"/>
+            <key code="43" action="&#x003C;"/>
+            <key code="44" action="?"/>
             <key code="45" action="9"/>
             <key code="46" action="M"/>
-            <key code="47" output="&#x003E;"/>
+            <key code="47" action="&#x003E;"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" action="5"/>
             <key code="50" output="~"/>
@@ -381,20 +381,20 @@
         </keyMap>
         <keyMap index="3">
             <key code="0" output="à"/>
-            <key code="1" output="æ"/>
+            <key code="1" action="æ"/>
             <key code="2" output="ë"/>
             <key code="3" output=""/>
             <key code="4" output="ÿ"/>
             <key code="5" action="α"/>
             <key code="6" output="ä"/>
             <key code="7" output="×"/>
-            <key code="8" output="ç"/>
-            <key code="9" output=""/>
+            <key code="8" action="ç"/>
+            <key code="9" action="action 2"/>
             <key code="10" output="≤"/>
             <key code="11" output="ß"/>
             <key code="12" output="â"/>
             <key code="13" output="é"/>
-            <key code="14" output="è"/>
+            <key code="14" action="è"/>
             <key code="15" output="®"/>
             <key code="16" output=""/>
             <key code="17" output=""/>
@@ -404,17 +404,17 @@
             <key code="21" output=""/>
             <key code="22" action="circumflex"/>
             <key code="23" output="€"/>
-            <key code="24" output="≠"/>
+            <key code="24" action="≠"/>
             <key code="25" output="ô"/>
             <key code="26" output="û"/>
             <key code="27" output="–"/>
-            <key code="28" output="î"/>
+            <key code="28" action="î"/>
             <key code="29" output=""/>
-            <key code="30" output="»"/>
+            <key code="30" action="»"/>
             <key code="31" output="ò"/>
-            <key code="32" output="ù"/>
-            <key code="33" output="«"/>
-            <key code="34" output="ì"/>
+            <key code="32" action="ù"/>
+            <key code="33" action="«"/>
+            <key code="34" action="ì"/>
             <key code="35" output="œ"/>
             <key code="36" output="&#x000D;"/>
             <key code="37" output="ö"/>
@@ -424,10 +424,10 @@
             <key code="41" action="´"/>
             <key code="42" output="∅"/>
             <key code="43" action="cedilla"/>
-            <key code="44" output="’"/>
-            <key code="45" output="ñ"/>
-            <key code="46" output=""/>
-            <key code="47" output="·"/>
+            <key code="44" action="’"/>
+            <key code="45" action="ñ"/>
+            <key code="46" action="m 1"/>
+            <key code="47" action="·"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" output=" "/>
             <key code="50" action="21"/>
@@ -493,7 +493,7 @@
         </keyMap>
         <keyMap index="4">
             <key code="0" output="À"/>
-            <key code="1" output="Æ"/>
+            <key code="1" action="Æ"/>
             <key code="2" output="Ë"/>
             <key code="3" output=""/>
             <key code="4" output="Ÿ"/>
@@ -516,16 +516,16 @@
             <key code="21" action="¯ 1"/>
             <key code="22" action="caron"/>
             <key code="23" action="¤"/>
-            <key code="24" output="≈"/>
+            <key code="24" action="≈"/>
             <key code="25" output="Ô"/>
             <key code="26" output="Û"/>
             <key code="27" output="—"/>
             <key code="28" output="Î"/>
             <key code="29" output=""/>
-            <key code="30" output="″"/>
+            <key code="30" action="″"/>
             <key code="31" output="Ò"/>
             <key code="32" output="Ù"/>
-            <key code="33" output="‶"/>
+            <key code="33" action="‶"/>
             <key code="34" action="Ì"/>
             <key code="35" action="Œ"/>
             <key code="36" output="&#x000D;"/>
@@ -535,11 +535,11 @@
             <key code="40" output="Ï"/>
             <key code="41" action="˚"/>
             <key code="42" action="„"/>
-            <key code="43" output="¯"/>
-            <key code="44" output="¿"/>
+            <key code="43" action="¯ 2"/>
+            <key code="44" action="¿"/>
             <key code="45" output="Ñ"/>
             <key code="46" output=""/>
-            <key code="47" output="…"/>
+            <key code="47" action="…"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" output=" "/>
             <key code="50" action="`"/>
@@ -1022,9 +1022,34 @@
         </keyMap>
     </keyMapSet>
     <actions>
+        <action id="!">
+            <when state="none" output="!"/>
+            <when state="math" output="¬"/>
+        </action>
+        <action id="*">
+            <when state="none" output="*"/>
+            <when state="math" output="⊗"/>
+        </action>
+        <action id="+">
+            <when state="none" output="+"/>
+            <when state="math" output="⨁"/>
+        </action>
         <action id=",">
             <when state="none" output=","/>
             <when state="circumflex" output="‘"/>
+            <when state="math" output="⇐"/>
+        </action>
+        <action id="-">
+            <when state="none" output="-"/>
+            <when state="math" output="±"/>
+        </action>
+        <action id=".">
+            <when state="none" output="."/>
+            <when state="math" output="⇒"/>
+        </action>
+        <action id="/">
+            <when state="none" output="/"/>
+            <when state="math" output="⇔"/>
         </action>
         <action id="0">
             <when state="none" next="s1"/>
@@ -1033,6 +1058,7 @@
             <when state="none" output="0"/>
             <when state="caron" output="₀"/>
             <when state="circumflex" output="⁰"/>
+            <when state="math" output="〉"/>
         </action>
         <action id="1">
             <when state="none" next="s2"/>
@@ -1053,6 +1079,7 @@
             <when state="grave accent" output="Ò"/>
             <when state="greek letter" output="Ο"/>
             <when state="macron" output="Ō"/>
+            <when state="math" output="○"/>
             <when state="ring" output="O̊"/>
             <when state="s1" output="Ó"/>
             <when state="s2" output="Ò"/>
@@ -1102,6 +1129,7 @@
             <when state="grave accent" output="à"/>
             <when state="greek letter" output="α"/>
             <when state="macron" output="ā"/>
+            <when state="math" output="∀"/>
             <when state="ring" output="å"/>
             <when state="s1" output="á"/>
             <when state="s2" output="à"/>
@@ -1120,6 +1148,7 @@
             <when state="grave accent" output="è"/>
             <when state="greek letter" output="ε"/>
             <when state="macron" output="ē"/>
+            <when state="math" output="∃"/>
             <when state="ring" output="e̊"/>
             <when state="s1" output="é"/>
             <when state="s2" output="è"/>
@@ -1138,6 +1167,7 @@
             <when state="grave accent" output="ì"/>
             <when state="greek letter" output="ι"/>
             <when state="macron" output="ī"/>
+            <when state="math" output="∈"/>
             <when state="ring" output="i̊"/>
             <when state="s1" output="í"/>
             <when state="s2" output="ì"/>
@@ -1153,6 +1183,7 @@
             <when state="circumflex" output="n̂"/>
             <when state="diaeresis" output="n̈"/>
             <when state="greek letter" output="ν"/>
+            <when state="math" output="∇"/>
             <when state="s5" output="ñ"/>
             <when state="tilde" output="ñ"/>
         </action>
@@ -1167,6 +1198,7 @@
             <when state="grave accent" output="ò"/>
             <when state="greek letter" output="ο"/>
             <when state="macron" output="ō"/>
+            <when state="math" output="∘"/>
             <when state="ring" output="o̊"/>
             <when state="s1" output="ó"/>
             <when state="s2" output="ò"/>
@@ -1186,6 +1218,7 @@
             <when state="grave accent" output="ù"/>
             <when state="greek letter" output="υ"/>
             <when state="macron" output="ū"/>
+            <when state="math" output="⋃"/>
             <when state="ring" output="ů"/>
             <when state="s1" output="ú"/>
             <when state="s2" output="ù"/>
@@ -1306,6 +1339,7 @@
             <when state="grave accent" output="Ì"/>
             <when state="greek letter" output="Ι"/>
             <when state="macron" output="Ī"/>
+            <when state="math" output="∫"/>
             <when state="ring" output="I̊"/>
             <when state="s1" output="Í"/>
             <when state="s2" output="Ì"/>
@@ -1317,6 +1351,7 @@
             <when state="none" output="8"/>
             <when state="caron" output="₈"/>
             <when state="circumflex" output="⁸"/>
+            <when state="math" output="∞"/>
         </action>
         <action id="9">
             <when state="none" output="N"/>
@@ -1326,6 +1361,7 @@
             <when state="circumflex" output="N̂"/>
             <when state="diaeresis" output="N̈"/>
             <when state="greek letter" output="Ν"/>
+            <when state="math" output="ℕ"/>
             <when state="s5" output="Ñ"/>
             <when state="tilde" output="Ñ"/>
         </action>
@@ -1333,6 +1369,27 @@
             <when state="none" output="9"/>
             <when state="caron" output="₉"/>
             <when state="circumflex" output="⁹"/>
+            <when state="math" output="⟨"/>
+        </action>
+        <action id=";">
+            <when state="none" output=";"/>
+            <when state="math" output="∎"/>
+        </action>
+        <action id="&#x003C;">
+            <when state="none" output="&#x003C;"/>
+            <when state="math" output="←"/>
+        </action>
+        <action id="=">
+            <when state="none" output="="/>
+            <when state="math" output="≡"/>
+        </action>
+        <action id="&#x003E;">
+            <when state="none" output="&#x003E;"/>
+            <when state="math" output="→"/>
+        </action>
+        <action id="?">
+            <when state="none" output="?"/>
+            <when state="math" output="↔"/>
         </action>
         <action id="B">
             <when state="none" output="B"/>
@@ -1350,6 +1407,7 @@
             <when state="cedilla" output="Ç"/>
             <when state="circumflex" output="Ĉ"/>
             <when state="diaeresis" output="C̈"/>
+            <when state="math" output="ℂ"/>
         </action>
         <action id="D">
             <when state="none" output="D"/>
@@ -1384,6 +1442,7 @@
             <when state="circumflex" output="Ĥ"/>
             <when state="diaeresis" output="Ḧ"/>
             <when state="greek letter" output="Η"/>
+            <when state="math" output="ℋ"/>
         </action>
         <action id="J">
             <when state="none" output="J"/>
@@ -1432,6 +1491,7 @@
             <when state="currency" output="₱"/>
             <when state="diaeresis" output="P̈"/>
             <when state="greek letter" output="Π"/>
+            <when state="math" output="∏"/>
             <when state="tilde" output="P̃"/>
         </action>
         <action id="Q">
@@ -1441,6 +1501,7 @@
             <when state="cedilla" output="Q̧"/>
             <when state="diaeresis" output="Q̈"/>
             <when state="greek letter" output="Χ"/>
+            <when state="math" output="ℚ"/>
             <when state="ring" output="Q̊"/>
         </action>
         <action id="R">
@@ -1451,6 +1512,7 @@
             <when state="circumflex" output="R̂"/>
             <when state="grave accent" output="R̀"/>
             <when state="greek letter" output="Ρ"/>
+            <when state="math" output="ℝ"/>
             <when state="tilde" output="R̃"/>
         </action>
         <action id="S">
@@ -1462,6 +1524,7 @@
             <when state="diaeresis" output="S̈"/>
             <when state="grave accent" output="S̀"/>
             <when state="greek letter" output="Σ"/>
+            <when state="math" output="∑"/>
             <when state="ring" output="S̊"/>
         </action>
         <action id="T">
@@ -1514,6 +1577,18 @@
             <when state="diaeresis" output="Z̈"/>
             <when state="grave accent" output="Z̀"/>
             <when state="greek letter" output="Ζ"/>
+            <when state="math" output="ℤ"/>
+        </action>
+        <action id="[">
+            <when state="none" output="["/>
+            <when state="math" output="⌊"/>
+        </action>
+        <action id="\">
+            <when state="none" output="\"/>
+        </action>
+        <action id="]">
+            <when state="none" output="]"/>
+            <when state="math" output="⌋"/>
         </action>
         <action id="`">
             <when state="none" next="tilde"/>
@@ -1529,6 +1604,10 @@
         </action>
         <action id="action 1">
             <when state="none" output=""/>
+        </action>
+        <action id="action 2">
+            <when state="none" output=""/>
+            <when state="math" output="∧"/>
         </action>
         <action id="b">
             <when state="none" output="b"/>
@@ -1548,12 +1627,14 @@
             <when state="circumflex" output="ĉ"/>
             <when state="currency" output="¢"/>
             <when state="diaeresis" output="c̈"/>
+            <when state="math" output="⊂"/>
         </action>
         <action id="caron">
             <when state="none" next="caron"/>
         </action>
         <action id="cedilla">
             <when state="none" next="cedilla"/>
+            <when state="math" output="⇍"/>
         </action>
         <action id="circumflex">
             <when state="none" next="circumflex"/>
@@ -1565,6 +1646,7 @@
             <when state="cedilla" output="ḑ"/>
             <when state="circumflex" output="d̂"/>
             <when state="greek letter" output="δ"/>
+            <when state="math" output="∂"/>
             <when state="ring" output="d̊"/>
         </action>
         <action id="f">
@@ -1572,6 +1654,7 @@
             <when state="acute accent" output="f́"/>
             <when state="caron" output="f̌"/>
             <when state="greek letter" output="φ"/>
+            <when state="math" output="↦"/>
         </action>
         <action id="g">
             <when state="none" output="g"/>
@@ -1622,6 +1705,10 @@
             <when state="diaeresis" output="l̈"/>
             <when state="greek letter" output="λ"/>
         </action>
+        <action id="less_extra">
+            <when state="none" output="&#x003C;"/>
+            <when state="math" output="≪"/>
+        </action>
         <action id="m">
             <when state="none" output="m"/>
             <when state="acute accent" output="ḿ"/>
@@ -1632,6 +1719,13 @@
             <when state="grave accent" output="m̀"/>
             <when state="greek letter" output="μ"/>
             <when state="tilde" output="m̃"/>
+        </action>
+        <action id="m 1">
+            <when state="none" next="math"/>
+        </action>
+        <action id="more_extra">
+            <when state="none" output="&#x003E;"/>
+            <when state="math" output="≫"/>
         </action>
         <action id="p">
             <when state="none" output="p"/>
@@ -1660,6 +1754,7 @@
             <when state="currency" output="₽"/>
             <when state="grave accent" output="r̀"/>
             <when state="greek letter" output="ρ"/>
+            <when state="math" output="√"/>
             <when state="tilde" output="r̃"/>
         </action>
         <action id="s">
@@ -1684,6 +1779,7 @@
             <when state="diaeresis" output="ẗ"/>
             <when state="grave accent" output="t̀"/>
             <when state="greek letter" output="τ"/>
+            <when state="math" output="⊥"/>
         </action>
         <action id="v">
             <when state="none" output="v"/>
@@ -1692,6 +1788,7 @@
             <when state="circumflex" output="v̂"/>
             <when state="diaeresis" output="v̈"/>
             <when state="grave accent" output="v̀"/>
+            <when state="math" output="∨"/>
             <when state="ring" output="v̊"/>
             <when state="tilde" output="ṽ"/>
         </action>
@@ -1727,6 +1824,18 @@
             <when state="grave accent" output="z̀"/>
             <when state="greek letter" output="ζ"/>
         </action>
+        <action id="{">
+            <when state="none" output="{"/>
+            <when state="math" output="⟦"/>
+        </action>
+        <action id="|">
+            <when state="none" output="|"/>
+            <when state="math" output="‖"/>
+        </action>
+        <action id="}">
+            <when state="none" output="}"/>
+            <when state="math" output="⟧"/>
+        </action>
         <action id="¤">
             <when state="none" next="currency"/>
         </action>
@@ -1736,17 +1845,40 @@
         <action id="©">
             <when state="none" output="©"/>
         </action>
+        <action id="«">
+            <when state="none" output="«"/>
+            <when state="math" output="⌈"/>
+        </action>
         <action id="¯">
             <when state="none" next="caron"/>
         </action>
         <action id="¯ 1">
             <when state="none" next="macron"/>
         </action>
+        <action id="¯ 2">
+            <when state="none" output="¯"/>
+            <when state="math" output="↚"/>
+        </action>
         <action id="°">
             <when state="none" next="ring"/>
         </action>
         <action id="´">
             <when state="none" next="acute accent"/>
+        </action>
+        <action id="·">
+            <when state="none" output="·"/>
+            <when state="math" output="⇏"/>
+        </action>
+        <action id="»">
+            <when state="none" output="»"/>
+            <when state="math" output="⌉"/>
+        </action>
+        <action id="¿">
+            <when state="none" output="¿"/>
+            <when state="math" output="↮"/>
+        </action>
+        <action id="Æ">
+            <when state="none" output="Æ"/>
         </action>
         <action id="Ç">
             <when state="none" output="Ç"/>
@@ -1763,8 +1895,36 @@
         <action id="ß">
             <when state="none" output="ẞ"/>
         </action>
+        <action id="æ">
+            <when state="none" output="æ"/>
+        </action>
+        <action id="ç">
+            <when state="none" output="ç"/>
+            <when state="math" output="⊄"/>
+        </action>
+        <action id="è">
+            <when state="none" output="è"/>
+            <when state="math" output="∄"/>
+        </action>
+        <action id="ì">
+            <when state="none" output="ì"/>
+            <when state="math" output="∉"/>
+        </action>
+        <action id="î">
+            <when state="none" output="î"/>
+            <when state="math" output="∝"/>
+        </action>
+        <action id="ñ">
+            <when state="none" output="ñ"/>
+            <when state="math" output="∆"/>
+        </action>
+        <action id="ù">
+            <when state="none" output="ù"/>
+            <when state="math" output="⋂"/>
+        </action>
         <action id="Œ">
             <when state="none" output="Œ"/>
+            <when state="math" output="∐"/>
         </action>
         <action id="ˊ">
             <when state="none" next="acute accent"/>
@@ -1779,9 +1939,32 @@
         <action id="α">
             <when state="none" next="greek letter"/>
         </action>
+        <action id="’">
+            <when state="none" output="’"/>
+            <when state="math" output="⇎"/>
+        </action>
         <action id="„">
             <when state="none" output="„"/>
             <when state="circumflex" output="“"/>
+        </action>
+        <action id="…">
+            <when state="none" output="…"/>
+            <when state="math" output="↛"/>
+        </action>
+        <action id="″">
+            <when state="none" output="″"/>
+            <when state="math" output="⌉"/>
+        </action>
+        <action id="‶">
+            <when state="none" output="‶"/>
+            <when state="math" output="⌈"/>
+        </action>
+        <action id="≈">
+            <when state="none" output="≈"/>
+        </action>
+        <action id="≠">
+            <when state="none" output="≠"/>
+            <when state="math" output="≢"/>
         </action>
     </actions>
     <terminators>
@@ -1795,6 +1978,7 @@
         <when state="grave accent" output="`"/>
         <when state="greek letter" output=""/>
         <when state="macron" output="¯"/>
+        <when state="math" output=""/>
         <when state="ring" output="˚"/>
         <when state="s1" output="è"/>
         <when state="s2" output="`"/>
