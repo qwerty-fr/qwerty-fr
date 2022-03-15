@@ -54,7 +54,7 @@
             <key code="7" action="x"/>
             <key code="8" action="c"/>
             <key code="9" action="v"/>
-            <key code="10" action="&#x003C;"/>
+            <key code="10" action="less_extra"/>
             <key code="11" action="b"/>
             <key code="12" action="q"/>
             <key code="13" action="w"/>
@@ -166,7 +166,7 @@
             <key code="7" action="X"/>
             <key code="8" action="C"/>
             <key code="9" action="V"/>
-            <key code="10" action="&#x003E;"/>
+            <key code="10" action="more_extra"/>
             <key code="11" action="B"/>
             <key code="12" action="Q"/>
             <key code="13" action="W"/>
@@ -1026,11 +1026,11 @@
             <when state="none" output="!"/>
             <when state="math" output="¬"/>
         </action>
-        <action id="&#x003C;">
+        <action id="less_extra">
             <when state="none" output="&#x003C;"/>
             <when state="math" output="≪"/>
         </action>
-        <action id="&#x003E;">
+        <action id="more_extra">
             <when state="none" output="&#x003E;"/>
             <when state="math" output="≫"/>
         </action>
