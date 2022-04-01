@@ -64,7 +64,7 @@ Download the [QWERTY-fr layout](https://github.com/qwerty-fr/qwerty-fr/releases/
 
 You'll need to restart macOS before using it or otherwise you'll encounter bugs.
 
-**✅ Protip**: On Apple keyboards the right <kbd>Option ⌥</kbd> key is often hard to access. You can use [Karabiner-Elements](https://pqrs.org/osx/karabiner/) to swap the right <kbd>Option ⌥</kbd> key with the right <kbd>Commmand ⌘</kbd> key. [Here is the rule](https://ke-complex-modifications.pqrs.org/#swap_right_cmd_with_right_option) you'll need to import in Karabiner-Elements. This makes it easier to type characters!
+**✅ Protip**: On Apple keyboards the right <kbd>Option ⌥</kbd> key is often hard to access. You can use [Karabiner-Elements](https://pqrs.org/osx/karabiner/) to swap the right <kbd>Option ⌥</kbd> key with the right <kbd>Command ⌘</kbd> key. [Here is the rule](https://ke-complex-modifications.pqrs.org/#swap_right_cmd_with_right_option) you'll need to import in Karabiner-Elements. This makes it easier to type characters!
 
 ### Linux
 
