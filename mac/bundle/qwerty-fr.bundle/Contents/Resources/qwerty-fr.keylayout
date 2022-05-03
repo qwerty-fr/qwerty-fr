@@ -1609,6 +1609,10 @@
             <when state="none" output=""/>
             <when state="math" output="∧"/>
         </action>
+        <action id="action 2">
+            <when state="none" output=""/>
+            <when state="math" output="∧"/>
+        </action>
         <action id="b">
             <when state="none" output="b"/>
             <when state="acute accent" output="b́"/>
