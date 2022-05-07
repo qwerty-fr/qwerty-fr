@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 351 on 2022-05-07 at 20:40 (CEST)-->
+<!--Last edited by Ukelele version 351 on 2022-05-07 at 22:17 (CEST)-->
 <!--Created by Ukelele version 2.1.10 on 2012-02-20 at 23:06 (PST)-->
 <keyboard group="0" id="8657" name="qwerty-fr" maxout="3">
     <!-- Supporting both ISO and ANSI keyboards require shenanigans because some keys have inconsistent code. I was inspired by the file `bepo-qwerty.keylayout`.
@@ -51,32 +51,32 @@
             <modifier keys="caps? anyOption? command? control"/>
         </keyMapSelect>
     </modifierMap>
-	<keyMapSet id="ANSI">
-		<keyMap index="0" baseMapSet="ISO" baseIndex="0">
-			<key code="50" output="`"/>
-		</keyMap>
-		<keyMap index="1" baseMapSet="ISO" baseIndex="1">
-			<key code="50" output="&#x003E;"/>
-		</keyMap>
-		<keyMap index="2" baseMapSet="ISO" baseIndex="2">
-			<key code="50" output="&#x003E;"/>
-		</keyMap>
-		<keyMap index="3" baseMapSet="ISO" baseIndex="3">
-			<key code="50" output="&#x2264;"/>
-		</keyMap>
-		<keyMap index="4" baseMapSet="ISO" baseIndex="4">
-			<key code="50" output="&#x2265;"/>
-		</keyMap>
-		<keyMap index="5" baseMapSet="ISO" baseIndex="5">
-			<key code="50" output="&#x2265;"/>
-		</keyMap>
-		<keyMap index="6" baseMapSet="ISO" baseIndex="6">
-			<key code="50" output="`"/>
-		</keyMap>
-		<keyMap index="7" baseMapSet="ISO" baseIndex="7">
-			<key code="50" output="&#x003E;"/>
-		</keyMap>
-	</keyMapSet>
+    <keyMapSet id="ANSI">
+        <keyMap index="0" baseMapSet="ISO" baseIndex="0">
+            <key code="50" output="`"/>
+        </keyMap>
+        <keyMap index="1" baseMapSet="ISO" baseIndex="1">
+            <key code="50" output="~"/>
+        </keyMap>
+        <keyMap index="2" baseMapSet="ISO" baseIndex="2">
+            <key code="50" output="~"/>
+        </keyMap>
+        <keyMap index="3" baseMapSet="ISO" baseIndex="3">
+            <key code="50" action="21"/>
+        </keyMap>
+        <keyMap index="4" baseMapSet="ISO" baseIndex="4">
+            <key code="50" action="~"/>
+        </keyMap>
+        <keyMap index="5" baseMapSet="ISO" baseIndex="5">
+            <key code="50" action="~"/>
+        </keyMap>
+        <keyMap index="6" baseMapSet="ISO" baseIndex="6">
+            <key code="50" output="`"/>
+        </keyMap>
+        <keyMap index="7" baseMapSet="ISO" baseIndex="7">
+            <key code="50" output="&#x003E;"/>
+        </keyMap>
+    </keyMapSet>
     <keyMapSet id="ISO">
         <keyMap index="0">
             <key code="0" action="13"/>
@@ -975,87 +975,6 @@
             <key code="126" output="&#x001E;"/>
         </keyMap>
     </keyMapSet>
-    <keyMapSet id="994">
-        <keyMap index="0" baseMapSet="ANSI" baseIndex="0">
-            <key code="24" output="^"/>
-            <key code="30" output="["/>
-            <key code="33" output="@"/>
-            <key code="39" output=":"/>
-            <key code="42" output="]"/>
-            <key code="93" output="¥"/>
-            <key code="94" output="_"/>
-            <key code="95" output=","/>
-            <key code="102" action="5"/>
-            <key code="104" action="5"/>
-        </keyMap>
-        <keyMap index="1" baseMapSet="ANSI" baseIndex="1">
-            <key code="19" output="&#x0022;"/>
-            <key code="22" output="&#x0026;"/>
-            <key code="24" output="~"/>
-            <key code="25" output=")"/>
-            <key code="26" output="&#x0027;"/>
-            <key code="27" output="="/>
-            <key code="28" output="("/>
-            <key code="29" output="0"/>
-            <key code="30" output="{"/>
-            <key code="33" output="`"/>
-            <key code="39" output="*"/>
-            <key code="41" output="+"/>
-            <key code="42" output="}"/>
-            <key code="93" output="|"/>
-            <key code="94" output="_"/>
-            <key code="95" output=","/>
-            <key code="102" action="5"/>
-            <key code="104" action="5"/>
-        </keyMap>
-        <keyMap index="2" baseMapSet="ANSI" baseIndex="2">
-            <key code="24" output="^"/>
-            <key code="30" output="["/>
-            <key code="33" output="@"/>
-            <key code="39" output=":"/>
-            <key code="42" output="]"/>
-            <key code="93" output="¥"/>
-            <key code="94" output="_"/>
-            <key code="95" output=","/>
-            <key code="102" action="5"/>
-            <key code="104" action="5"/>
-        </keyMap>
-        <keyMap index="3" baseMapSet="ANSI" baseIndex="3">
-            <key code="93" output="\"/>
-            <key code="94" action="1"/>
-            <key code="95" output=","/>
-            <key code="102" action="5"/>
-            <key code="104" action="5"/>
-        </keyMap>
-        <keyMap index="4" baseMapSet="ANSI" baseIndex="4">
-            <key code="93" output="|"/>
-            <key code="94" output="`"/>
-            <key code="95" output=","/>
-            <key code="102" action="5"/>
-            <key code="104" action="5"/>
-        </keyMap>
-        <keyMap index="5" baseMapSet="ANSI" baseIndex="5">
-            <key code="93" output="\"/>
-            <key code="94" output="`"/>
-            <key code="95" output=","/>
-            <key code="102" action="5"/>
-            <key code="104" action="5"/>
-        </keyMap>
-        <keyMap index="6" baseMapSet="ANSI" baseIndex="6">
-            <key code="93" output="\"/>
-            <key code="94" output="_"/>
-            <key code="95" output=","/>
-            <key code="102" action="5"/>
-            <key code="104" action="5"/>
-        </keyMap>
-        <keyMap index="7" baseMapSet="ANSI" baseIndex="7">
-            <key code="93" output="|"/>
-            <key code="94" output="_"/>
-            <key code="95" output=","/>
-            <key code="102" action="5"/>
-            <key code="104" action="5"/>
-        </keyMap>
-    </keyMapSet>
     <actions>
         <action id="!">
             <when state="none" output="!"/>
@@ -1639,9 +1558,6 @@
             <when state="none" output="]"/>
             <when state="math" output="⌋"/>
         </action>
-        <action id="~">
-            <when state="none" next="tilde"/>
-        </action>
         <action id="` 1">
             <when state="none" next="grave accent"/>
         </action>
@@ -1889,6 +1805,9 @@
         <action id="}">
             <when state="none" output="}"/>
             <when state="math" output="⟧"/>
+        </action>
+        <action id="~">
+            <when state="none" next="tilde"/>
         </action>
         <action id="¤">
             <when state="none" next="currency"/>
