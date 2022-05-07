@@ -1,19 +1,28 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 351 on 2022-05-07 at 20:40 (CEST)-->
+<!--Last edited by Ukelele version 351 on 2022-05-07 at 22:17 (CEST)-->
 <!--Created by Ukelele version 2.1.10 on 2012-02-20 at 23:06 (PST)-->
 <keyboard group="0" id="8657" name="qwerty-fr" maxout="3">
+    <!-- Supporting both ISO and ANSI keyboards require shenanigans because some keys have inconsistent code. I was inspired by the file `bepo-qwerty.keylayout`.
+    -->
     <layouts>
-        <layout first="0" last="17" mapSet="16c" modifiers="f4"/>
-        <layout first="18" last="18" mapSet="994" modifiers="f4"/>
-        <layout first="21" last="23" mapSet="994" modifiers="f4"/>
-        <layout first="30" last="30" mapSet="994" modifiers="f4"/>
-        <layout first="194" last="194" mapSet="994" modifiers="f4"/>
-        <layout first="197" last="197" mapSet="994" modifiers="f4"/>
-        <layout first="200" last="201" mapSet="994" modifiers="f4"/>
-        <layout first="206" last="207" mapSet="994" modifiers="f4"/>
+        <layout first="0" last="0" mapSet="ISO" modifiers="commonModifiers"/>
+        <layout first="1" last="6" mapSet="ANSI" modifiers="commonModifiers"/>
+        <layout first="10" last="10" mapSet="ANSI" modifiers="commonModifiers"/>
+        <layout first="12" last="12" mapSet="ANSI" modifiers="commonModifiers"/>
+        <layout first="14" last="15" mapSet="ANSI" modifiers="commonModifiers"/>
+        <layout first="24" last="24" mapSet="ANSI" modifiers="commonModifiers"/>
+        <layout first="27" last="28" mapSet="ANSI" modifiers="commonModifiers"/>
+        <layout first="37" last="37" mapSet="ANSI" modifiers="commonModifiers"/>
+        <layout first="40" last="40" mapSet="ANSI" modifiers="commonModifiers"/>
+        <layout first="195" last="195" mapSet="ANSI" modifiers="commonModifiers"/>
+        <layout first="198" last="198" mapSet="ANSI" modifiers="commonModifiers"/>
+        <layout first="204" last="204" mapSet="ANSI" modifiers="commonModifiers"/>
+        <layout first="202" last="202" mapSet="ANSI" modifiers="commonModifiers"/>
+        <layout first="34" last="34" mapSet="ANSI" modifiers="commonModifiers"/>
+        <layout first="31" last="31" mapSet="ANSI" modifiers="commonModifiers"/>
     </layouts>
-    <modifierMap id="f4" defaultIndex="7">
+    <modifierMap id="commonModifiers" defaultIndex="7">
         <keyMapSelect mapIndex="0">
             <modifier keys="command?"/>
             <modifier keys="anyShift? caps? command"/>
@@ -42,7 +51,33 @@
             <modifier keys="caps? anyOption? command? control"/>
         </keyMapSelect>
     </modifierMap>
-    <keyMapSet id="16c">
+    <keyMapSet id="ANSI">
+        <keyMap index="0" baseMapSet="ISO" baseIndex="0">
+            <key code="50" output="`"/>
+        </keyMap>
+        <keyMap index="1" baseMapSet="ISO" baseIndex="1">
+            <key code="50" output="~"/>
+        </keyMap>
+        <keyMap index="2" baseMapSet="ISO" baseIndex="2">
+            <key code="50" output="~"/>
+        </keyMap>
+        <keyMap index="3" baseMapSet="ISO" baseIndex="3">
+            <key code="50" action="21"/>
+        </keyMap>
+        <keyMap index="4" baseMapSet="ISO" baseIndex="4">
+            <key code="50" action="~"/>
+        </keyMap>
+        <keyMap index="5" baseMapSet="ISO" baseIndex="5">
+            <key code="50" action="~"/>
+        </keyMap>
+        <keyMap index="6" baseMapSet="ISO" baseIndex="6">
+            <key code="50" output="`"/>
+        </keyMap>
+        <keyMap index="7" baseMapSet="ISO" baseIndex="7">
+            <key code="50" output="&#x003E;"/>
+        </keyMap>
+    </keyMapSet>
+    <keyMapSet id="ISO">
         <keyMap index="0">
             <key code="0" action="13"/>
             <key code="1" action="s"/>
@@ -54,7 +89,7 @@
             <key code="7" action="x"/>
             <key code="8" action="c"/>
             <key code="9" action="v"/>
-            <key code="10" action="less_extra"/>
+            <key code="10" output="`"/>
             <key code="11" action="b"/>
             <key code="12" action="q"/>
             <key code="13" action="w"/>
@@ -94,7 +129,7 @@
             <key code="47" action="."/>
             <key code="48" output="&#x0009;"/>
             <key code="49" action="5"/>
-            <key code="50" output="`"/>
+            <key code="50" action="less_extra"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
@@ -166,7 +201,7 @@
             <key code="7" action="X"/>
             <key code="8" action="C"/>
             <key code="9" action="V"/>
-            <key code="10" action="more_extra"/>
+            <key code="10" output="~"/>
             <key code="11" action="B"/>
             <key code="12" action="Q"/>
             <key code="13" action="W"/>
@@ -206,7 +241,7 @@
             <key code="47" action="&#x003E;"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" action="5"/>
-            <key code="50" output="~"/>
+            <key code="50" action="more_extra"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
@@ -278,7 +313,7 @@
             <key code="7" output="X"/>
             <key code="8" output="C"/>
             <key code="9" output="V"/>
-            <key code="10" output="§"/>
+            <key code="10" output="~"/>
             <key code="11" output="B"/>
             <key code="12" output="Q"/>
             <key code="13" output="W"/>
@@ -318,7 +353,7 @@
             <key code="47" output="."/>
             <key code="48" output="&#x0009;"/>
             <key code="49" action="5"/>
-            <key code="50" output="`"/>
+            <key code="50" output="&#x003E;"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
@@ -390,7 +425,7 @@
             <key code="7" output="×"/>
             <key code="8" action="ç"/>
             <key code="9" action="action 2"/>
-            <key code="10" output="≤"/>
+            <key code="10" action="` 1"/>
             <key code="11" output="ß"/>
             <key code="12" output="â"/>
             <key code="13" output="é"/>
@@ -430,7 +465,7 @@
             <key code="47" action="·"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" output=" "/>
-            <key code="50" action="21"/>
+            <key code="50" output="≤"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
@@ -502,7 +537,7 @@
             <key code="7" output="÷"/>
             <key code="8" action="Ç"/>
             <key code="9" output=""/>
-            <key code="10" output="≥"/>
+            <key code="10" action="~"/>
             <key code="11" action="ß"/>
             <key code="12" output="Â"/>
             <key code="13" action="É"/>
@@ -542,7 +577,7 @@
             <key code="47" action="…"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" output=" "/>
-            <key code="50" action="`"/>
+            <key code="50" output="≥"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
@@ -614,7 +649,7 @@
             <key code="7" output="≈"/>
             <key code="8" output="Ç"/>
             <key code="9" output="√"/>
-            <key code="10" output="§"/>
+            <key code="10" output="`"/>
             <key code="11" output="ı"/>
             <key code="12" output="Œ"/>
             <key code="13" output="∑"/>
@@ -654,7 +689,7 @@
             <key code="47" output="≥"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" output=" "/>
-            <key code="50" output="`"/>
+            <key code="50" output="§"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
@@ -726,7 +761,7 @@
             <key code="7" output="≈"/>
             <key code="8" output="ç"/>
             <key code="9" output="√"/>
-            <key code="10" output="§"/>
+            <key code="10" output="`"/>
             <key code="11" output="∫"/>
             <key code="12" output="œ"/>
             <key code="13" output="∑"/>
@@ -766,7 +801,7 @@
             <key code="47" output="≥"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" output=" "/>
-            <key code="50" output="`"/>
+            <key code="50" output="§"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
@@ -838,7 +873,7 @@
             <key code="7" output="&#x0018;"/>
             <key code="8" output="&#x0003;"/>
             <key code="9" output="&#x0016;"/>
-            <key code="10" output="0"/>
+            <key code="10" output="`"/>
             <key code="11" output="&#x0002;"/>
             <key code="12" output="&#x0011;"/>
             <key code="13" output="&#x0017;"/>
@@ -878,7 +913,7 @@
             <key code="47" output="."/>
             <key code="48" output="&#x0009;"/>
             <key code="49" action="5"/>
-            <key code="50" output="`"/>
+            <key code="50" output="0"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
@@ -938,87 +973,6 @@
             <key code="124" output="&#x001D;"/>
             <key code="125" output="&#x001F;"/>
             <key code="126" output="&#x001E;"/>
-        </keyMap>
-    </keyMapSet>
-    <keyMapSet id="994">
-        <keyMap index="0" baseMapSet="16c" baseIndex="0">
-            <key code="24" output="^"/>
-            <key code="30" output="["/>
-            <key code="33" output="@"/>
-            <key code="39" output=":"/>
-            <key code="42" output="]"/>
-            <key code="93" output="¥"/>
-            <key code="94" output="_"/>
-            <key code="95" output=","/>
-            <key code="102" action="5"/>
-            <key code="104" action="5"/>
-        </keyMap>
-        <keyMap index="1" baseMapSet="16c" baseIndex="1">
-            <key code="19" output="&#x0022;"/>
-            <key code="22" output="&#x0026;"/>
-            <key code="24" output="~"/>
-            <key code="25" output=")"/>
-            <key code="26" output="&#x0027;"/>
-            <key code="27" output="="/>
-            <key code="28" output="("/>
-            <key code="29" output="0"/>
-            <key code="30" output="{"/>
-            <key code="33" output="`"/>
-            <key code="39" output="*"/>
-            <key code="41" output="+"/>
-            <key code="42" output="}"/>
-            <key code="93" output="|"/>
-            <key code="94" output="_"/>
-            <key code="95" output=","/>
-            <key code="102" action="5"/>
-            <key code="104" action="5"/>
-        </keyMap>
-        <keyMap index="2" baseMapSet="16c" baseIndex="2">
-            <key code="24" output="^"/>
-            <key code="30" output="["/>
-            <key code="33" output="@"/>
-            <key code="39" output=":"/>
-            <key code="42" output="]"/>
-            <key code="93" output="¥"/>
-            <key code="94" output="_"/>
-            <key code="95" output=","/>
-            <key code="102" action="5"/>
-            <key code="104" action="5"/>
-        </keyMap>
-        <keyMap index="3" baseMapSet="16c" baseIndex="3">
-            <key code="93" output="\"/>
-            <key code="94" action="1"/>
-            <key code="95" output=","/>
-            <key code="102" action="5"/>
-            <key code="104" action="5"/>
-        </keyMap>
-        <keyMap index="4" baseMapSet="16c" baseIndex="4">
-            <key code="93" output="|"/>
-            <key code="94" output="`"/>
-            <key code="95" output=","/>
-            <key code="102" action="5"/>
-            <key code="104" action="5"/>
-        </keyMap>
-        <keyMap index="5" baseMapSet="16c" baseIndex="5">
-            <key code="93" output="\"/>
-            <key code="94" output="`"/>
-            <key code="95" output=","/>
-            <key code="102" action="5"/>
-            <key code="104" action="5"/>
-        </keyMap>
-        <keyMap index="6" baseMapSet="16c" baseIndex="6">
-            <key code="93" output="\"/>
-            <key code="94" output="_"/>
-            <key code="95" output=","/>
-            <key code="102" action="5"/>
-            <key code="104" action="5"/>
-        </keyMap>
-        <keyMap index="7" baseMapSet="16c" baseIndex="7">
-            <key code="93" output="|"/>
-            <key code="94" output="_"/>
-            <key code="95" output=","/>
-            <key code="102" action="5"/>
-            <key code="104" action="5"/>
         </keyMap>
     </keyMapSet>
     <actions>
@@ -1604,9 +1558,6 @@
             <when state="none" output="]"/>
             <when state="math" output="⌋"/>
         </action>
-        <action id="`">
-            <when state="none" next="tilde"/>
-        </action>
         <action id="` 1">
             <when state="none" next="grave accent"/>
         </action>
@@ -1854,6 +1805,9 @@
         <action id="}">
             <when state="none" output="}"/>
             <when state="math" output="⟧"/>
+        </action>
+        <action id="~">
+            <when state="none" next="tilde"/>
         </action>
         <action id="¤">
             <when state="none" next="currency"/>
