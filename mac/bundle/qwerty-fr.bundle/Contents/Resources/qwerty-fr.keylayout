@@ -1,8 +1,8 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 351 on 2022-05-07 at 22:17 (CEST)-->
+<!--Last edited by Ukelele version 351 on 2022-05-09 at 14:11 (CEST)-->
 <!--Created by Ukelele version 2.1.10 on 2012-02-20 at 23:06 (PST)-->
-<keyboard group="0" id="8657" name="qwerty-fr" maxout="3">
+<keyboard group="126" id="-7247" name="qwerty-fr" maxout="3">
     <!-- Supporting both ISO and ANSI keyboards require shenanigans because some keys have inconsistent code. I was inspired by the file `bepo-qwerty.keylayout`.
     -->
     <layouts>
@@ -446,7 +446,7 @@
             <key code="28" action="î"/>
             <key code="29" output="ø"/>
             <key code="30" action="»"/>
-            <key code="31" output="ò"/>
+            <key code="31" action="ò"/>
             <key code="32" action="ù"/>
             <key code="33" action="«"/>
             <key code="34" action="ì"/>
@@ -1034,6 +1034,7 @@
             <when state="greek letter" output="Ο"/>
             <when state="macron" output="Ō"/>
             <when state="math" output="○"/>
+            <when state="ogonek" output="Ǫ"/>
             <when state="ring" output="O̊"/>
             <when state="s1" output="Ó"/>
             <when state="s2" output="Ò"/>
@@ -1053,6 +1054,7 @@
             <when state="grave accent" output="Ù"/>
             <when state="greek letter" output="Υ"/>
             <when state="macron" output="Ū"/>
+            <when state="ogonek" output="Ų"/>
             <when state="ring" output="Ů"/>
             <when state="s1" output="Ú"/>
             <when state="s2" output="Ù"/>
@@ -1086,6 +1088,7 @@
             <when state="greek letter" output="α"/>
             <when state="macron" output="ā"/>
             <when state="math" output="∀"/>
+            <when state="ogonek" output="ą"/>
             <when state="ring" output="å"/>
             <when state="s1" output="á"/>
             <when state="s2" output="à"/>
@@ -1107,6 +1110,7 @@
             <when state="greek letter" output="ε"/>
             <when state="macron" output="ē"/>
             <when state="math" output="∃"/>
+            <when state="ogonek" output="ę"/>
             <when state="ring" output="e̊"/>
             <when state="s1" output="é"/>
             <when state="s2" output="è"/>
@@ -1127,6 +1131,7 @@
             <when state="greek letter" output="ι"/>
             <when state="macron" output="ī"/>
             <when state="math" output="∈"/>
+            <when state="ogonek" output="į"/>
             <when state="ring" output="i̊"/>
             <when state="s1" output="í"/>
             <when state="s2" output="ì"/>
@@ -1158,6 +1163,7 @@
             <when state="greek letter" output="ο"/>
             <when state="macron" output="ō"/>
             <when state="math" output="∘"/>
+            <when state="ogonek" output="ǫ"/>
             <when state="ring" output="o̊"/>
             <when state="s1" output="ó"/>
             <when state="s2" output="ò"/>
@@ -1178,6 +1184,7 @@
             <when state="greek letter" output="υ"/>
             <when state="macron" output="ū"/>
             <when state="math" output="⋃"/>
+            <when state="ogonek" output="ų"/>
             <when state="ring" output="ů"/>
             <when state="s1" output="ú"/>
             <when state="s2" output="ù"/>
@@ -1254,6 +1261,7 @@
             <when state="grave accent" output="À"/>
             <when state="greek letter" output="Α"/>
             <when state="macron" output="Ā"/>
+            <when state="ogonek" output="Ą"/>
             <when state="ring" output="Å"/>
             <when state="s1" output="Á"/>
             <when state="s2" output="À"/>
@@ -1278,6 +1286,7 @@
             <when state="grave accent" output="È"/>
             <when state="greek letter" output="Ε"/>
             <when state="macron" output="Ē"/>
+            <when state="ogonek" output="Ę"/>
             <when state="ring" output="E̊"/>
             <when state="s1" output="É"/>
             <when state="s2" output="È"/>
@@ -1303,6 +1312,7 @@
             <when state="greek letter" output="Ι"/>
             <when state="macron" output="Ī"/>
             <when state="math" output="∫"/>
+            <when state="ogonek" output="Į"/>
             <when state="ring" output="I̊"/>
             <when state="s1" output="Í"/>
             <when state="s2" output="Ì"/>
@@ -1832,7 +1842,7 @@
             <when state="none" next="macron"/>
         </action>
         <action id="¯ 2">
-            <when state="none" output=""/>
+            <when state="none" next="ogonek"/>
             <when state="math" output="↚"/>
         </action>
         <action id="¯ 3">
@@ -1897,6 +1907,10 @@
             <when state="none" output="ñ"/>
             <when state="math" output="∆"/>
         </action>
+        <action id="ò">
+            <when state="none" output="ò"/>
+            <when state="math" output="∅"/>
+        </action>
         <action id="ù">
             <when state="none" output="ù"/>
             <when state="math" output="⋂"/>
@@ -1958,6 +1972,7 @@
         <when state="greek letter" output=""/>
         <when state="macron" output="¯"/>
         <when state="math" output=""/>
+        <when state="ogonek" output="˛"/>
         <when state="ring" output="˚"/>
         <when state="s1" output="è"/>
         <when state="s2" output="`"/>
