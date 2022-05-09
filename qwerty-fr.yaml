@@ -20,11 +20,11 @@ geometry: ISO
 
 full: |
   ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━┓
-  │ ~*~ │ ! ¡ │ @*‟ │ # Ê │ $*¯ │ %*¤ │ ^*ˇ │ & Û │ * Î │ ( Ô │ )   │ _ — │ + ≈ ┃          ┃
-  │ `*` │ 1 ¹ │ 2 ² │ 3 ê │ 4   │ 5 € │ 6*^ │ 7 û │ 8 î │ 9 ô │ 0   │ - – │ = ≠ ┃ ⌫        ┃
+  │ ~*~ │ ! ¡ │ @*˝ │ # Ê │ $ € │ %   │ ^*ˇ │ & Û │ * Î │ ( Ô │ ) Ø │ _ — │ + ≈ ┃          ┃
+  │ `*` │ 1 ¹ │ 2 ² │ 3 ê │ 4*¤ │ 5*¯ │ 6*^ │ 7 û │ 8 î │ 9 ô │ 0 ø │ - – │ = ≠ ┃ ⌫        ┃
   ┢━━━━━┷━━┱──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┺━━┳━━━━━━━┫
-  ┃        ┃ Q Â │ W É │ E È │ R © │ T   │ Y   │ U Ù │ I Ì │ O Ò │ P Œ │ { “ │ } ” ┃       ┃
-  ┃ ↹      ┃ q â │ w é │ e è │ r ® │ t   │ y   │ u ù │ i ì │ o ò │ p œ │ [ « │ ] » ┃       ┃
+  ┃        ┃ Q Â │ W É │ E È │ R © │ T Þ │ Y   │ U Ù │ I Ì │ O Ò │ P Œ │ { “ │ } ” ┃       ┃
+  ┃ ↹      ┃ q â │ w é │ e è │ r ® │ t þ │ y   │ u ù │ i ì │ o ò │ p œ │ [ « │ ] » ┃       ┃
   ┣━━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓  ⏎   ┃
   ┃         ┃ A À │ S Æ │ D Ë │ F   │ G   │ H Ÿ │ J Ü │ K Ï │ L Ö │ :*˚ │ "*¨ │ | „ ┃      ┃
   ┃ ⇬       ┃ a à │ s æ │ d ë │ f   │ g*α │ h ÿ │ j ü │ k ï │ l ö │ ;*´ │ '*` │ \ ø ┃      ┃
@@ -68,8 +68,8 @@ deadkeys:
   
   - char: '*˝'
     name: doubleacute
-    base: OoUuУу
-    alt:  ŐőŰűӲӳ
+    base: AaEeIiMmOoUuУу
+    alt:  A̋a̋E̋e̋I̋i̋M̋m̋ŐőŰűӲӳ
     alt_space: "˝"  # U+201D RIGHT DOUBLE QUOTATION MARK
     alt_self:  "˝"  # U+02DD DOUBLE ACUTE ACCENT
   
@@ -89,15 +89,15 @@ deadkeys:
   
   - char: '*~'
     name: tilde
-    base: AaEeIiNnOoUuVvYy<>=
-    alt:  ÃãẼẽĨĩÑñÕõŨũṼṽỸỹ≲≳≃
+    base: AaEeGgIiJjMmNnOoPpRrUuVvYy<>=
+    alt:  ÃãẼẽG̃g̃ĨĩJ̃j̃M̃m̃ÑñÕõP̃p̃R̃r̃ŨũṼṽỸỹ≲≳≃
     alt_space: '~'  # U+007E TILDE
     alt_self:  '~'  # U+007E TILDE
   
   - char: '*¯'
     name: macron
-    base: AaÆæEeGgIiOoUuYy
-    alt:  ĀāǢǣĒēḠḡĪīŌōŪūȲȳ
+    base: AaÆæDdEeGgIiLlOoTtUuYy
+    alt:  ĀāǢǣĐđĒēḠḡĪīŁłŌōŦŧŪūȲȳ
     alt_space: '¯'  # U+00AF MACRON
     alt_self:  'ˉ'  # U+02C9 MODIFIER LETTER MACRON
   
@@ -117,8 +117,8 @@ deadkeys:
   
   - char: '*¸'
     name: cedilla
-    base: CcDdEeGgHhKkLlNnRrSsTt
-    alt:  ÇçḐḑȨȩĢģḨḩĶķĻļŅņŖŗŞşŢţ
+    base: AaBbCcDdEeGgHhI̧iKkLlMmNnQqRrSsTtUuXxZz
+    alt:  A̧a̧B̧b̧ÇçḐḑȨȩĢģḨḩI̧i̧ĶķĻļM̧m̧ŅņQ̧q̧ŖŗŞşŢţU̧u̧X̧x̧Z̧z̧
     alt_space: '¸'  # U+00B8 CEDILLA
     alt_self:  '¸'  # U+00B8 CEDILLA
   
@@ -138,14 +138,14 @@ deadkeys:
   
   - char: '*¤'
     name: currency
-    base: bciIlpPrtswy
-    alt:  ฿¢₹₪ł£₱₽₺﷼₩¥
+    base: bBcdeiIlpPrtswy
+    alt:  ฿₿¢$€₹₪ł£₱₽₺﷼₩¥
     alt_space: '¤'  # U+00A4 CURRENCY SIGN
     alt_self:  '¤'  # U+00A4 CURRENCY SIGN
 
   - char: '*∫'
     name: math
-    base: '!*+,-./0OaeinouI8N9;<=>?CHLPQRSZ[]c˛dfrtv{|}«¯·»¿çèìîñùŒ’…″‶≠'
-    alt:  '¬⊗⨁⇐±⇒⇔〉○∀∃∈∇∘⋃∫∞ℕ⟨∎←≡→↔ℂℋℒ∏ℚℝ∑ℤ⌊⌋⊂⇍∂↦√⊥∨⟦‖⟧⌈↚⇏⌉↮⊄∄∉∝∆⋂∐⇎↛⌉⌈≢'
+    base: '!*+,-./0OaeinouôI8N9;<=>?CHLPQRSZ[]c˛dfrtv{|}«¯·»¿çèìîñùŒ’…″‶≠'
+    alt:  '¬⊗⨁⇐±⇒⇔〉○∀∃∈∇∘⋃∅∫∞ℕ⟨∎←≡→↔ℂℋℒ∏ℚℝ∑ℤ⌊⌋⊂⇍∂↦√⊥∨⟦‖⟧⌈↚⇏⌉↮⊄∄∉∝∆⋂∐⇎↛⌉⌈≢'
     alt_space: '∫'
     alt_self:  '∫'
