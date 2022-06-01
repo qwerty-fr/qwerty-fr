@@ -20,11 +20,11 @@ geometry: ISO
 
 full: |
   ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━━┓
-  │ ~*~ │ ! ¡ │ @*˝ │ # Ê │ $ € │ %   │ ^*ˇ │ & Û │ * Î │ ( Ô │ ) Ø │ _ — │ + ≈ ┃          ┃
+  │ ~*~ │ ! ¡ │ @*˝ │ # Ê │ $ € │ %*˙ │ ^*ˇ │ & Û │ * Î │ ( Ô │ ) Ø │ _ — │ + ≈ ┃          ┃
   │ `*` │ 1 ¹ │ 2 ² │ 3 ê │ 4*¤ │ 5*¯ │ 6*^ │ 7 û │ 8 î │ 9 ô │ 0 ø │ - – │ = ≠ ┃ ⌫        ┃
   ┢━━━━━┷━━┱──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┺━━┳━━━━━━━┫
-  ┃        ┃ Q Â │ W É │ E È │ R © │ T Þ │ Y   │ U Ù │ I Ì │ O Ò │ P Œ │ { “ │ } ” ┃       ┃
-  ┃ ↹      ┃ q â │ w é │ e è │ r ® │ t þ │ y   │ u ù │ i ì │ o ò │ p œ │ [ « │ ] » ┃       ┃
+  ┃        ┃ Q Â │ W É │ E È │ R © │ T Þ │ Y*˘ │ U Ù │ I Ì │ O Ò │ P Œ │ { “ │ } ” ┃       ┃
+  ┃ ↹      ┃ q â │ w é │ e è │ r ® │ t þ │ y*b │ u ù │ i ì │ o ò │ p œ │ [ « │ ] » ┃       ┃
   ┣━━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓  ⏎   ┃
   ┃         ┃ A À │ S Æ │ D Ë │ F   │ G   │ H Ÿ │ J Ü │ K Ï │ L Ö │ :*˚ │ "*¨ │ | „ ┃      ┃
   ┃ ⇬       ┃ a à │ s æ │ d ë │ f   │ g*α │ h ÿ │ j ü │ k ï │ l ö │ ;*´ │ '*` │ \   ┃      ┃
@@ -94,6 +94,29 @@ deadkeys:
     alt_space: '~'  # U+007E TILDE
     alt_self:  '~'  # U+007E TILDE
   
+  # FIXME: due to a bug in kalamine/x-keyboard we can't use *̑ or * ̑ because it's a combining diacritic
+  # Alternatively we could change x-keyboard so that it displays the `alt_self` symbol instead of the `char`
+  - char: '*b'
+    name: invertedbreve
+    base: AaEeIiOoRrUu
+    alt:  ȂȃȆȇȊȋȎȏȒȓȖȗ
+    alt_space: ' ̑'
+    alt_self: ' ̑'
+  
+  - char: '*˘'
+    name: breve
+    base: AaEeGgHhIiOoUu
+    alt:  ĂăĔĕĞğḪḫĬĭŎŏŬŭ
+    alt_space: '˘'
+    alt_self: '˘'
+
+  - char: '*˙'
+    name: abovedot
+    base: AaBbCcDdEeFfGgHhIiMmNnOoPpRrSsTtWwXxYyZz
+    alt:  ȦȧḂḃĊċḊḋĖėḞḟĠġḢḣİıṀṁṄṅȮȯṖṗṘṙṠṡṪṫẆẇẊẋẎẏŻż
+    alt_space: '˙'
+    alt_self: '˙'
+
   - char: '*¯'
     name: macron
     base: AaÆæDdEeGgIiLlOoTtUuYy
