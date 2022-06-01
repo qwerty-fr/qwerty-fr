@@ -1,7 +1,7 @@
 Run the following on a Mac (tested on macOS Monterey 12.1):
 
 ```
-pkgbuild --version 0.60 --root ../bundle --scripts scripts --identifier qwerty-fr.org.pkg --install-location /Library/Keyboard\ Layouts/ qwerty-fr.pkg
+pkgbuild --version 0.70 --root ../bundle --scripts scripts --identifier qwerty-fr.org.pkg --install-location /Library/Keyboard\ Layouts/ qwerty-fr.pkg
 productbuild --distribution distribution.xml qwerty-fr-distribution.pkg
 codesign -s - qwerty-fr-distribution.pkg
 ```

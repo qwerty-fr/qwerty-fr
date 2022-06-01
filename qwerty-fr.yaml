@@ -15,7 +15,7 @@ name: qwerty-fr
 name8: q-fr
 description: QWERTY-fr layout
 url: https://github.com/qwerty-fr/qwerty-fr
-version: 0.6.0
+version: 0.7.0
 geometry: ISO
 
 full: |

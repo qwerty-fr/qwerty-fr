@@ -1,3 +1,22 @@
+xkb-qwerty-fr (0.7) unstable; urgency=low
+
+  * Layout: Added a new math mode (not available on Linux due to xkb limitations) which allows to type mathematical formulas conveniently. It can be activated by pressing m.
+  * Layout: Added capital sharp s: ẞ (Germany).
+  * Layout: Added extra ˚ characters: D̊, d̊, E̊, e̊, G̊, g̊, I̊, i̊, O̊, o̊, Q̊, q̊, S̊, s̊, V̊, v̊, W̊, X̊, x̊, Y̊.
+  * Layout: Added above dot ˙ (Lithuanian, Polish, Turkish).
+  * Layout: Added breve ˘ (Romanian, Turkish).
+  * Layout: Added reverted breve  ̑ (Serbian, Croatian).
+  * Layout: Added d with stroke: đ, Đ (Faroese, Icelandic).
+  * Layout: Added thorn: Þ/þ (Icelandic).
+  * Layout: Added ŋ/Ŋ (Sami) on the ogonek dead key layer.
+  * Layout: Moved ø/Ø from \ to 0 to be easier to learn (Danish, Faroese, Norwegian).
+  * Layout: Moved € from 5 to 4.
+  * Layout: Moved the caron ¯ from 5 to 4.
+  * Layout: Moved the currency dead key ¤ from 5 to 4.
+  * MacOS: Added a workaround for a macOS bug that swaps keys between ANSI and ISO keyboards.
+
+ -- Paul <devnoname120@gmail.com>  Mon, 01 Jun 2022 22:00:00 +0100
+
 xkb-qwerty-fr (0.6) unstable; urgency=low
 
   * Layout: Moved circumflex keys ê, û, î, ô one column to the left.
