@@ -12,7 +12,7 @@ xkb_symbols "qwerty-fr"
     key <AE02> { [ 2,            at,          twosuperior,            dead_doubleacute     ] };
     key <AE03> { [ 3,            numbersign,  ecircumflex,            Ecircumflex          ] };
     key <AE04> { [ 4,            dollar,      dead_currency,          EuroSign             ] }; // FIXME: dead_currency has a different mapping than the one we want for qwerty-fr. Need to define a custom dead key instead. See Windows layout for dead key definition.
-    key <AE05> { [ 5,            percent,     dead_macron,            VoidSymbol           ] };
+    key <AE05> { [ 5,            percent,     dead_macron,            dead_abovedot        ] };
     key <AE06> { [ 6,            asciicircum, dead_circumflex,        dead_caron           ] };
     key <AE07> { [ 7,            ampersand,   ucircumflex,            Ucircumflex          ] };
     key <AE08> { [ 8,            asterisk,    icircumflex,            Icircumflex          ] };
@@ -26,7 +26,7 @@ xkb_symbols "qwerty-fr"
     key <AD03> { [ e,            E,           egrave,                 Egrave               ] };
     key <AD04> { [ r,            R,           registered,             copyright            ] };
     key <AD05> { [ t,            T,           thorn,                  THORN                ] };
-    key <AD06> { [ y,            Y,           VoidSymbol,             VoidSymbol           ] };
+    key <AD06> { [ y,            Y,           dead_invertedbreve,     dead_breve           ] };
     key <AD07> { [ u,            U,           ugrave,                 Ugrave               ] };
     key <AD08> { [ i,            I,           igrave,                 Igrave               ] };
     key <AD09> { [ o,            O,           ograve,                 Ograve               ] };
