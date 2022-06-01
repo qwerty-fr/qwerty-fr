@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 351 on 2022-05-09 at 14:11 (CEST)-->
+<!--Last edited by Ukelele version 351 on 2022-06-01 at 15:48 (CEST)-->
 <!--Created by Ukelele version 2.1.10 on 2012-02-20 at 23:06 (PST)-->
 <keyboard group="126" id="-7247" name="qwerty-fr" maxout="3">
     <!-- Supporting both ISO and ANSI keyboards require shenanigans because some keys have inconsistent code. I was inspired by the file `bepo-qwerty.keylayout`.
@@ -431,7 +431,7 @@
             <key code="13" output="é"/>
             <key code="14" action="è"/>
             <key code="15" output="®"/>
-            <key code="16" output=""/>
+            <key code="16" action=" ̑"/>
             <key code="17" output="þ"/>
             <key code="18" output="¹"/>
             <key code="19" output="²"/>
@@ -550,7 +550,7 @@
             <key code="20" output="Ê"/>
             <key code="21" output="€"/>
             <key code="22" action="caron"/>
-            <key code="23" output=""/>
+            <key code="23" action="˙"/>
             <key code="24" action="≈"/>
             <key code="25" output="Ô"/>
             <key code="26" output="Û"/>
@@ -1025,13 +1025,16 @@
         <action id="10">
             <when state="none" output="O"/>
             <when state="acute accent" output="Ó"/>
+            <when state="breve" output="Ŏ"/>
             <when state="caron" output="Ǒ"/>
             <when state="cedilla" output="O̧"/>
             <when state="circumflex" output="Ô"/>
             <when state="diaeresis" output="Ö"/>
+            <when state="dot above" output="Ȯ"/>
             <when state="double acute accent" output="Ő"/>
             <when state="grave accent" output="Ò"/>
             <when state="greek letter" output="Ο"/>
+            <when state="inverted breve" output="Ȏ"/>
             <when state="macron" output="Ō"/>
             <when state="math" output="○"/>
             <when state="ogonek" output="Ǫ"/>
@@ -1046,6 +1049,7 @@
         <action id="11">
             <when state="none" output="U"/>
             <when state="acute accent" output="Ú"/>
+            <when state="breve" output="Ŭ"/>
             <when state="caron" output="Ǔ"/>
             <when state="cedilla" output="U̧"/>
             <when state="circumflex" output="Û"/>
@@ -1053,6 +1057,7 @@
             <when state="double acute accent" output="Ű"/>
             <when state="grave accent" output="Ù"/>
             <when state="greek letter" output="Υ"/>
+            <when state="inverted breve" output="Ȗ"/>
             <when state="macron" output="Ū"/>
             <when state="ogonek" output="Ų"/>
             <when state="ring" output="Ů"/>
@@ -1068,6 +1073,7 @@
             <when state="caron" output="Y̌"/>
             <when state="circumflex" output="Ŷ"/>
             <when state="diaeresis" output="Ÿ"/>
+            <when state="dot above" output="Ẏ"/>
             <when state="double acute accent" output="Ӳ"/>
             <when state="grave accent" output="Ỳ"/>
             <when state="greek letter" output="Ψ"/>
@@ -1079,13 +1085,16 @@
         <action id="13">
             <when state="none" output="a"/>
             <when state="acute accent" output="á"/>
+            <when state="breve" output="ă"/>
             <when state="caron" output="ǎ"/>
             <when state="cedilla" output="a̧"/>
             <when state="circumflex" output="â"/>
             <when state="diaeresis" output="ä"/>
+            <when state="dot above" output="ȧ"/>
             <when state="double acute accent" output="a̋"/>
             <when state="grave accent" output="à"/>
             <when state="greek letter" output="α"/>
+            <when state="inverted breve" output="ȃ"/>
             <when state="macron" output="ā"/>
             <when state="math" output="∀"/>
             <when state="ogonek" output="ą"/>
@@ -1100,14 +1109,17 @@
         <action id="14">
             <when state="none" output="e"/>
             <when state="acute accent" output="é"/>
+            <when state="breve" output="ĕ"/>
             <when state="caron" output="ě"/>
             <when state="cedilla" output="ȩ"/>
             <when state="circumflex" output="ê"/>
             <when state="currency" output="€"/>
             <when state="diaeresis" output="ë"/>
+            <when state="dot above" output="ė"/>
             <when state="double acute accent" output="e̋"/>
             <when state="grave accent" output="è"/>
             <when state="greek letter" output="ε"/>
+            <when state="inverted breve" output="ȇ"/>
             <when state="macron" output="ē"/>
             <when state="math" output="∃"/>
             <when state="ogonek" output="ę"/>
@@ -1121,14 +1133,17 @@
         <action id="15">
             <when state="none" output="i"/>
             <when state="acute accent" output="í"/>
+            <when state="breve" output="ĭ"/>
             <when state="caron" output="ǐ"/>
             <when state="cedilla" output="i̧"/>
             <when state="circumflex" output="î"/>
             <when state="currency" output="₹"/>
             <when state="diaeresis" output="ï"/>
+            <when state="dot above" output="ı"/>
             <when state="double acute accent" output=" i̋"/>
             <when state="grave accent" output="ì"/>
             <when state="greek letter" output="ι"/>
+            <when state="inverted breve" output="ȋ"/>
             <when state="macron" output="ī"/>
             <when state="math" output="∈"/>
             <when state="ogonek" output="į"/>
@@ -1146,6 +1161,7 @@
             <when state="cedilla" output="ņ"/>
             <when state="circumflex" output="n̂"/>
             <when state="diaeresis" output="n̈"/>
+            <when state="dot above" output="ṅ"/>
             <when state="greek letter" output="ν"/>
             <when state="math" output="∇"/>
             <when state="s5" output="ñ"/>
@@ -1154,13 +1170,16 @@
         <action id="17">
             <when state="none" output="o"/>
             <when state="acute accent" output="ó"/>
+            <when state="breve" output="ŏ"/>
             <when state="caron" output="ǒ"/>
             <when state="cedilla" output="o̧"/>
             <when state="circumflex" output="ô"/>
             <when state="diaeresis" output="ö"/>
+            <when state="dot above" output="ȯ"/>
             <when state="double acute accent" output="ő"/>
             <when state="grave accent" output="ò"/>
             <when state="greek letter" output="ο"/>
+            <when state="inverted breve" output="ȏ"/>
             <when state="macron" output="ō"/>
             <when state="math" output="∘"/>
             <when state="ogonek" output="ǫ"/>
@@ -1175,6 +1194,7 @@
         <action id="18">
             <when state="none" output="u"/>
             <when state="acute accent" output="ú"/>
+            <when state="breve" output="ŭ"/>
             <when state="caron" output="ǔ"/>
             <when state="cedilla" output="u̧"/>
             <when state="circumflex" output="û"/>
@@ -1182,6 +1202,7 @@
             <when state="double acute accent" output="ű"/>
             <when state="grave accent" output="ù"/>
             <when state="greek letter" output="υ"/>
+            <when state="inverted breve" output="ȗ"/>
             <when state="macron" output="ū"/>
             <when state="math" output="⋃"/>
             <when state="ogonek" output="ų"/>
@@ -1199,6 +1220,7 @@
             <when state="circumflex" output="ŷ"/>
             <when state="currency" output="¥"/>
             <when state="diaeresis" output="ÿ"/>
+            <when state="dot above" output="ẏ"/>
             <when state="double acute accent" output="ӳ"/>
             <when state="grave accent" output="ỳ"/>
             <when state="greek letter" output="ψ"/>
@@ -1253,13 +1275,16 @@
         <action id="6">
             <when state="none" output="A"/>
             <when state="acute accent" output="Á"/>
+            <when state="breve" output="Ă"/>
             <when state="caron" output="Ǎ"/>
             <when state="cedilla" output="A̧"/>
             <when state="circumflex" output="Â"/>
             <when state="diaeresis" output="Ä"/>
+            <when state="dot above" output="Ȧ"/>
             <when state="double acute accent" output="A̋"/>
             <when state="grave accent" output="À"/>
             <when state="greek letter" output="Α"/>
+            <when state="inverted breve" output="Ȃ"/>
             <when state="macron" output="Ā"/>
             <when state="ogonek" output="Ą"/>
             <when state="ring" output="Å"/>
@@ -1278,13 +1303,16 @@
         <action id="7">
             <when state="none" output="E"/>
             <when state="acute accent" output="É"/>
+            <when state="breve" output="Ĕ"/>
             <when state="caron" output="Ě"/>
             <when state="cedilla" output="Ȩ"/>
             <when state="circumflex" output="Ê"/>
             <when state="diaeresis" output="Ë"/>
+            <when state="dot above" output="Ė"/>
             <when state="double acute accent" output="E̋"/>
             <when state="grave accent" output="È"/>
             <when state="greek letter" output="Ε"/>
+            <when state="inverted breve" output="Ȇ"/>
             <when state="macron" output="Ē"/>
             <when state="ogonek" output="Ę"/>
             <when state="ring" output="E̊"/>
@@ -1302,14 +1330,17 @@
         <action id="8">
             <when state="none" output="I"/>
             <when state="acute accent" output="Í"/>
+            <when state="breve" output="Ĭ"/>
             <when state="caron" output="Ǐ"/>
             <when state="cedilla" output="I̧"/>
             <when state="circumflex" output="Î"/>
             <when state="currency" output="₪"/>
             <when state="diaeresis" output="Ï"/>
+            <when state="dot above" output="İ"/>
             <when state="double acute accent" output="I̋"/>
             <when state="grave accent" output="Ì"/>
             <when state="greek letter" output="Ι"/>
+            <when state="inverted breve" output="Ȋ"/>
             <when state="macron" output="Ī"/>
             <when state="math" output="∫"/>
             <when state="ogonek" output="Į"/>
@@ -1333,6 +1364,7 @@
             <when state="cedilla" output="Ņ"/>
             <when state="circumflex" output="N̂"/>
             <when state="diaeresis" output="N̈"/>
+            <when state="dot above" output="Ṅ"/>
             <when state="greek letter" output="Ν"/>
             <when state="math" output="ℕ"/>
             <when state="s5" output="Ñ"/>
@@ -1372,6 +1404,7 @@
             <when state="circumflex" output="B̂"/>
             <when state="currency" output="₿"/>
             <when state="diaeresis" output="B̈"/>
+            <when state="dot above" output="Ḃ"/>
             <when state="greek letter" output="B"/>
         </action>
         <action id="C">
@@ -1381,6 +1414,7 @@
             <when state="cedilla" output="Ç"/>
             <when state="circumflex" output="Ĉ"/>
             <when state="diaeresis" output="C̈"/>
+            <when state="dot above" output="Ċ"/>
             <when state="math" output="ℂ"/>
         </action>
         <action id="D">
@@ -1389,6 +1423,7 @@
             <when state="caron" output="Ď"/>
             <when state="cedilla" output="Ḑ"/>
             <when state="circumflex" output="D̂"/>
+            <when state="dot above" output="Ḋ"/>
             <when state="greek letter" output="Δ"/>
             <when state="macron" output="Đ"/>
             <when state="ring" output="D̊"/>
@@ -1397,14 +1432,17 @@
             <when state="none" output="F"/>
             <when state="acute accent" output="F́"/>
             <when state="caron" output="F̌"/>
+            <when state="dot above" output="Ḟ"/>
             <when state="greek letter" output="Φ"/>
         </action>
         <action id="G">
             <when state="none" output="G"/>
             <when state="acute accent" output="Ǵ"/>
+            <when state="breve" output="Ğ"/>
             <when state="caron" output="Ǧ"/>
             <when state="cedilla" output="Ģ"/>
             <when state="circumflex" output="Ĝ"/>
+            <when state="dot above" output="Ġ"/>
             <when state="greek letter" output="Γ"/>
             <when state="ring" output="G̊"/>
             <when state="tilde" output="G̃"/>
@@ -1412,10 +1450,12 @@
         <action id="H">
             <when state="none" output="H"/>
             <when state="acute accent" output="H́"/>
+            <when state="breve" output="Ḫ"/>
             <when state="caron" output="Ȟ"/>
             <when state="cedilla" output="Ḩ"/>
             <when state="circumflex" output="Ĥ"/>
             <when state="diaeresis" output="Ḧ"/>
+            <when state="dot above" output="Ḣ"/>
             <when state="greek letter" output="Η"/>
             <when state="math" output="ℋ"/>
         </action>
@@ -1456,6 +1496,7 @@
             <when state="cedilla" output="M̧"/>
             <when state="circumflex" output="M̂"/>
             <when state="diaeresis" output="M̈"/>
+            <when state="dot above" output="Ṁ"/>
             <when state="double acute accent" output="M̋"/>
             <when state="grave accent" output="M̀"/>
             <when state="greek letter" output="Μ"/>
@@ -1467,6 +1508,7 @@
             <when state="caron" output="P̌"/>
             <when state="currency" output="₱"/>
             <when state="diaeresis" output="P̈"/>
+            <when state="dot above" output="Ṗ"/>
             <when state="greek letter" output="Π"/>
             <when state="math" output="∏"/>
             <when state="tilde" output="P̃"/>
@@ -1487,8 +1529,10 @@
             <when state="caron" output="Ř"/>
             <when state="cedilla" output="Ŗ"/>
             <when state="circumflex" output="R̂"/>
+            <when state="dot above" output="Ṙ"/>
             <when state="grave accent" output="R̀"/>
             <when state="greek letter" output="Ρ"/>
+            <when state="inverted breve" output="Ȓ"/>
             <when state="math" output="ℝ"/>
             <when state="tilde" output="R̃"/>
         </action>
@@ -1499,6 +1543,7 @@
             <when state="cedilla" output="Ş"/>
             <when state="circumflex" output="Ŝ"/>
             <when state="diaeresis" output="S̈"/>
+            <when state="dot above" output="Ṡ"/>
             <when state="grave accent" output="S̀"/>
             <when state="greek letter" output="Σ"/>
             <when state="math" output="∑"/>
@@ -1511,6 +1556,7 @@
             <when state="cedilla" output="Ţ"/>
             <when state="circumflex" output="T̂"/>
             <when state="diaeresis" output="T̈"/>
+            <when state="dot above" output="Ṫ"/>
             <when state="grave accent" output="T̀"/>
             <when state="greek letter" output="Τ"/>
             <when state="macron" output="Ŧ"/>
@@ -1531,6 +1577,7 @@
             <when state="caron" output="W̌"/>
             <when state="circumflex" output="Ŵ"/>
             <when state="diaeresis" output="Ẅ"/>
+            <when state="dot above" output="Ẇ"/>
             <when state="grave accent" output="Ẁ"/>
             <when state="greek letter" output="Ω"/>
             <when state="ring" output="W̊"/>
@@ -1542,6 +1589,7 @@
             <when state="cedilla" output="X̧"/>
             <when state="circumflex" output="X̂"/>
             <when state="diaeresis" output="Ẍ"/>
+            <when state="dot above" output="Ẋ"/>
             <when state="grave accent" output="X̀"/>
             <when state="greek letter" output="Ξ"/>
             <when state="ring" output="X̊"/>
@@ -1553,6 +1601,7 @@
             <when state="cedilla" output="Z̧"/>
             <when state="circumflex" output="Ẑ"/>
             <when state="diaeresis" output="Z̈"/>
+            <when state="dot above" output="Ż"/>
             <when state="grave accent" output="Z̀"/>
             <when state="greek letter" output="Ζ"/>
             <when state="math" output="ℤ"/>
@@ -1578,7 +1627,7 @@
             <when state="none" output="Þ"/>
         </action>
         <action id="action 1">
-            <when state="none" output=""/>
+            <when state="none" next="breve"/>
         </action>
         <action id="action 2">
             <when state="none" output=""/>
@@ -1592,6 +1641,7 @@
             <when state="circumflex" output="b̂"/>
             <when state="currency" output="฿"/>
             <when state="diaeresis" output="b̈"/>
+            <when state="dot above" output="ḃ"/>
             <when state="greek letter" output="β"/>
         </action>
         <action id="c">
@@ -1602,6 +1652,7 @@
             <when state="circumflex" output="ĉ"/>
             <when state="currency" output="¢"/>
             <when state="diaeresis" output="c̈"/>
+            <when state="dot above" output="ċ"/>
             <when state="math" output="⊂"/>
         </action>
         <action id="caron">
@@ -1621,6 +1672,7 @@
             <when state="cedilla" output="ḑ"/>
             <when state="circumflex" output="d̂"/>
             <when state="currency" output="$"/>
+            <when state="dot above" output="ḋ"/>
             <when state="greek letter" output="δ"/>
             <when state="macron" output="đ"/>
             <when state="math" output="∂"/>
@@ -1630,15 +1682,18 @@
             <when state="none" output="f"/>
             <when state="acute accent" output="f́"/>
             <when state="caron" output="f̌"/>
+            <when state="dot above" output="ḟ"/>
             <when state="greek letter" output="φ"/>
             <when state="math" output="↦"/>
         </action>
         <action id="g">
             <when state="none" output="g"/>
             <when state="acute accent" output="ǵ"/>
+            <when state="breve" output="ğ"/>
             <when state="caron" output="ǧ"/>
             <when state="cedilla" output="ģ"/>
             <when state="circumflex" output="ĝ"/>
+            <when state="dot above" output="ġ"/>
             <when state="greek letter" output="γ"/>
             <when state="ring" output="g̊"/>
             <when state="tilde" output="g̃"/>
@@ -1646,10 +1701,12 @@
         <action id="h">
             <when state="none" output="h"/>
             <when state="acute accent" output="h́"/>
+            <when state="breve" output="ḫ"/>
             <when state="caron" output="ȟ"/>
             <when state="cedilla" output="ḩ"/>
             <when state="circumflex" output="ĥ"/>
             <when state="diaeresis" output="ḧ"/>
+            <when state="dot above" output="ḣ"/>
             <when state="greek letter" output="η"/>
         </action>
         <action id="j">
@@ -1694,6 +1751,7 @@
             <when state="cedilla" output="m̧"/>
             <when state="circumflex" output="m̂"/>
             <when state="diaeresis" output="m̈"/>
+            <when state="dot above" output="ṁ"/>
             <when state="double acute accent" output="m̋"/>
             <when state="grave accent" output="m̀"/>
             <when state="greek letter" output="μ"/>
@@ -1712,6 +1770,7 @@
             <when state="caron" output="p̌"/>
             <when state="currency" output="£"/>
             <when state="diaeresis" output="p̈"/>
+            <when state="dot above" output="ṗ"/>
             <when state="greek letter" output="π"/>
             <when state="tilde" output="p̃"/>
         </action>
@@ -1731,8 +1790,10 @@
             <when state="cedilla" output="ŗ"/>
             <when state="circumflex" output="r̂"/>
             <when state="currency" output="₽"/>
+            <when state="dot above" output="ṙ"/>
             <when state="grave accent" output="r̀"/>
             <when state="greek letter" output="ρ"/>
+            <when state="inverted breve" output="ȓ"/>
             <when state="math" output="√"/>
             <when state="tilde" output="r̃"/>
         </action>
@@ -1744,6 +1805,7 @@
             <when state="circumflex" output="ŝ"/>
             <when state="currency" output="﷼"/>
             <when state="diaeresis" output="s̈"/>
+            <when state="dot above" output="ṡ"/>
             <when state="grave accent" output="s̀"/>
             <when state="greek letter" output="σ"/>
             <when state="ring" output="s̊"/>
@@ -1756,6 +1818,7 @@
             <when state="circumflex" output="t̂"/>
             <when state="currency" output="₺"/>
             <when state="diaeresis" output="ẗ"/>
+            <when state="dot above" output="ṫ"/>
             <when state="grave accent" output="t̀"/>
             <when state="greek letter" output="τ"/>
             <when state="macron" output="ŧ"/>
@@ -1779,6 +1842,7 @@
             <when state="circumflex" output="ŵ"/>
             <when state="currency" output="₩"/>
             <when state="diaeresis" output="ẅ"/>
+            <when state="dot above" output="ẇ"/>
             <when state="grave accent" output="ẁ"/>
             <when state="greek letter" output="ω"/>
             <when state="ring" output="ẘ"/>
@@ -1790,6 +1854,7 @@
             <when state="cedilla" output="x̧"/>
             <when state="circumflex" output="x̂"/>
             <when state="diaeresis" output="ẍ"/>
+            <when state="dot above" output="ẋ"/>
             <when state="grave accent" output="x̀"/>
             <when state="greek letter" output="ξ"/>
             <when state="ring" output="x̊"/>
@@ -1801,6 +1866,7 @@
             <when state="cedilla" output="z̧"/>
             <when state="circumflex" output="ẑ"/>
             <when state="diaeresis" output="z̈"/>
+            <when state="dot above" output="ż"/>
             <when state="grave accent" output="z̀"/>
             <when state="greek letter" output="ζ"/>
         </action>
@@ -1922,6 +1988,12 @@
         <action id="ˊ">
             <when state="none" next="acute accent"/>
         </action>
+        <action id="˘">
+            <when state="none" next="breve"/>
+        </action>
+        <action id="˙">
+            <when state="none" next="dot above"/>
+        </action>
         <action id="˚">
             <when state="none" next="ring"/>
         </action>
@@ -1959,19 +2031,22 @@
             <when state="none" output="≠"/>
             <when state="math" output="≢"/>
         </action>
+        <action id=" ̑">
+            <when state="none" next="inverted breve"/>
+        </action>
     </actions>
     <terminators>
         <when state="acute accent" output="´"/>
+        <when state="grave accent" output="`"/>
+        <when state="inverted breve" output=" ̑"/>
+        <when state="breve" output="˘"/>
         <when state="caron" output="ˇ"/>
         <when state="cedilla" output="¸"/>
         <when state="circumflex" output="ˆ"/>
-        <when state="currency" output="¤"/>
         <when state="diaeresis" output="¨"/>
+        <when state="dot above" output="˙"/>
         <when state="double acute accent" output="˝"/>
-        <when state="grave accent" output="`"/>
-        <when state="greek letter" output=""/>
         <when state="macron" output="¯"/>
-        <when state="math" output=""/>
         <when state="ogonek" output="˛"/>
         <when state="ring" output="˚"/>
         <when state="s1" output="è"/>
@@ -1980,5 +2055,8 @@
         <when state="s4" output="ù"/>
         <when state="s5" output="ñ"/>
         <when state="tilde" output="~"/>
+        <when state="currency" output="¤"/>
+        <when state="greek letter" output=""/>
+        <when state="math" output=""/>
     </terminators>
 </keyboard>
