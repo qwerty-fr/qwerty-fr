@@ -147,8 +147,8 @@ deadkeys:
   
   - char: '*˛'
     name: ogonek
-    base: AaEeIiOoUu
-    alt:  ĄąĘęĮįǪǫŲų
+    base: AaEeIiNnOoUu
+    alt:  ĄąĘęĮįŊŋǪǫŲų
     alt_space: '˛'  # U+02DB OGONEK
     alt_self:  '˛'  # U+02DB OGONEK
   

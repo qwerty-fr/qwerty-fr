@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 351 on 2022-06-01 at 15:48 (CEST)-->
+<!--Last edited by Ukelele version 351 on 2022-06-01 at 17:36 (CEST)-->
 <!--Created by Ukelele version 2.1.10 on 2012-02-20 at 23:06 (PST)-->
 <keyboard group="126" id="-7247" name="qwerty-fr" maxout="3">
     <!-- Supporting both ISO and ANSI keyboards require shenanigans because some keys have inconsistent code. I was inspired by the file `bepo-qwerty.keylayout`.
@@ -976,6 +976,9 @@
         </keyMap>
     </keyMapSet>
     <actions>
+        <action id=" ̑">
+            <when state="none" next="inverted breve"/>
+        </action>
         <action id="!">
             <when state="none" output="!"/>
             <when state="math" output="¬"/>
@@ -1164,6 +1167,7 @@
             <when state="dot above" output="ṅ"/>
             <when state="greek letter" output="ν"/>
             <when state="math" output="∇"/>
+            <when state="ogonek" output="ŋ"/>
             <when state="s5" output="ñ"/>
             <when state="tilde" output="ñ"/>
         </action>
@@ -1367,6 +1371,7 @@
             <when state="dot above" output="Ṅ"/>
             <when state="greek letter" output="Ν"/>
             <when state="math" output="ℕ"/>
+            <when state="ogonek" output="Ŋ"/>
             <when state="s5" output="Ñ"/>
             <when state="tilde" output="Ñ"/>
         </action>
@@ -2031,22 +2036,22 @@
             <when state="none" output="≠"/>
             <when state="math" output="≢"/>
         </action>
-        <action id=" ̑">
-            <when state="none" next="inverted breve"/>
-        </action>
     </actions>
     <terminators>
         <when state="acute accent" output="´"/>
-        <when state="grave accent" output="`"/>
-        <when state="inverted breve" output=" ̑"/>
         <when state="breve" output="˘"/>
         <when state="caron" output="ˇ"/>
         <when state="cedilla" output="¸"/>
         <when state="circumflex" output="ˆ"/>
+        <when state="currency" output="¤"/>
         <when state="diaeresis" output="¨"/>
         <when state="dot above" output="˙"/>
         <when state="double acute accent" output="˝"/>
+        <when state="grave accent" output="`"/>
+        <when state="greek letter" output=""/>
+        <when state="inverted breve" output=" ̑"/>
         <when state="macron" output="¯"/>
+        <when state="math" output=""/>
         <when state="ogonek" output="˛"/>
         <when state="ring" output="˚"/>
         <when state="s1" output="è"/>
@@ -2055,8 +2060,5 @@
         <when state="s4" output="ù"/>
         <when state="s5" output="ñ"/>
         <when state="tilde" output="~"/>
-        <when state="currency" output="¤"/>
-        <when state="greek letter" output=""/>
-        <when state="math" output=""/>
     </terminators>
 </keyboard>
