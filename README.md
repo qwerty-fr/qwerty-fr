@@ -54,7 +54,8 @@ Download the [QWERTY-fr layout](https://github.com/qwerty-fr/qwerty-fr/releases/
 
 **Automatic install**:
 
-Download the [QWERTY-fr layout](https://github.com/qwerty-fr/qwerty-fr/releases/latest) PKG. Do a right click on it and then click on ‶Open″.
+Download the [QWERTY-fr layout](https://github.com/qwerty-fr/qwerty-fr/releases/latest) PKG. Do a right click on it and then click on ‶Open″. Follow the installation process, then go to ‶System Preferences″ > ‶Keyboard″, click ‶+″, scroll down to ‶Others″ and add ‶qwerty-fr″.
+
 
 **Manual install**:
 
