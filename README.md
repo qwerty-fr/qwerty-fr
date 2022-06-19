@@ -6,6 +6,12 @@ Keyboard layout based on the QWERTY layout with extra symbols and diacritics so 
 
 👉 You can [try this keyboard layout online](https://qwerty-fr.org) without installing it!
 
+## 🗣 Discuss
+
+You can provide feedback and discuss with other users using Telegram:
+- ![Telegram icon](https://badges.aleen42.com/src/telegram.svg)
+- 🔐 `finless-marmalade-paralyses` (bot protection).
+
 ## 💭 Why?
 
 The official and widely spread keyboard layout in France is [AZERTY](https://upload.wikimedia.org/wikipedia/commons/b/b9/KB_France.svg). Compared to QWERTY, it adds extra letters such as « é » and « ç ». Unfortunately a lot of characters are missing, for example it's impossible to type « É » or « Ç ». It's also impossible to type the French quotation marks (« »), and other special characters such as « œ » and « æ ». French users usually rely on autocorrect to fix the shortcomings of [AZERTY](https://upload.wikimedia.org/wikipedia/commons/b/b9/KB_France.svg), which is unacceptable.
