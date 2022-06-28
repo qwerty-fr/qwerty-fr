@@ -60,15 +60,18 @@ Download the [QWERTY-fr layout](https://github.com/qwerty-fr/qwerty-fr/releases/
 
 **Automatic install**:
 
-Download the [QWERTY-fr layout](https://github.com/qwerty-fr/qwerty-fr/releases/latest) PKG. Do a right click on it and then click on ‶Open″.
+- Download the [QWERTY-fr layout](https://github.com/qwerty-fr/qwerty-fr/releases/latest) PKG.
+- Do a right click on it and then click on `Open`. Follow the installation process.
+- Go to `System Preferences` > `Keyboard`, click `+`, scroll down to `Others` and add `qwerty-fr`.
+- Restart macOS (if you don't some characters won't work).
 
 **Manual install**:
 
-Download the [QWERTY-fr layout](https://github.com/qwerty-fr/qwerty-fr/releases/latest) ZIP file and extract **qwerty-fr.bundle** to :
-- `/Library/Keyboard Layouts/` to install for all users.
-- `~/Library/Keyboard Layouts/` for user-local installation.
-
-You'll need to restart macOS before using it or otherwise you'll encounter bugs.
+- Download the [QWERTY-fr layout](https://github.com/qwerty-fr/qwerty-fr/releases/latest) ZIP file and extract **qwerty-fr.bundle** to:
+  - `/Library/Keyboard Layouts/` to install for all users.
+  - `~/Library/Keyboard Layouts/` for user-local installation.
+- Go to `System Preferences` > `Keyboard`, click `+`, scroll down to `Others` and add `qwerty-fr`.
+- Restart macOS (if you don't some characters won't work).
 
 **✅ Protip**: On Apple keyboards the right <kbd>Option ⌥</kbd> key is often hard to access. You can use [Karabiner-Elements](https://pqrs.org/osx/karabiner/) to swap the right <kbd>Option ⌥</kbd> key with the right <kbd>Command ⌘</kbd> key. [Here is the rule](https://ke-complex-modifications.pqrs.org/#swap_right_cmd_with_right_option) you'll need to import in Karabiner-Elements. This makes it easier to type characters!
 
