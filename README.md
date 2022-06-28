@@ -55,13 +55,13 @@ Download the [QWERTY-fr layout](https://github.com/qwerty-fr/qwerty-fr/releases/
 **Automatic install**:
 
 - Download the [QWERTY-fr layout](https://github.com/qwerty-fr/qwerty-fr/releases/latest) PKG.
-- Do a right click on it and then click on `Open`. Follow the installation process
+- Do a right click on it and then click on `Open`. Follow the installation process.
 - Go to `System Preferences` > `Keyboard`, click `+`, scroll down to `Others` and add `qwerty-fr`.
 - Restart macOS (if you don't some characters won't work).
 
 **Manual install**:
 
-- Download the [QWERTY-fr layout](https://github.com/qwerty-fr/qwerty-fr/releases/latest) ZIP file and extract **qwerty-fr.bundle** to :
+- Download the [QWERTY-fr layout](https://github.com/qwerty-fr/qwerty-fr/releases/latest) ZIP file and extract **qwerty-fr.bundle** to:
   - `/Library/Keyboard Layouts/` to install for all users.
   - `~/Library/Keyboard Layouts/` for user-local installation.
 - Go to `System Preferences` > `Keyboard`, click `+`, scroll down to `Others` and add `qwerty-fr`.
