@@ -9,7 +9,7 @@ Keyboard layout based on the QWERTY layout with extra symbols and diacritics so 
 ## 🗣 Discuss
 
 You can provide feedback and discuss with other users using Telegram:
-- ![Telegram icon](https://badges.aleen42.com/src/telegram.svg)
+- [![Telegram icon](https://badges.aleen42.com/src/telegram.svg)](https://jstrieb.github.io/link-lock/#eyJ2IjoiMC4wLjEiLCJlIjoiTmZjNUZhdmZJSUp4QUxNVkpOU2ZweWxwSXNHVWhoSkowanFoNHBKS1VOV0JjYmhSN0Q4VWlGYTlrTUJQNkE9PSIsInMiOiJvL1pFczAxWlJoeitEa1B5TGQvTHVnPT0iLCJpIjoiTUZRUEVVdXVhai9LaWZ5SyJ9)
 - 🔐 `finless-marmalade-paralyses` (bot protection).
 
 ## 💭 Why?
