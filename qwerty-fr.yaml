@@ -26,7 +26,7 @@ full: |
   ┃        ┃ Q Â │ W É │ E È │ R © │ T Þ │ Y*˘ │ U Ù │ I Ì │ O Ò │ P Œ │ { “ │ } ” ┃       ┃
   ┃ ↹      ┃ q â │ w é │ e è │ r ® │ t þ │ y*ȃ │ u ù │ i ì │ o ò │ p œ │ [ « │ ] » ┃       ┃
   ┣━━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓  ⏎   ┃
-  ┃         ┃ A À │ S Æ │ D Ë │ F   │ G   │ H Ÿ │ J Ü │ K Ï │ L Ö │ :*˚ │ "*¨ │ | „ ┃      ┃
+  ┃         ┃ A À │ S Æ │ D Ë │ F   │ G   │ H Ÿ │ J Ü │ K Ï │ L Ö │ :*° │ "*¨ │ | „ ┃      ┃
   ┃ ⇬       ┃ a à │ s æ │ d ë │ f   │ g*α │ h ÿ │ j ü │ k ï │ l ö │ ;*´ │ '*` │ \   ┃      ┃
   ┣━━━━━━┳━━┹──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┲━━┷━━━━━┻━━━━━━┫
   ┃      ┃ > ≥ │ Z À │ X ÷ │ C Ç │ V   │ B ẞ │ N Ñ │ M   │ <*˛ │ > … │ ? ¿ ┃               ┃
@@ -131,12 +131,12 @@ deadkeys:
     alt_space: '"'  # U+0022 QUOTATION MARK
     alt_self:  '¨'  # U+00A8 DIAERESIS
   
-  - char: '*˚'
+  - char: '*°'
     name: abovering
     base: AaDdEeGgIiOoQqSsUuVvWwXxYy
     alt:  ÅåD̊d̊E̊e̊G̊g̊I̊i̊O̊o̊Q̊q̊S̊s̊ŮůV̊v̊W̊ẘX̊x̊Y̊ẙ
-    alt_space: '˚'  # U+02DA RING ABOVE
-    alt_self:  '˚'  # U+02DA RING ABOVE
+    alt_space: '°'  # U+02DA RING ABOVE
+    alt_self:  '°'  # U+02DA RING ABOVE
   
   - char: '*¸'
     name: cedilla
