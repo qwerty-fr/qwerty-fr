@@ -436,7 +436,7 @@
             <key code="18" output="¹"/>
             <key code="19" output="²"/>
             <key code="20" output="ê"/>
-            <key code="21" action="¤ 1"/>
+            <key code="21" output="€"/>
             <key code="22" action="circumflex"/>
             <key code="23" action="¯ 3"/>
             <key code="24" action="≠"/>
@@ -548,7 +548,7 @@
             <key code="18" output="¡"/>
             <key code="19" action="˝"/>
             <key code="20" output="Ê"/>
-            <key code="21" output="€"/>
+            <key code="21" action="¤ 1"/>
             <key code="22" action="caron"/>
             <key code="23" action="˙"/>
             <key code="24" action="≈"/>
