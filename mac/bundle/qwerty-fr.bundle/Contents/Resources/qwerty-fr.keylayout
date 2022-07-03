@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
-<!--Last edited by Ukelele version 351 on 2022-06-01 at 17:36 (CEST)-->
+<!--Last edited by Ukelele version 351 on 2022-07-03 at 11:41 (CEST)-->
 <!--Created by Ukelele version 2.1.10 on 2012-02-20 at 23:06 (PST)-->
 <keyboard group="126" id="-7247" name="qwerty-fr" maxout="3">
     <!-- Supporting both ISO and ANSI keyboards require shenanigans because some keys have inconsistent code. I was inspired by the file `bepo-qwerty.keylayout`.
@@ -2053,7 +2053,7 @@
         <when state="macron" output="¯"/>
         <when state="math" output=""/>
         <when state="ogonek" output="˛"/>
-        <when state="ring" output="˚"/>
+        <when state="ring" output="°"/>
         <when state="s1" output="è"/>
         <when state="s2" output="`"/>
         <when state="s3" output="ì"/>
