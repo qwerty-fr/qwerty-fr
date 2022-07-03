@@ -1,1 +1,4 @@
-/linux/debian/xkb-qwerty-fr_*/
+/linux/debian/xkb-qwerty-fr_*
+.idea/
+mac/bundle/qwerty-fr_*.zip
+mac/pkg/*.pkg
