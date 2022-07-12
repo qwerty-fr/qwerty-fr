@@ -557,10 +557,10 @@
             <key code="27" output="—"/>
             <key code="28" output="Î"/>
             <key code="29" output="Ø"/>
-            <key code="30" action="”"/>
+            <key code="30" action="″"/>
             <key code="31" output="Ò"/>
             <key code="32" output="Ù"/>
-            <key code="33" action="“"/>
+            <key code="33" action="‶"/>
             <key code="34" action="Ì"/>
             <key code="35" action="Œ"/>
             <key code="36" output="&#x000D;"/>
@@ -2021,12 +2021,12 @@
             <when state="none" output="…"/>
             <when state="math" output="↛"/>
         </action>
-        <action id="”">
-            <when state="none" output="”"/>
+        <action id="″">
+            <when state="none" output="″"/>
             <when state="math" output="⌉"/>
         </action>
-        <action id="“">
-            <when state="none" output="“"/>
+        <action id="‶">
+            <when state="none" output="‶"/>
             <when state="math" output="⌈"/>
         </action>
         <action id="≈">
