@@ -67,7 +67,7 @@ LAYOUT		;an extra '@' at the end is a dead key
 2f	V		1	v	V	-1	-1	-1		// v, V, , , 
 30	B		1	b	B	-1	00df	1e9e		// b, B, , ß, ẞ (capital)
 31	N		5	n	N	-1	00f1	00d1		// n, N, , ñ, Ñ
-32	M		1	m	M	-1	-1	-1		// m, M, , , 
+32	M		1	m	M	-1	222b@	-1			// m, M, , ∫, 
 33	OEM_COMMA	0	002c	003c	-1	00b8@	02db@		// <, , ¸, ˛, ''
 34	OEM_PERIOD	0	002e	003e	-1	00b7	2026		// >, , ·, …, ''
 35	OEM_2		0	002f	003f	-1	2019	00bf		// /, ?, , ’, ¿
@@ -348,6 +348,10 @@ DEADKEY	007e	// ~
 007e	007e	// ~ -> ~
 0020	007e	//   -> ~
 
+DEADKEY 222b	// ¸
+222b	222b	// ¸
+0020	222b	//   -> ¸
+
 DEADKEY 00b8	// ¸
 0043	00c7	// C -> Ç
 0045	0228	// E -> Ȩ
@@ -365,7 +369,7 @@ DEADKEY 00b8	// ¸
 0072	0157	// r -> ŗ
 0073	015f	// s -> ş
 0074	0163	// t -> ţ
-00b8	00b8	// ¸ -> ¸
+00b8	00b8	// ¸
 0020	00b8	//   -> ¸
 
 DEADKEY 02db	// ˛
@@ -483,6 +487,7 @@ KEYNAME_DEAD
 00a8	"DIAERESIS"
 0060	"GRAVE ACCENT"
 007e	"TILDE"
+222b	"MATH"
 00b8	"CEDILLA"
 02db	"OGONEK"
 02da	"RING ABOVE"
