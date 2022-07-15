@@ -1,2 +1,2 @@
 * text=auto eol=lf
-windows/qwertyfr.utf8.klc text eol=crlf
+windows/qwertyfr.utf8.klc text working-tree-encoding=UTF-16LE-BOM eol=crlf
