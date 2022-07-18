@@ -92,7 +92,21 @@ Use your favorite AUR helper to install it. Or in the directory containing the `
 
 You can download the [Linux ZIP file](https://github.com/qwerty-fr/qwerty-fr/releases/latest) and then extract it at the root of your filesystem.
 
-# 🤝 Contributing
+## 📣 Frequently asked questions
+
+### The math dead key doesn't do anything on Windows
+
+If you have **Nvidia GeForce Experience** installed, then you need to change the shortcut that it uses for the `Toggle microphone on/off` feature:
+- Open Nvidia's GeForce Experience's overlay (the default shortcut is <kbd>Alt</kbd> <kbd>z</kbd>.
+- Click the settings cog ⚙, then click on `keyboard shortcuts`.
+- Locate the `Toggle microphone on/off` entry (it should display the default shortcut `Ctrl+Alt+M`).
+- Double-click on the shortcut and remove it (or change it to another key combination).
+
+### Some dead keys (e.g. math) don't work on Linux
+
+This is a known limitation. See https://github.com/qwerty-fr/qwerty-fr/issues/17
+
+## 🤝 Contributing
 
 The easiest way to contribute to this project is to spread the word and the website [qwerty-fr.org](https://qwerty-fr.org).
 
