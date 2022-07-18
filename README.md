@@ -99,8 +99,10 @@ You can download the [Linux ZIP file](https://github.com/qwerty-fr/qwerty-fr/rel
 If you have **Nvidia GeForce Experience** installed, then you need to change the shortcut that it uses for the `Toggle microphone on/off` feature:
 - Open Nvidia's GeForce Experience's overlay (the default shortcut is <kbd>Alt</kbd> <kbd>z</kbd>.
 - Click the settings cog ⚙, then click on `keyboard shortcuts`.
-- Locate the `Toggle microphone on/off` entry (it should display the default shortcut `Ctrl+Alt+M`).
+- Locate the `Toggle microphone on/off` entry (it should display the default shortcut `Ctrl+Alt+M` or `AltGr+M`).
 - Double-click on the shortcut and remove it (or change it to another key combination).
+
+Alternatively, you can also access the math mode with <kbd>AltGr</kbd> kbd>Shift</kbd> kbd>m</kbd> which doesn't conflict with Nvidia GeForce Experience.
 
 ### Some dead keys (e.g. math) don't work on Linux
 
