@@ -27,7 +27,7 @@ full: |
   ┃ ↹      ┃ q â │ w é │ e è │ r ® │ t þ │ y*ȃ │ u ù │ i ì │ o ò │ p œ │ [ « │ ] » ┃       ┃
   ┣━━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓  ⏎   ┃
   ┃         ┃ A À │ S Æ │ D Ë │ F   │ G   │ H Ÿ │ J Ü │ K Ï │ L Ö │ :*° │ "*¨ │ | „ ┃      ┃
-  ┃ ⇬       ┃ a à │ s æ │ d ë │ f   │ g*α │ h ÿ │ j ü │ k ï │ l ö │ ;*´ │ '*` │ \   ┃      ┃
+  ┃ ⇬       ┃ a à │ s æ │ d ë │ f   │ g*Ω │ h ÿ │ j ü │ k ï │ l ö │ ;*´ │ '*` │ \   ┃      ┃
   ┣━━━━━━┳━━┹──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┬──┴──┲━━┷━━━━━┻━━━━━━┫
   ┃      ┃ > ≥ │ Z À │ X ÷ │ C Ç │ V   │ B ẞ │ N Ñ │ M   │ <*˛ │ > … │ ? ¿ ┃               ┃
   ┃ ⇧    ┃ < ≤ │ z ä │ x × │ c ç │ v   │ b ß │ n ñ │ m*∫ │ ,*¸ │ . · │ / ’ ┃ ⇧             ┃
@@ -152,12 +152,12 @@ deadkeys:
     alt_space: '˛'  # U+02DB OGONEK
     alt_self:  '˛'  # U+02DB OGONEK
   
-  - char: '*α'
+  - char: '*Ω'
     name: greek
     base: AaBbDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuWwXxYyZz
     alt:  ΑαΒβΔδΕεΦφΓγΗηΙιΘθΚκΛλΜμΝνΟοΠπΧχΡρΣσΤτΥυΩωΞξΨψΖζ
-    alt_space: 'α'  # U+00B5 GREEK SMALL LETTER ALPHA
-    alt_self:  'α'  # U+00B5 GREEK SMALL LETTER ALPHA
+    alt_space: 'Ω'  # U+00B5 GREEK SMALL LETTER ALPHA
+    alt_self:  'Ω'  # U+00B5 GREEK SMALL LETTER ALPHA
   
   - char: '*¤'
     name: currency
