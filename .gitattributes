@@ -1,2 +1,7 @@
 * text=auto eol=lf
-windows/qwertyfr.utf8.klc text eol=crlf
+
+# Git only supports UTF-8 for text operations, but we want the file in the working directory to be UTF-16LE-BOM. I tried this:
+# windows/qwertyfr.utf16le-bom.klc text working-tree-encoding=UTF-16LE-BOM eol=crlf
+# But for unclear reasons the file doesn't survive the encoding roundtrip: "error: failed to encode 'windows/qwertyfr.utf16le-bom.klc' from UTF-8 to UTF-16LE-BOM"
+# So we are storing as binary to make sure that the encoding doesn't get messed with.
+windows/qwertyfr.utf16le-bom.klc binary
