@@ -102,7 +102,7 @@ If you have **Nvidia GeForce Experience** installed, then you need to change the
 - Locate the `Toggle microphone on/off` entry (it should display the default shortcut `Ctrl+Alt+M` or `AltGr+M`).
 - Double-click on the shortcut and remove it (or change it to another key combination).
 
-Alternatively, you can also access the math mode with <kbd>AltGr</kbd> kbd>Shift</kbd> kbd>m</kbd> which doesn't conflict with Nvidia GeForce Experience.
+Alternatively, you can also access the math mode with <kbd>AltGr</kbd> <kbd>Shift</kbd> <kbd>m</kbd> which doesn't conflict with Nvidia GeForce Experience.
 
 ### Some dead keys (e.g. math) don't work on Linux
 
