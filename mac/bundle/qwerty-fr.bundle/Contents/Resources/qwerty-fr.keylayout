@@ -2048,10 +2048,10 @@
         <when state="dot above" output="˙"/>
         <when state="double acute accent" output="˝"/>
         <when state="grave accent" output="`"/>
-        <when state="greek letter" output=""/>
+        <when state="greek letter" output="Ω"/>
         <when state="inverted breve" output=" ̑"/>
         <when state="macron" output="¯"/>
-        <when state="math" output=""/>
+        <when state="math" output="∫"/>
         <when state="ogonek" output="˛"/>
         <when state="ring" output="°"/>
         <when state="s1" output="è"/>
