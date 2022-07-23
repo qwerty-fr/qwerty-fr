@@ -1,3 +1,11 @@
+xkb-qwerty-fr (0.7.1) unstable; urgency=low
+
+  * Layout: Swapped the position of dead currency (¤) and euro sign (€) to make the latter more accessible as it's very frequently used in European countries.
+  * MacOS: Fixed many issues.
+  * Windows: Fixed many issues.
+
+ -- Paul <devnoname120@gmail.com>  Sat, 23 Jul 2022 22:00:00 +0100
+
 xkb-qwerty-fr (0.7) unstable; urgency=low
 
   * Layout: Added a new math mode (not available on Linux due to xkb limitations) which allows to type mathematical formulas conveniently. It can be activated by pressing m.

@@ -1,5 +1,5 @@
 Package: xkb-qwerty-fr
-Version: 0.7
+Version: 0.7.1
 Section: x11
 Priority: optional
 Architecture: all
@@ -7,7 +7,8 @@ Depends: xkb-data, perl
 Suggests: x11-xkb-utils
 Conflicts: xkb-data-legacy
 Installed-Size: 100
-Maintainer: Julien Blitte <julien.blitte@gmail.com>
+Homepage: https://github.com/qwerty-fr/qwerty-fr
+Maintainer: Paul <devnoname120@gmail.com>
 Description: French qwerty keymap
  This package provide a keymap for french users of qwerty keyboard.
  All French characters are directly accessible with AltGr and smartly mapped.
