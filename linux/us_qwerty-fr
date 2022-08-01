@@ -11,7 +11,7 @@ xkb_symbols "qwerty-fr"
     key <AE01> { [ 1,            exclam,      onesuperior,            exclamdown           ] };
     key <AE02> { [ 2,            at,          twosuperior,            dead_doubleacute     ] };
     key <AE03> { [ 3,            numbersign,  ecircumflex,            Ecircumflex          ] };
-    key <AE04> { [ 4,            dollar,      EuroSign                dead_currency,       ] }; // FIXME: dead_currency has a different mapping than the one we want for qwerty-fr. Need to define a custom dead key instead. See Windows layout for dead key definition.
+    key <AE04> { [ 4,            dollar,      EuroSign,               dead_currency        ] }; // FIXME: dead_currency has a different mapping than the one we want for qwerty-fr. Need to define a custom dead key instead. See Windows layout for dead key definition.
     key <AE05> { [ 5,            percent,     dead_macron,            dead_abovedot        ] };
     key <AE06> { [ 6,            asciicircum, dead_circumflex,        dead_caron           ] };
     key <AE07> { [ 7,            ampersand,   ucircumflex,            Ucircumflex          ] };
