@@ -1,3 +1,9 @@
+xkb-qwerty-fr (0.7.2) unstable; urgency=low
+
+  * Linux: Fixed syntax error that broke the layout. Credits go to https://github.com/SimonGaufreteau.
+
+ -- Paul <devnoname120@gmail.com>  Tue, 6 Sep 2022 22:00:00 +0100
+
 xkb-qwerty-fr (0.7.1) unstable; urgency=low
 
   * Layout: Swapped the position of dead currency (¤) and euro sign (€) to make the latter more accessible as it's very frequently used in European countries.

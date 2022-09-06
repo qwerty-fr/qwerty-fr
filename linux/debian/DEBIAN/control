@@ -1,5 +1,5 @@
 Package: xkb-qwerty-fr
-Version: 0.7.1
+Version: 0.7.2
 Section: x11
 Priority: optional
 Architecture: all
