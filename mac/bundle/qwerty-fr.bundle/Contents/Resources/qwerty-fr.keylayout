@@ -29,22 +29,27 @@
         </keyMapSelect>
         <keyMapSelect mapIndex="1">
             <modifier keys="anyShift caps?"/>
-        </keyMapSelect>
-        <keyMapSelect mapIndex="2">
             <modifier keys="caps"/>
         </keyMapSelect>
+        <!-- Merged in mapIndex 1 (shift) -->
+        <!-- <keyMapSelect mapIndex="2">
+            <modifier keys="caps"/>
+        </keyMapSelect> -->
         <keyMapSelect mapIndex="3">
-            <modifier keys="anyOption"/>
+            <modifier keys="anyOption command?"/>
         </keyMapSelect>
         <keyMapSelect mapIndex="4">
             <modifier keys="anyShift caps? anyOption command?"/>
+            <modifier keys="caps anyOption command?"/>
         </keyMapSelect>
-        <keyMapSelect mapIndex="5">
+        <!-- Merged in mapIndex 4 (shift-option) -->
+        <!-- <keyMapSelect mapIndex="5">
             <modifier keys="caps anyOption"/>
-        </keyMapSelect>
-        <keyMapSelect mapIndex="6">
+        </keyMapSelect> -->
+        <!-- Merged in mapIndex 3 (option) and mapIndex 4 (shift-option) depending on the value of caps -->
+        <!-- <keyMapSelect mapIndex="6">
             <modifier keys="caps? anyOption command"/>
-        </keyMapSelect>
+        </keyMapSelect> -->
         <keyMapSelect mapIndex="7">
             <modifier keys="anyShift caps? option? command? control"/>
             <modifier keys="shift? caps? anyOption command? control"/>
