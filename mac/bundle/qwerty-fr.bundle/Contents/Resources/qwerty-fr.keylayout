@@ -3,8 +3,8 @@
 <!--Last edited by Ukelele version 351 on 2022-07-03 at 11:41 (CEST)-->
 <!--Created by Ukelele version 2.1.10 on 2012-02-20 at 23:06 (PST)-->
 <keyboard group="126" id="-7247" name="qwerty-fr" maxout="3">
-    <!-- Supporting both ISO and ANSI keyboards require shenanigans because some keys have inconsistent code. I was inspired by the file `bepo-qwerty.keylayout`.
-    -->
+    <!-- Workaround to support both ANSI and ISO keyboards. macOS swaps some  because some keys have their codes are swapped between the two (macOS legacy bug).
+         I was inspired by the file `bepo-qwerty.keylayout`. -->
     <layouts>
         <layout first="0" last="0" mapSet="ISO" modifiers="commonModifiers"/>
         <layout first="1" last="6" mapSet="ANSI" modifiers="commonModifiers"/>
@@ -29,24 +29,23 @@
         </keyMapSelect>
         <keyMapSelect mapIndex="1">
             <modifier keys="anyShift caps?"/>
+        </keyMapSelect>
+        <!-- Not merged into mapIndex 1 (anyShift) as caps lock only changes letters to capital.
+             Other symbols are not affected by caps lock, unless shift is pressed in addition. -->
+        <keyMapSelect mapIndex="2">
             <modifier keys="caps"/>
         </keyMapSelect>
-        <!-- Merged in mapIndex 1 (shift) -->
-        <!-- <keyMapSelect mapIndex="2">
-            <modifier keys="caps"/>
-        </keyMapSelect> -->
         <keyMapSelect mapIndex="3">
-            <modifier keys="anyOption command?"/>
+            <modifier keys="caps? anyOption command?"/>
         </keyMapSelect>
         <keyMapSelect mapIndex="4">
             <modifier keys="anyShift caps? anyOption command?"/>
-            <modifier keys="caps anyOption command?"/>
         </keyMapSelect>
-        <!-- Merged in mapIndex 4 (shift-option) -->
+        <!-- Merged in mapIndex 3 (anyOption) as caps lock only affects letters, not other symbols. -->
         <!-- <keyMapSelect mapIndex="5">
             <modifier keys="caps anyOption"/>
         </keyMapSelect> -->
-        <!-- Merged in mapIndex 3 (option) and mapIndex 4 (shift-option) depending on the value of caps -->
+        <!-- Merged in mapIndex 3 (anyOption) as command shouldn't affect the layout. -->
         <!-- <keyMapSelect mapIndex="6">
             <modifier keys="caps? anyOption command"/>
         </keyMapSelect> -->
@@ -64,7 +63,7 @@
             <key code="50" output="~"/>
         </keyMap>
         <keyMap index="2" baseMapSet="ISO" baseIndex="2">
-            <key code="50" output="~"/>
+            <key code="50" output="`"/>
         </keyMap>
         <keyMap index="3" baseMapSet="ISO" baseIndex="3">
             <key code="50" action="21"/>
@@ -318,7 +317,7 @@
             <key code="7" output="X"/>
             <key code="8" output="C"/>
             <key code="9" output="V"/>
-            <key code="10" output="~"/>
+            <key code="10" output="`"/>
             <key code="11" output="B"/>
             <key code="12" output="Q"/>
             <key code="13" output="W"/>
