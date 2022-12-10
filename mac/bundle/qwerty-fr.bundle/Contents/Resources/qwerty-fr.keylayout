@@ -2,9 +2,8 @@
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
 <!--Last edited by Ukelele version 351 on 2022-07-03 at 11:41 (CEST)-->
 <!--Created by Ukelele version 2.1.10 on 2012-02-20 at 23:06 (PST)-->
+<!-- See documentation: https://developer.apple.com/library/archive/technotes/tn2056/_index.html -->
 <keyboard group="126" id="-7247" name="qwerty-fr" maxout="3">
-    <!-- Workaround to support both ANSI and ISO keyboards. macOS swaps some  because some keys have their codes are swapped between the two (macOS legacy bug).
-         I was inspired by the file `bepo-qwerty.keylayout`. -->
     <layouts>
         <layout first="0" last="0" mapSet="ISO" modifiers="commonModifiers"/>
         <layout first="1" last="6" mapSet="ANSI" modifiers="commonModifiers"/>
@@ -25,36 +24,39 @@
     <modifierMap id="commonModifiers" defaultIndex="7">
         <keyMapSelect mapIndex="0">
             <modifier keys="command?"/>
-            <modifier keys="anyShift? caps? command"/>
         </keyMapSelect>
         <keyMapSelect mapIndex="1">
-            <modifier keys="anyShift caps?"/>
+            <modifier keys="anyShift caps? command?"/>
         </keyMapSelect>
-        <!-- Not merged into mapIndex 1 (anyShift) as caps lock only changes letters to capital.
-             Other symbols are not affected by caps lock, unless shift is pressed in addition. -->
+        <!-- Caps lock has its own keyMap as it only changes letters (to capital), not other symbols. -->
         <keyMapSelect mapIndex="2">
-            <modifier keys="caps"/>
+            <modifier keys="caps command?"/>
         </keyMapSelect>
         <keyMapSelect mapIndex="3">
-            <modifier keys="caps? anyOption command?"/>
+            <modifier keys="anyOption command?"/>
         </keyMapSelect>
         <keyMapSelect mapIndex="4">
             <modifier keys="anyShift caps? anyOption command?"/>
         </keyMapSelect>
-        <!-- Merged in mapIndex 3 (anyOption) as caps lock only affects letters, not other symbols. -->
-        <!-- <keyMapSelect mapIndex="5">
-            <modifier keys="caps anyOption"/>
-        </keyMapSelect> -->
-        <!-- Merged in mapIndex 3 (anyOption) as command shouldn't affect the layout. -->
+        <!-- Caps lock has its own keyMap as it only changes letters (to capital), not other symbols. -->
+        <keyMapSelect mapIndex="5">
+            <modifier keys="caps anyOption command?"/>
+        </keyMapSelect>
+        <!-- Merged in mapIndex 3 (anyOption) and mapIndex 4 (anyShift-anyOption) as command shouldn't affect the layout. -->
         <!-- <keyMapSelect mapIndex="6">
             <modifier keys="caps? anyOption command"/>
         </keyMapSelect> -->
+        <!-- Control pressed alone: no reason to change this behavior in qwerty-fr. -->
         <keyMapSelect mapIndex="7">
             <modifier keys="anyShift caps? option? command? control"/>
             <modifier keys="shift? caps? anyOption command? control"/>
             <modifier keys="caps? anyOption? command? control"/>
         </keyMapSelect>
     </modifierMap>
+    <!-- Workaround to support both ANSI and ISO keyboards in a single layout.
+         Due to a legacy bug, macOS maps the physical key code 50 to the physical key < on ISO, but to the physical key ` on ANSI (!)
+         So when physical key code 50 is pressed, we need to know if the keyboard is ANSI or ISO to determine the corresponding physical key.
+         Workaround inspired by the file `bepo-qwerty.keylayout`. -->
     <keyMapSet id="ANSI">
         <keyMap index="0" baseMapSet="ISO" baseIndex="0">
             <key code="50" output="`"/>
