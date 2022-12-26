@@ -1015,7 +1015,7 @@
             <when state="none" output="0"/>
             <when state="caron" output="₀"/>
             <when state="circumflex" output="⁰"/>
-            <when state="math" output="〉"/>
+            <when state="math" output="⟩"/>
         </action>
         <action id="1">
             <when state="none" next="s2"/>
