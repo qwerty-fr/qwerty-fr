@@ -15,6 +15,7 @@
         <layout first="27" last="28" mapSet="ANSI" modifiers="commonModifiers"/>
         <layout first="37" last="37" mapSet="ANSI" modifiers="commonModifiers"/>
         <layout first="40" last="40" mapSet="ANSI" modifiers="commonModifiers"/>
+        <layout first="43" last="43" mapSet="ISO" modifiers="commonModifiers"/>
         <layout first="195" last="195" mapSet="ANSI" modifiers="commonModifiers"/>
         <layout first="198" last="198" mapSet="ANSI" modifiers="commonModifiers"/>
         <layout first="204" last="204" mapSet="ANSI" modifiers="commonModifiers"/>
