@@ -2,3 +2,4 @@
 .idea/
 mac/bundle/qwerty-fr_*.zip
 mac/pkg/*.pkg
+**/.DS_Store
