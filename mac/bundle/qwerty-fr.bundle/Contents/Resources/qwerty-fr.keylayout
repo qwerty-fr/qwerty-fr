@@ -1130,17 +1130,11 @@
             <when state="none" output="/"/>
             <when state="math" output="⇔"/>
         </action>
-        <action id="0">
-            <when state="none" next="s1"/>
-        </action>
         <action id="0 1">
             <when state="none" output="0"/>
             <when state="caron" output="₀"/>
             <when state="circumflex" output="⁰"/>
             <when state="math" output="〉"/>
-        </action>
-        <action id="1">
-            <when state="none" next="s2"/>
         </action>
         <action id="1 1">
             <when state="none" output="1"/>
@@ -1164,11 +1158,6 @@
             <when state="math" output="○"/>
             <when state="ogonek" output="Ǫ"/>
             <when state="ring" output="O̊"/>
-            <when state="s1" output="Ó"/>
-            <when state="s2" output="Ò"/>
-            <when state="s3" output="Ô"/>
-            <when state="s4" output="Ö"/>
-            <when state="s5" output="Õ"/>
             <when state="tilde" output="Õ"/>
         </action>
         <action id="11">
@@ -1186,10 +1175,6 @@
             <when state="macron" output="Ū"/>
             <when state="ogonek" output="Ų"/>
             <when state="ring" output="Ů"/>
-            <when state="s1" output="Ú"/>
-            <when state="s2" output="Ù"/>
-            <when state="s3" output="Û"/>
-            <when state="s4" output="Ü"/>
             <when state="tilde" output="Ũ"/>
         </action>
         <action id="12">
@@ -1204,7 +1189,6 @@
             <when state="greek letter" output="Ψ"/>
             <when state="macron" output="Ȳ"/>
             <when state="ring" output="Y̊"/>
-            <when state="s4" output="Ÿ"/>
             <when state="tilde" output="Ỹ"/>
         </action>
         <action id="13">
@@ -1224,11 +1208,6 @@
             <when state="math" output="∀"/>
             <when state="ogonek" output="ą"/>
             <when state="ring" output="å"/>
-            <when state="s1" output="á"/>
-            <when state="s2" output="à"/>
-            <when state="s3" output="â"/>
-            <when state="s4" output="ä"/>
-            <when state="s5" output="ã"/>
             <when state="tilde" output="ã"/>
         </action>
         <action id="14">
@@ -1249,10 +1228,6 @@
             <when state="math" output="∃"/>
             <when state="ogonek" output="ę"/>
             <when state="ring" output="e̊"/>
-            <when state="s1" output="é"/>
-            <when state="s2" output="è"/>
-            <when state="s3" output="ê"/>
-            <when state="s4" output="ë"/>
             <when state="tilde" output="ẽ"/>
         </action>
         <action id="15">
@@ -1273,10 +1248,6 @@
             <when state="math" output="∈"/>
             <when state="ogonek" output="į"/>
             <when state="ring" output="i̊"/>
-            <when state="s1" output="í"/>
-            <when state="s2" output="ì"/>
-            <when state="s3" output="î"/>
-            <when state="s4" output="ï"/>
             <when state="tilde" output="ĩ"/>
         </action>
         <action id="16">
@@ -1290,7 +1261,6 @@
             <when state="greek letter" output="ν"/>
             <when state="math" output="∇"/>
             <when state="ogonek" output="ŋ"/>
-            <when state="s5" output="ñ"/>
             <when state="tilde" output="ñ"/>
         </action>
         <action id="17">
@@ -1310,11 +1280,6 @@
             <when state="math" output="∘"/>
             <when state="ogonek" output="ǫ"/>
             <when state="ring" output="o̊"/>
-            <when state="s1" output="ó"/>
-            <when state="s2" output="ò"/>
-            <when state="s3" output="ô"/>
-            <when state="s4" output="ö"/>
-            <when state="s5" output="õ"/>
             <when state="tilde" output="õ"/>
         </action>
         <action id="18">
@@ -1333,10 +1298,6 @@
             <when state="math" output="⋃"/>
             <when state="ogonek" output="ų"/>
             <when state="ring" output="ů"/>
-            <when state="s1" output="ú"/>
-            <when state="s2" output="ù"/>
-            <when state="s3" output="û"/>
-            <when state="s4" output="ü"/>
             <when state="tilde" output="ũ"/>
         </action>
         <action id="19">
@@ -1352,33 +1313,20 @@
             <when state="greek letter" output="ψ"/>
             <when state="macron" output="ȳ"/>
             <when state="ring" output="ẙ"/>
-            <when state="s4" output="ÿ"/>
             <when state="tilde" output="ỹ"/>
-        </action>
-        <action id="2">
-            <when state="none" next="s3"/>
         </action>
         <action id="2 1">
             <when state="none" output="2"/>
             <when state="caron" output="₂"/>
             <when state="circumflex" output="²"/>
         </action>
-        <action id="20">
-            <when state="none" next="s2"/>
-        </action>
         <action id="21">
             <when state="none" next="grave accent"/>
-        </action>
-        <action id="3">
-            <when state="none" next="s4"/>
         </action>
         <action id="3 1">
             <when state="none" output="3"/>
             <when state="caron" output="₃"/>
             <when state="circumflex" output="³"/>
-        </action>
-        <action id="4">
-            <when state="none" next="s5"/>
         </action>
         <action id="4 1">
             <when state="none" output="4"/>
@@ -1387,11 +1335,6 @@
         </action>
         <action id="5">
             <when state="none" output=" "/>
-            <when state="s1" output="´"/>
-            <when state="s2" output="`"/>
-            <when state="s3" output="ˆ"/>
-            <when state="s4" output="¨"/>
-            <when state="s5" output="˜"/>
         </action>
         <action id="5 1">
             <when state="none" output="5"/>
@@ -1414,11 +1357,6 @@
             <when state="macron" output="Ā"/>
             <when state="ogonek" output="Ą"/>
             <when state="ring" output="Å"/>
-            <when state="s1" output="Á"/>
-            <when state="s2" output="À"/>
-            <when state="s3" output="Â"/>
-            <when state="s4" output="Ä"/>
-            <when state="s5" output="Ã"/>
             <when state="tilde" output="Ã"/>
         </action>
         <action id="6 1">
@@ -1442,10 +1380,6 @@
             <when state="macron" output="Ē"/>
             <when state="ogonek" output="Ę"/>
             <when state="ring" output="E̊"/>
-            <when state="s1" output="É"/>
-            <when state="s2" output="È"/>
-            <when state="s3" output="Ê"/>
-            <when state="s4" output="Ë"/>
             <when state="tilde" output="Ẽ"/>
         </action>
         <action id="7 1">
@@ -1471,10 +1405,6 @@
             <when state="math" output="∫"/>
             <when state="ogonek" output="Į"/>
             <when state="ring" output="I̊"/>
-            <when state="s1" output="Í"/>
-            <when state="s2" output="Ì"/>
-            <when state="s3" output="Î"/>
-            <when state="s4" output="Ï"/>
             <when state="tilde" output="Ĩ "/>
         </action>
         <action id="8 1">
@@ -1494,7 +1424,6 @@
             <when state="greek letter" output="Ν"/>
             <when state="math" output="ℕ"/>
             <when state="ogonek" output="Ŋ"/>
-            <when state="s5" output="Ñ"/>
             <when state="tilde" output="Ñ"/>
         </action>
         <action id="9 1">
@@ -2012,9 +1941,6 @@
         <action id="~">
             <when state="none" next="tilde"/>
         </action>
-        <action id="¤">
-            <when state="none" next="currency"/>
-        </action>
         <action id="¤ 1">
             <when state="none" next="currency"/>
         </action>
@@ -2028,21 +1954,12 @@
             <when state="none" output="«"/>
             <when state="math" output="⌈"/>
         </action>
-        <action id="¯">
-            <when state="none" next="caron"/>
-        </action>
-        <action id="¯ 1">
-            <when state="none" next="macron"/>
-        </action>
         <action id="¯ 2">
             <when state="none" next="ogonek"/>
             <when state="math" output="↚"/>
         </action>
         <action id="¯ 3">
             <when state="none" next="macron"/>
-        </action>
-        <action id="°">
-            <when state="none" next="ring"/>
         </action>
         <action id="´">
             <when state="none" next="acute accent"/>
@@ -2073,9 +1990,6 @@
         </action>
         <action id="Ö">
             <when state="none" output="Ö"/>
-        </action>
-        <action id="ß">
-            <when state="none" output="ẞ"/>
         </action>
         <action id="æ">
             <when state="none" output="æ"/>
@@ -2111,12 +2025,6 @@
         <action id="Œ">
             <when state="none" output="Œ"/>
             <when state="math" output="∐"/>
-        </action>
-        <action id="ˊ">
-            <when state="none" next="acute accent"/>
-        </action>
-        <action id="˘">
-            <when state="none" next="breve"/>
         </action>
         <action id="˙">
             <when state="none" next="dot above"/>
@@ -2176,11 +2084,6 @@
         <when state="math" output="∫"/>
         <when state="ogonek" output="˛"/>
         <when state="ring" output="°"/>
-        <when state="s1" output="è"/>
-        <when state="s2" output="`"/>
-        <when state="s3" output="ì"/>
-        <when state="s4" output="ù"/>
-        <when state="s5" output="ñ"/>
         <when state="tilde" output="~"/>
     </terminators>
 </keyboard>
