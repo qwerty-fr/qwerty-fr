@@ -138,7 +138,7 @@
             <key code="46" action="m"/>
             <key code="47" action="."/>
             <key code="48" output="&#x0009;"/>
-            <key code="49" action="nbsp"/>
+            <key code="49" action="space"/>
             <key code="50" action="less_extra"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
@@ -215,8 +215,8 @@
             <key code="6" output="ä"/>
             <key code="7" output="×"/>
             <key code="8" action="ç"/>
-            <key code="9" action="action 2"/>
-            <key code="10" action="` 1"/>
+            <key code="9" action="v option"/>
+            <key code="10" action="` dead_key action"/>
             <key code="11" output="ß"/>
             <key code="12" output="â"/>
             <key code="13" output="é"/>
@@ -229,7 +229,7 @@
             <key code="20" output="ê"/>
             <key code="21" output="€"/>
             <key code="22" action="circumflex"/>
-            <key code="23" action="¯ 3"/>
+            <key code="23" action="¯ dead_key action"/>
             <key code="24" action="≠"/>
             <key code="25" output="ô"/>
             <key code="26" output="û"/>
@@ -245,14 +245,14 @@
             <key code="36" output="&#x000D;"/>
             <key code="37" output="ö"/>
             <key code="38" output="ü"/>
-            <key code="39" action="` 2"/>
+            <key code="39" action="` dead_key action"/>
             <key code="40" output="ï"/>
             <key code="41" action="´"/>
             <key code="42" output=""/>
             <key code="43" action="cedilla"/>
             <key code="44" action="’"/>
             <key code="45" action="ñ"/>
-            <key code="46" action="m 1"/>
+            <key code="46" action="∫"/>
             <key code="47" action="·"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" output=" "/>
@@ -260,6 +260,11 @@
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
+            <key code="55" output=""/>
+            <key code="56" output=""/>
+            <key code="57" output=""/>
+            <key code="58" output=""/>
+            <key code="59" output=""/>
             <key code="64" output="&#x0010;"/>
             <key code="65" output="."/>
             <key code="66" output="&#x001D;"/>
@@ -367,7 +372,7 @@
             <key code="46" action="M"/>
             <key code="47" action="&#x003E;"/>
             <key code="48" output="&#x0009;"/>
-            <key code="49" action="nbsp"/>
+            <key code="49" action="space"/>
             <key code="50" action="more_extra"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
@@ -591,7 +596,7 @@
             <key code="46" output="M"/>
             <key code="47" output="."/>
             <key code="48" output="&#x0009;"/>
-            <key code="49" action="nbsp"/>
+            <key code="49" action="space"/>
             <key code="50" action="less_extra"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
@@ -663,8 +668,8 @@
             <key code="6" output="Ä"/>
             <key code="7" output="×"/>
             <key code="8" action="Ç"/>
-            <key code="9" action="action 2"/>
-            <key code="10" action="` 1"/>
+            <key code="9" action="v option"/>
+            <key code="10" action="` dead_key action"/>
             <key code="11" output="ẞ"/>
             <key code="12" output="Â"/>
             <key code="13" action="É"/>
@@ -677,7 +682,7 @@
             <key code="20" output="Ê"/>
             <key code="21" output="€"/>
             <key code="22" action="circumflex"/>
-            <key code="23" action="¯ 3"/>
+            <key code="23" action="¯ dead_key action"/>
             <key code="24" action="≠"/>
             <key code="25" output="Ô"/>
             <key code="26" output="Û"/>
@@ -700,7 +705,7 @@
             <key code="43" action="cedilla"/>
             <key code="44" action="’"/>
             <key code="45" output="Ñ"/>
-            <key code="46" action="m 1"/>
+            <key code="46" action="∫"/>
             <key code="47" action="·"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" output=" "/>
@@ -815,7 +820,7 @@
             <key code="46" action="m"/>
             <key code="47" action="&#x003E;"/>
             <key code="48" output="&#x0009;"/>
-            <key code="49" action="nbsp"/>
+            <key code="49" action="space"/>
             <key code="50" action="more_extra"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
@@ -887,7 +892,7 @@
             <key code="6" output="ä"/>
             <key code="7" output="÷"/>
             <key code="8" action="ç"/>
-            <key code="9" action="action 2"/>
+            <key code="9" action="v option"/>
             <key code="10" action="~"/>
             <key code="11" output="ß"/>
             <key code="12" output="â"/>
@@ -924,7 +929,7 @@
             <key code="43" action="¯ 2"/>
             <key code="44" action="¿"/>
             <key code="45" action="ñ"/>
-            <key code="46" action="m 1"/>
+            <key code="46" action="∫"/>
             <key code="47" action="…"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" output=" "/>
@@ -1039,7 +1044,7 @@
             <key code="46" output="&#x000D;"/>
             <key code="47" output="."/>
             <key code="48" output="&#x0009;"/>
-            <key code="49" action="nbsp"/>
+            <key code="49" action="space"/>
             <key code="50" output="0"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
@@ -1551,10 +1556,10 @@
             <when state="none" output="]"/>
             <when state="math" output="⌋"/>
         </action>
-        <action id="` 1">
+        <action id="` 2">
             <when state="none" next="grave accent"/>
         </action>
-        <action id="` 2">
+        <action id="` dead_key action">
             <when state="none" next="grave accent"/>
         </action>
         <action id="a">
@@ -1581,10 +1586,6 @@
         </action>
         <action id="action 1">
             <when state="none" next="breve"/>
-        </action>
-        <action id="action 2">
-            <when state="none" output=""/>
-            <when state="math" output="∧"/>
         </action>
         <action id="b">
             <when state="none" output="b"/>
@@ -1750,9 +1751,6 @@
             <when state="greek letter" output="μ"/>
             <when state="tilde" output="m̃"/>
         </action>
-        <action id="m 1">
-            <when state="none" next="math"/>
-        </action>
         <action id="more_extra">
             <when state="none" output="&#x003E;"/>
             <when state="math" output="≫"/>
@@ -1769,9 +1767,6 @@
             <when state="math" output="∇"/>
             <when state="ogonek" output="ŋ"/>
             <when state="tilde" output="ñ"/>
-        </action>
-        <action id="nbsp">
-            <when state="none" output=" "/>
         </action>
         <action id="o">
             <when state="none" output="o"/>
@@ -1838,6 +1833,9 @@
             <when state="greek letter" output="σ"/>
             <when state="ring" output="s̊"/>
         </action>
+        <action id="space">
+            <when state="none" output=" "/>
+        </action>
         <action id="t">
             <when state="none" output="t"/>
             <when state="acute accent" output="t́"/>
@@ -1880,6 +1878,10 @@
             <when state="math" output="∨"/>
             <when state="ring" output="v̊"/>
             <when state="tilde" output="ṽ"/>
+        </action>
+        <action id="v option">
+            <when state="none" output=""/>
+            <when state="math" output="∧"/>
         </action>
         <action id="w">
             <when state="none" output="w"/>
@@ -1963,7 +1965,7 @@
             <when state="none" next="ogonek"/>
             <when state="math" output="↚"/>
         </action>
-        <action id="¯ 3">
+        <action id="¯ dead_key action">
             <when state="none" next="macron"/>
         </action>
         <action id="´">
@@ -2063,6 +2065,9 @@
         <action id="…">
             <when state="none" output="…"/>
             <when state="math" output="↛"/>
+        </action>
+        <action id="∫">
+            <when state="none" next="math"/>
         </action>
         <action id="≈">
             <when state="none" output="≈"/>
