@@ -1,0 +1,5 @@
+#!/bin/sh
+pushd ../debian
+make zip
+popd
+cp ../debian/*.zip .

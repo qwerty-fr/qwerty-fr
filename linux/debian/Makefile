@@ -16,8 +16,17 @@ PACKAGE=$(PKG_NAME).deb
 .PHONY: deb
 deb: $(PACKAGE)
 
-$(PACKAGE): $(PKG_NAME)/DEBIAN $(PKG_NAME)/usr/share/man/man7/qwerty-fr.7.gz $(PKG_NAME)/usr/share/doc/xkb-qwerty-fr/changelog.gz $(PKG_NAME)/usr/share/doc/xkb-qwerty-fr/copyright $(PKG_NAME)/usr/share/doc/xkb-qwerty-fr/keymap.txt $(PKG_NAME)/usr/share/X11/xkb/symbols/us_qwerty-fr
+$(PACKAGE): $(PKG_NAME)/DEBIAN $(PKG_NAME)/usr/share/man/man7/qwerty-fr.7.gz $(PKG_NAME)/usr/share/doc/xkb-qwerty-fr/changelog.gz $(PKG_NAME)/usr/share/doc/xkb-qwerty-fr/copyright $(PKG_NAME)/usr/share/doc/xkb-qwerty-fr/keymap.txt $(PKG_NAME)/usr/share/X11/xkb/symbols/us_qwerty-fr $(PKG_NAME).zip
 	$(BUILD) $(PKG_NAME)
+
+.PHONY: zip
+zip: $(PKG_NAME).zip
+
+$(PKG_NAME).zip: $(PKG_NAME)/usr/share/man/man7/qwerty-fr.7.gz $(PKG_NAME)/usr/share/doc/xkb-qwerty-fr/changelog.gz $(PKG_NAME)/usr/share/doc/xkb-qwerty-fr/copyright $(PKG_NAME)/usr/share/doc/xkb-qwerty-fr/keymap.txt $(PKG_NAME)/usr/share/X11/xkb/symbols/us_qwerty-fr
+	rm -f $(PKG_NAME).zip &&\
+	pushd $(PKG_NAME) &&\
+	zip -r ../$@ usr -x \*.DS_Store \*__MACOSX \*DEBIAN &&\
+	popd
 
 $(PKG_NAME)/DEBIAN: DEBIAN
 	$(MKD) $(@D) &&\
@@ -50,6 +59,7 @@ $(PKG_NAME)/usr/share/X11/xkb/symbols/us_qwerty-fr: ../us_qwerty-fr
 .PHONY: clean
 clean:
 	$(RM) $(PKG_NAME) $(PACKAGE)
+	$(RM) $(PKG_NAME).zip
 
 .PHONY: lintian
 lintian: $(PACKAGE)
