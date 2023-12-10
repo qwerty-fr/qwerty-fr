@@ -7,7 +7,7 @@ MV=mv -f
 MKD=mkdir -p
 
 PKG=xkb-qwerty-fr
-VER=0.7.2
+VER=0.7.3
 ARCH=all
 
 PKG_NAME=$(PKG)_$(VER)_$(ARCH)

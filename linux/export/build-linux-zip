@@ -1,5 +1,6 @@
 #!/bin/sh
 pushd ../debian
+find . -name ".DS_Store" -type f -print -delete
 make zip
 popd
 cp ../debian/*.zip .

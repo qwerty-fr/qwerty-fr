@@ -1,6 +1,6 @@
 cask "qwerty-fr" do
-  version "0.7.1"
-  sha256 "aa036941b3552df47c58e27fc5641835da3ab3df660c4092086a2ea75d36fa28"
+  version "0.7.3"
+  sha256 "7c8213994ae08323ab95837c586bb0863f77a334ec744ce8762332e7af345b70"
 
   url "https://github.com/qwerty-fr/qwerty-fr/releases/download/v#{version}/qwerty-fr_#{version}_mac.zip",
       verified: "github.com/qwerty-fr/qwerty-fr/"
@@ -22,7 +22,6 @@ cask "qwerty-fr" do
   uninstall delete: [
     "/Library/Keyboard Layouts/qwerty-fr.bundle/",
     "/System/Library/Caches/com.apple.IntlDataCache.le*",
-    "/private/var/folders/*/*/*/com.apple.IntlDataCache.le*",
   ]
 
   caveats do

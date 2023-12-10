@@ -1,7 +1,7 @@
 # WIP: Kalamine layout to be able to use https://github.com/fabi1cazenave/x-keyboard
 #
 # Use this fork due to the custom dead keys: https://github.com/qwerty-fr/kalamine
-# 
+#
 # Known issues:
 # ~ key doesn't work on Windows (Kalamine has a bug where it puts the wrong key code)
 # < key doesn't work on Windows (Kalamine has a bug where it puts the wrong key code)
@@ -15,7 +15,7 @@ name: qwerty-fr
 name8: q-fr
 description: QWERTY-fr layout
 url: https://github.com/qwerty-fr/qwerty-fr
-version: 0.7.1
+version: 0.7.3
 geometry: ISO
 
 full: |
@@ -51,49 +51,49 @@ deadkeys:
     alt:  ÀàÈèÌìǸǹÒòÙùẀẁỲỳЀѐЍѝ
     alt_space: '`'  # U+0060 GRAVE ACCENT
     alt_self:  '`'  # U+0060 GRAVE ACCENT
-  
+
   - char: '*‟'
     name: doublegrave
     base: AaEeIiOoRrUuѴѴ
     alt:  ȀȁȄȅȈȉȌȍȐȑȔȕѶѷ
     alt_space: '‟'  # U+201F HIGH REVERSED-9 QUOTATION MARK
     alt_self:  '‟'  # U+201F HIGH REVERSED-9 QUOTATION MARK
-  
+
   - char: '*´'
     name: acute
     base: AaCcEeGgIiKkLlMmNnOoPpRrSsUuWwYyZzΑαΕεΗηΙιΟοΥυΩωГгКк
     alt:  ÁáĆćÉéǴǵÍíḰḱĹĺḾḿŃńÓóṔṕŔŕŚśÚúẂẃÝýŹźΆάΈέΉήΊίΌόΎύΏώЃѓЌќ
     alt_space: "´"  # U+0027 APOSTROPHE
     alt_self:  '´'  # U+00B4 ACUTE ACCENT
-  
+
   - char: '*˝'
     name: doubleacute
     base: AaEeIiMmOoUuУу
     alt:  A̋a̋E̋e̋I̋i̋M̋m̋ŐőŰűӲӳ
     alt_space: "˝"  # U+201D RIGHT DOUBLE QUOTATION MARK
     alt_self:  "˝"  # U+02DD DOUBLE ACUTE ACCENT
-  
+
   - char: '*^'
     name: circumflex
     base: AaCcEeGgHhIiJjOoSsUuWwYyZz0123456789()+-=„,
     alt:  ÂâĈĉÊêĜĝĤĥÎîĴĵÔôŜŝÛûŴŵŶŷẐẑ⁰¹²³⁴⁵⁶⁷⁸⁹⁽⁾⁺⁻⁼“‘
     alt_space: '^'  # U+005E CIRCUMFLEX ACCENT
     alt_self:  '^'  # U+005E CIRCUMFLEX ACCENT
-  
+
   - char: '*ˇ'
     name: caron
     base: AaCcDdEeGgHhIiKkLlNnOoRrSsTtUuZzƷʒ0123456789()+-=
     alt:  ǍǎČčĎďĚěǦǧȞȟǏǐǨǩĽľŇňǑǒŘřŠšŤťǓǔŽžǮǯ₀₁₂₃₄₅₆₇₈₉₍₎₊₋₌
     alt_space: 'ˇ'  # U+02C7 CARON
     alt_self:  'ˇ'  # U+02C7 CARON
-  
+
   - char: '*~'
     name: tilde
     base: AaEeGgIiJjMmNnOoPpRrUuVvYy<>=
     alt:  ÃãẼẽG̃g̃ĨĩJ̃j̃M̃m̃ÑñÕõP̃p̃R̃r̃ŨũṼṽỸỹ≲≳≃
     alt_space: '~'  # U+007E TILDE
     alt_self:  '~'  # U+007E TILDE
-  
+
   # FIXME: due to a bug in kalamine/x-keyboard we can't use *̑ or * ̑ because ` ̑` is a combining diacritic
   # Alternatively we could change x-keyboard so that it displays the `alt_self` symbol instead of the `char`
   - char: '*ȃ'
@@ -102,7 +102,7 @@ deadkeys:
     alt:  ȂȃȆȇȊȋȎȏȒȓȖȗ
     alt_space: ' ̑'
     alt_self: ' ̑'
-  
+
   - char: '*˘'
     name: breve
     base: AaEeGgHhIiOoUu
@@ -123,42 +123,42 @@ deadkeys:
     alt:  ĀāǢǣĐđĒēḠḡĪīŁłŌōŦŧŪūȲȳ
     alt_space: '¯'  # U+00AF MACRON
     alt_self:  'ˉ'  # U+02C9 MODIFIER LETTER MACRON
-  
+
   - char: '*¨'
     name: diaeresis
     base: AaEeHhIiOotUuWwXxYyΙιΥυАаЕеӘәЖжЗзИиІіОоӨөУуЧчЫыЭэ
     alt:  ÄäËëḦḧÏïÖöẗÜüẄẅẌẍŸÿΪϊΫϋӒӓЁёӚӛӜӝӞӟӤӥЇїӦӧӪӫӰӱӴӵӸӹӬӭ
     alt_space: '"'  # U+0022 QUOTATION MARK
     alt_self:  '¨'  # U+00A8 DIAERESIS
-  
+
   - char: '*°'
     name: abovering
     base: AaDdEeGgIiOoQqSsUuVvWwXxYy
     alt:  ÅåD̊d̊E̊e̊G̊g̊I̊i̊O̊o̊Q̊q̊S̊s̊ŮůV̊v̊W̊ẘX̊x̊Y̊ẙ
     alt_space: '°'  # U+02DA RING ABOVE
     alt_self:  '°'  # U+02DA RING ABOVE
-  
+
   - char: '*¸'
     name: cedilla
     base: AaBbCcDdEeGgHhI̧iKkLlMmNnQqRrSsTtUuXxZz
     alt:  A̧a̧B̧b̧ÇçḐḑȨȩĢģḨḩI̧i̧ĶķĻļM̧m̧ŅņQ̧q̧ŖŗŞşŢţU̧u̧X̧x̧Z̧z̧
     alt_space: '¸'  # U+00B8 CEDILLA
     alt_self:  '¸'  # U+00B8 CEDILLA
-  
+
   - char: '*˛'
     name: ogonek
     base: AaEeIiNnOoUu
     alt:  ĄąĘęĮįŊŋǪǫŲų
     alt_space: '˛'  # U+02DB OGONEK
     alt_self:  '˛'  # U+02DB OGONEK
-  
+
   - char: '*Ω'
     name: greek
     base: AaBbDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuWwXxYyZz
     alt:  ΑαΒβΔδΕεΦφΓγΗηΙιΘθΚκΛλΜμΝνΟοΠπΧχΡρΣσΤτΥυΩωΞξΨψΖζ
     alt_space: 'Ω'  # U+00B5 GREEK SMALL LETTER ALPHA
     alt_self:  'Ω'  # U+00B5 GREEK SMALL LETTER ALPHA
-  
+
   - char: '*¤'
     name: currency
     base: bBcdeiIlpPrtswy

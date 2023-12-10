@@ -1,3 +1,16 @@
+xkb-qwerty-fr (0.7.3) unstable; urgency=low
+
+  * Layout: Replaced 〉 with ⟩ in the math mode. i.e. “Right Angle
+    Bracket” was replaced with “Mathematical Right Angle Bracket”.
+    〉 is the “Right Angle Bracket” but we actually want ⟩ which is the
+    “Mathematical Right Angle Bracket”.
+  * Linux: Removed parasitic .DS_Store/__MACOSX/DEBIAN files from the Linux
+    package.
+  * Linux: Changed the separator characters used in keymap.txt to improve
+    readability. Credits go to https://github.com/eclipseo
+
+ -- Paul <devnoname120@gmail.com>  Sun, 10 Dec 2023 12:12:00 +0100
+
 xkb-qwerty-fr (0.7.2) unstable; urgency=low
 
   * Linux: Fixed syntax error that broke the layout. Credits go to https://github.com/SimonGaufreteau.

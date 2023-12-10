@@ -1,5 +1,5 @@
 
-This is the overall view of qwerty-fr 0.7.1 keymap.
+This is the overall view of qwerty-fr 0.7.3 keymap.
 
 
 ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
