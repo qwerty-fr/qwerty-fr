@@ -54,7 +54,11 @@ This keyboard layout is available Windows, Mac, and Linux.
 
 ### Windows
 
-Download the [QWERTY-fr layout](https://github.com/qwerty-fr/qwerty-fr/releases/latest), extract it, and run **setup.exe**.
+* Download the latest [qwerty-fr_X.X.X_windows.zip](https://github.com/qwerty-fr/qwerty-fr/releases/latest) archive.
+* Extract it.
+* Run the **setup.exe** application.
+* A keyboard layout named `French qwerty keyboard` has been added to your current language package.
+* Make sure it's first in the list; press <kbd>Win</kbd> <kbd>r</kbd> and enter `ms-settings:regionlanguage` to access the related settings, then go to your current language options and delete all other keyboard layouts.
 
 ### Mac
 
