@@ -43,8 +43,10 @@ In order to type special characters with diacritics, there are a few simple rule
 - <kbd>AltGr</kbd> <kbd>Shift ⇧</kbd> <kbd>C</kbd> outputs `Ç`.
 - <kbd>AltGr</kbd> <kbd>Shift ⇧</kbd> <kbd>W</kbd> outputs `É`.
 
-These two letters are impossible to type with an AZERTY layout. But with QWERTY-fr they are easy to type!
+On Windows and Linux, these two letters are impossible to type with a French AZERTY layout (the belgium AZERTY makes it a bit easier).
+On Mac OS, you can type them in <kbd>Caps Lock</kbd> mode, as all letters works including capitalized accented letters, but it means entering caps lock, typing and then exiting caps lock, 3 presses.
 
+But with QWERTY-fr they are easy to type on Windows, Linux and of course Mac OS, with the exact same combination.
 
 **Note 2**: You can type a [non-breaking space](https://en.wikipedia.org/wiki/Non-breaking_space) by pressing <kbd>AltGr</kbd> <kbd>Space</kbd>. And a [narrow non-breaking space (fr)](https://fr.wikipedia.org/wiki/Espace_fine_ins%C3%A9cable) by pressing <kbd>AltGr</kbd> <kbd>Shift ⇧</kbd> <kbd>Space</kbd>. Learn about when you should use them when typing French [here (fr)](https://typographisme.net/post/Les-espaces-typographiques-et-le-web).
 
