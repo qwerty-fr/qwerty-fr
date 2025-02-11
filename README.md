@@ -106,6 +106,13 @@ You can download the [Linux ZIP file](https://github.com/qwerty-fr/qwerty-fr/rel
 
 ## 📣 Frequently asked questions
 
+### é (AltGr/Option ⌥ + w) doesn’t work on Google Sheets
+
+Google Sheets intercepts the key combination <kbd>Option ⌥</kbd> <kbd>w</kbd> (<kbd>AltGr</kbd> <kbd>w</kbd> on Windows and Linux). This is not an issue with the qwerty-fr *per se* and unfortunately the keyboard layout itself cannot do anything to prevent key interception. See this issue for more information: https://github.com/qwerty-fr/qwerty-fr/issues/61
+
+Follow these instructions to fix the issue by disabling Option ⌥ (AltGr) shortcuts on Google Sheets:
+https://gist.github.com/devnoname120/8716817350df1b9d162b9499836ea9bc
+
 ### The math dead key doesn't do anything on Windows
 
 If you have **Nvidia GeForce Experience** installed, then you need to change the shortcut that it uses for the `Toggle microphone on/off` feature:
