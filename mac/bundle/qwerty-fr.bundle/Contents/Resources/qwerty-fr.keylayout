@@ -1493,6 +1493,7 @@
             <when state="diaeresis" output="L̈"/>
             <when state="greek letter" output="Λ"/>
             <when state="macron" output="Ł"/>
+            <when state="math" output="ℒ"/>
         </action>
         <action id="M">
             <when state="none" output="M"/>
