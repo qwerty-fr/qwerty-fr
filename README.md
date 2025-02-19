@@ -85,7 +85,9 @@ Then to `System Preferences` → `Keyboard` → `Input Sources`, click `+`, scro
 - Go to `System Preferences` → `Keyboard` → `Input Sources`, click `+`, scroll down to `Others` and add `qwerty-fr`.
 - Restart macOS (if you don't some characters won't work).
 
-**✅ Protip**: On Apple keyboards the right <kbd>Option ⌥</kbd> key is often hard to access. You can use [Karabiner-Elements](https://pqrs.org/osx/karabiner/) to swap the right <kbd>Option ⌥</kbd> key with the right <kbd>Command ⌘</kbd> key. [Here is the rule](https://ke-complex-modifications.pqrs.org/#swap_right_cmd_with_right_option) you'll need to import in Karabiner-Elements. This makes it easier to type characters!
+**✅ Protip**: On Apple keyboards the right <kbd>Option ⌥</kbd> key is often hard to access. You can easily swap the <kbd>Command ⌘</kbd> and the <kbd>Option ⌥</kbd> keys in the System Settings of macOS. In order to do this, open the System Settings, then search for `Customize modifier keys` in the sidebar, then click on it and configure it like in [this screenshot](https://github.com/user-attachments/assets/2fba96f0-66dd-4418-b7c5-050b077b9175). This makes it easier to type characters!
+
+If you only want to swap the right <kbd>Command ⌘</kbd> with the right <kbd>Option ⌥</kbd> (not both the left and the right), you can instead use [Karabiner-Elements](https://pqrs.org/osx/karabiner/). [Here is the rule](https://ke-complex-modifications.pqrs.org/#swap_right_cmd_with_right_option) you'll need to import in Karabiner-Elements.
 
 ### Linux
 
