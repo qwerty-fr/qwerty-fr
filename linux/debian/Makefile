@@ -24,9 +24,9 @@ zip: $(PKG_NAME).zip
 
 $(PKG_NAME).zip: $(PKG_NAME)/usr/share/man/man7/qwerty-fr.7.gz $(PKG_NAME)/usr/share/doc/xkb-qwerty-fr/changelog.gz $(PKG_NAME)/usr/share/doc/xkb-qwerty-fr/copyright $(PKG_NAME)/usr/share/doc/xkb-qwerty-fr/keymap.txt $(PKG_NAME)/usr/share/X11/xkb/symbols/us_qwerty-fr
 	rm -f $(PKG_NAME).zip &&\
-	pushd $(PKG_NAME) &&\
+	cd $(PKG_NAME) &&\
 	zip -r ../$@ usr -x \*.DS_Store \*__MACOSX \*DEBIAN &&\
-	popd
+	cd -
 
 $(PKG_NAME)/DEBIAN: DEBIAN
 	$(MKD) $(@D) &&\
