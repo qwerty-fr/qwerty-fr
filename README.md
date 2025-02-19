@@ -108,7 +108,7 @@ You can download the [Linux ZIP file](https://github.com/qwerty-fr/qwerty-fr/rel
 
 ### é (AltGr/Option ⌥ + w) doesn’t work on Google Sheets
 
-Google Sheets intercepts the key combination <kbd>Option ⌥</kbd> <kbd>w</kbd> (<kbd>AltGr</kbd> <kbd>w</kbd> on Windows and Linux). This is not an issue with the qwerty-fr *per se* and unfortunately the keyboard layout itself cannot do anything to prevent key interception. See this issue for more information: https://github.com/qwerty-fr/qwerty-fr/issues/61
+Google Sheets intercepts the key combination <kbd>Option ⌥</kbd> <kbd>w</kbd> (<kbd>AltGr</kbd> <kbd>w</kbd> on Windows and Linux). This is not an issue with the QWERTY-fr *per se* and unfortunately the keyboard layout itself cannot do anything to prevent key interception. See this issue for more information: https://github.com/qwerty-fr/qwerty-fr/issues/61
 
 Follow these instructions to fix the issue by disabling Option ⌥ (AltGr) shortcuts on Google Sheets:
 https://gist.github.com/devnoname120/8716817350df1b9d162b9499836ea9bc
@@ -126,6 +126,12 @@ Alternatively, you can also access the math mode with <kbd>AltGr</kbd> <kbd>Shif
 ### Some dead keys (e.g. math) don't work on Linux
 
 This is a known limitation. See https://github.com/qwerty-fr/qwerty-fr/issues/17
+
+### Why is the QWERTY-fr based on the `US ISO/ANSI (terminal style)` rather than the `UK ISO (standard)`?
+
+The [`UK ISO (standard)`](https://www.farah.cl/Keyboardery/A-Visual-Comparison-of-Different-National-Layouts/#enUK) has many drawbacks compared to the [`US ISO/ANSI (terminal style)`](https://www.farah.cl/Keyboardery/A-Visual-Comparison-of-Different-National-Layouts/#enUS) (which the QWERTY-fr is currently based on).
+
+See [#42](https://github.com/qwerty-fr/qwerty-fr/issues/42#issuecomment-2669809115) for the rationale and in-depth explanations about this decision.
 
 ## 🤝 Contributing
 
