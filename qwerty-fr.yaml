@@ -161,8 +161,8 @@ deadkeys:
 
   - char: '*¤'
     name: currency
-    base: bBcdeiIlpPrtswy
-    alt:  ฿₿¢$€₹₪ł£₱₽₺﷼₩¥
+    base: bBcdeiIlpPrtsvwy
+    alt:  ฿₿¢$€₹₪ł£₱₽₺﷼₫₩¥
     alt_space: '¤'  # U+00A4 CURRENCY SIGN
     alt_self:  '¤'  # U+00A4 CURRENCY SIGN
 

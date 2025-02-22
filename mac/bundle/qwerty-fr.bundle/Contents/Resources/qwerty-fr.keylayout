@@ -1835,6 +1835,7 @@
             <when state="acute accent" output="v́"/>
             <when state="caron" output="v̌"/>
             <when state="circumflex" output="v̂"/>
+            <when state="currency" output="₫"/>
             <when state="diaeresis" output="v̈"/>
             <when state="grave accent" output="v̀"/>
             <when state="math" output="∨"/>
