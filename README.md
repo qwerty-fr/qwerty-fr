@@ -6,6 +6,15 @@ Keyboard layout based on the QWERTY layout with extra symbols and diacritics so 
 
 👉 You can [try this keyboard layout online](https://qwerty-fr.org) without installing it!
 
+## 🙏 Acknowledgement
+
+<p align="center">
+  <a href="https://www.jetbrains.com/">
+    <img src="https://github.com/user-attachments/assets/9bc14cac-78d9-444f-bce3-16d065403314" alt="image">
+  </a><br>
+  Thanks to <a href="https://www.jetbrains.com/">JetBrains</a> for supporting the project with their complimentary license to their IDE!
+</p>
+
 ## 🗣 Discuss
 
 You can provide feedback and discuss with other users using Telegram:
