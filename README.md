@@ -140,6 +140,6 @@ See [#42](https://github.com/qwerty-fr/qwerty-fr/issues/42#issuecomment-26698091
 The easiest way to contribute to this project is to spread the word and the website [qwerty-fr.org](https://qwerty-fr.org).
 
 If you want to contribute by fixing issues with the layout, adding new keys, etc. we use the following software to edit the layouts:
-- **Windows**: [Microsoft Keyboard Layout Creator](https://www.microsoft.com/en-us/download/details.aspx?id=102134) ([mirror](https://web.archive.org/web/20200802184038/https://download.microsoft.com/download/1/1/8/118aedd2-152c-453f-bac9-5dd8fb310870/MSKLC.exe)).
+- **Windows**: [Microsoft Keyboard Layout Creator](https://www.microsoft.com/en-us/download/details.aspx?id=102134) ([mirror](https://web.archive.org/web/20250418093354/https://download.microsoft.com/download/6/f/5/6f5ce43a-e892-4fd1-b9a6-1a0cbb64e6e2/MSKLC.exe)).
 - **Mac**: [Ukelele](https://software.sil.org/ukelele/).
 - **Linux**: manually editing files.
