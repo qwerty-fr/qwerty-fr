@@ -54,6 +54,15 @@ This keyboard layout is available Windows, Mac, and Linux.
 
 ### Windows
 
+**Using WinGet (package manager)**
+
+After the WinGet manifest has been accepted in the Windows Package Manager Community Repository, run:
+```
+winget install --id qwerty-fr.qwerty-fr
+```
+
+**Manual install**
+
 * Download the latest [qwerty-fr_X.X.X_windows.zip](https://github.com/qwerty-fr/qwerty-fr/releases/latest) archive.
 * Extract it.
 * Run the **setup.exe** application.
