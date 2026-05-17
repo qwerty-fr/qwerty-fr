@@ -1,0 +1,81 @@
+name: WinGet
+
+on:
+  push:
+    paths:
+      - ".github/workflows/winget.yml"
+      - "windows/winget/**"
+  pull_request:
+    paths:
+      - ".github/workflows/winget.yml"
+      - "windows/winget/**"
+  workflow_dispatch:
+
+jobs:
+  manifest:
+    name: Validate and install manifest
+    runs-on: windows-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Locate manifest
+        id: manifest
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          $manifestDir = (Resolve-Path "windows\winget\manifests\q\qwerty-fr\qwerty-fr\1.0.3.40").Path
+          "dir=$manifestDir" >> $env:GITHUB_OUTPUT
+
+      - name: Show WinGet environment
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          winget --info
+          winget source list
+
+      - name: Validate WinGet manifest
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          winget validate --manifest "${{ steps.manifest.outputs.dir }}"
+
+      - name: Install from local manifest
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          winget settings --enable LocalManifestFiles
+          winget install `
+            --manifest "${{ steps.manifest.outputs.dir }}" `
+            --silent `
+            --accept-package-agreements `
+            --accept-source-agreements `
+            --disable-interactivity
+
+      - name: Verify installed keyboard layout
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+
+          $appEntries = @(
+            "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\*",
+            "HKLM:\Software\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*"
+          ) |
+            ForEach-Object { Get-ItemProperty $_ -ErrorAction SilentlyContinue } |
+            Where-Object { $_.DisplayName -eq "French qwerty keyboard" }
+
+          if (-not $appEntries) {
+            throw "French qwerty keyboard was not registered in Apps & Features."
+          }
+
+          $appEntries |
+            Select-Object DisplayName, DisplayVersion, Publisher, PSChildName |
+            Format-List
+
+          $keyboardLayout = Join-Path $env:WINDIR "System32\qwertyfr.dll"
+          if (-not (Test-Path $keyboardLayout)) {
+            throw "Expected keyboard layout DLL was not installed at $keyboardLayout."
+          }
+
+          Get-Item $keyboardLayout | Format-List FullName, Length, LastWriteTime
