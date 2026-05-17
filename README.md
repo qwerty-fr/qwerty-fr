@@ -100,11 +100,26 @@ If you only want to swap the right <kbd>Command ⌘</kbd> with the right <kbd>Op
 
 ### Linux
 
+**Note**: On Ubuntu and other GNOME-based distributions, you need to [disable the Compose key functionality](https://askubuntu.com/a/1028964) or typing characters with <kbd>AltGr</kbd> won't work at all.
+
 #### Ubuntu / Debian
 
 Download the [Linux DEB file](https://github.com/qwerty-fr/qwerty-fr/releases/latest) and install it.
 
-**Note**: On Ubuntu and other GNOME-based distributions, you need to [disable the Compose key functionality](https://askubuntu.com/a/1028964) or typing characters with <kbd>AltGr</kbd> won't work at all.
+#### Fedora / RPM
+
+Download the [Linux RPM file](https://github.com/qwerty-fr/qwerty-fr/releases/latest) and install it.
+
+```shell
+# Fedora
+sudo dnf install ./xkb-qwerty-fr_*_linux.noarch.rpm
+
+# Fedora atomic distributions
+sudo rpm-ostree install ./xkb-qwerty-fr_*_linux.noarch.rpm
+
+# Other RPM based distributions
+sudo rpm -i ./xkb-qwerty-fr_*_linux.noarch.rpm
+```
 
 #### Archlinux
 
