@@ -1,3 +1,17 @@
+xkb-qwerty-fr (0.7.4) unstable; urgency=high
+
+  * Linux: Stop modifying files owned by xkb-data. Install the layout in the
+    system-wide XKB configuration path instead.
+  * Linux: Remove the legacy triggers that could loop during package upgrades.
+  * Linux: Migrate files left by releases through 0.7.3 before unpacking, with
+    rollback state for failed pre-installation, unpack, and old-removal steps.
+  * Linux: Remove registry temporary files left by interrupted legacy package
+    scripts so they cannot block an xkb-data directory transition.
+  * Linux: X11-only sessions and isolated runtimes still require QWERTY-fr to
+    be included upstream in xkeyboard-config.
+
+ -- Paul <devnoname120@gmail.com>  Wed, 14 Oct 2026 01:49:24 +0200
+
 xkb-qwerty-fr (0.7.3) unstable; urgency=low
 
   * Layout: Replaced 〉 with ⟩ in the math mode. i.e. “Right Angle

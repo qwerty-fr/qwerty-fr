@@ -1,145 +1,159 @@
-#!/usr/bin/perl
+#!/bin/sh
+set -eu
 
-use strict;
-use warnings;
+root=${DPKG_ROOT:-}
+root=${root%/}
+case "$root" in
+  ""|/*) ;;
+  *)
+    printf 'xkb-qwerty-fr: invalid DPKG_ROOT: %s\n' "$root" >&2
+    exit 1
+    ;;
+esac
 
-my $dir = "/usr/share/X11/xkb";
-my ($mode) = @ARGV;
+symbols="$root/usr/share/X11/xkb/symbols"
+target="$symbols/us"
+backup="$symbols/us.qwerty-fr"
+fragment="$symbols/us_qwerty-fr"
+state_parent="$root/var/lib/xkb-qwerty-fr"
+state_dir="$state_parent/upgrade-state"
+work_file=
 
-sub remove_variant
-{
-	my ($input, $output, $layout, $variant) = @_;
+cleanup() {
+  if [ -n "$work_file" ]; then
+    rm -f -- "$work_file"
+  fi
+}
+trap cleanup EXIT
 
-	my $line;
-	my $level;
-	my $match;
-
-	open (IN, $input) || return 0;
-	open (OUT, ">$output") || return 0;
-
-	$level = 0;
-	$match = 0;
-	while ($line = <IN>)
-	{
-		if (($line =~ m/<layoutList>/) && ($level eq 0))
-		{
-			$level++;
-		}
-
-		if (($line =~ m/<layout>/) && ($level eq 1))
-		{
-			$level++;
-			$match = 0;
-		}
-
-		if (($line =~ m/<name>$layout<\/name>/) && ($level eq 2))
-		{
-			$match = 1;
-		}
-
-		if (($line =~ m/<variantList>/) && ($level eq 2))
-		{
-			$level++;
-		}
-
-		if (($line =~ m/<variant>/) && ($level eq 3))
-		{
-			# read completely next variant
-			while ($line !~ m/<\/variant>/)
-			{
-				my $line_cat;
-
-				unless ($line_cat = <IN>)
-				{
-					last;
-				}
-				else
-				{
-					$line .= $line_cat;
-				}
-			}
-
-			# correct entry
-			if ($line =~ m/<name>$variant<\/name>/)
-			{
-				# drop
-				$line = '';
-			}
-		}
-
-		print OUT $line;
-
-		if (($line =~ m/<\/variantList>/) && ($level eq 3))
-		{
-			$level--;
-		}
-
-		if (($line =~ m/<\/layout>/) && ($level eq 2))
-		{
-			$level--;
-		}
-	}
-
-	close(OUT);
-	close(IN);
-
-	return 1;
+fail_on_symlink() {
+  path=$1
+  if [ -L "$path" ]; then
+    printf 'xkb-qwerty-fr: refusing to restore symbolic link %s\n' "$path" >&2
+    exit 1
+  fi
 }
 
-sub remove_xml
-{
-	my ($file) = @_;
-	
-	my $temp = "$file.qwerty-fr";
-
-	if ( ! -f "$file")
-	{
-		return 0;
-	}
-
-	&remove_variant($file, $temp, "us", "qwerty-fr") || die("Error configuring '$file'!");
-
-	unlink($file) && rename($temp, $file);
-
-	return 1;
+require_regular_file() {
+  path=$1
+  fail_on_symlink "$path"
+  if [ ! -f "$path" ]; then
+    printf 'xkb-qwerty-fr: expected a regular file: %s\n' "$path" >&2
+    exit 1
+  fi
 }
 
-# retore using backup file
-if (-f "$dir/symbols/us.qwerty-fr")
-{
-	`cat "$dir/symbols/us.qwerty-fr" > "$dir/symbols/us"`;
+copy_atomic() {
+  source=$1
+  destination=$2
 
-	if ($mode ne "upgrade")
-	{
-		unlink("$dir/symbols/us.qwerty-fr");
-	}
+  require_regular_file "$source"
+  fail_on_symlink "$destination"
+  mkdir -p -- "$(dirname "$destination")"
+
+  work_file=$(mktemp "$symbols/.xkb-qwerty-fr.XXXXXX")
+  cp -p -- "$source" "$work_file"
+  mv -f -- "$work_file" "$destination"
+  work_file=
 }
 
-
-# evdev
-if (-f "$dir/rules/evdev.extras.xml")
-{
-	&remove_xml("$dir/rules/evdev.extras.xml");
-
-	# "Bug #1029979 workaround.\n";
-	&remove_xml("$dir/rules/evdev.xml");
-}
-elsif (-f "$dir/rules/evdev.xml")
-{
-	&remove_xml("$dir/rules/evdev.xml");
+remove_regular_file() {
+  path=$1
+  if [ -e "$path" ] || [ -L "$path" ]; then
+    require_regular_file "$path"
+    rm -f -- "$path"
+  fi
 }
 
-# base
-if (-f "$dir/rules/base.extras.xml")
-{
-	&remove_xml("$dir/rules/base.extras.xml");
-}
-elsif (-f "$dir/rules/base.xml")
-{
-	&remove_xml("$dir/rules/base.xml");
-}
-elsif (-f "$dir/base.xml")
-{
-	&remove_xml("$dir/base.xml");
+state_available() {
+  if [ ! -e "$state_dir" ] && [ ! -L "$state_dir" ]; then
+    return 1
+  fi
+
+  fail_on_symlink "$state_dir"
+  if [ ! -d "$state_dir" ] || [ ! -f "$state_dir/active" ]; then
+    printf 'xkb-qwerty-fr: invalid migration state: %s\n' "$state_dir" >&2
+    exit 1
+  fi
+  fail_on_symlink "$state_dir/active"
+  return 0
 }
 
+restore_entry() {
+  name=$1
+  destination=$2
+
+  if [ -f "$state_dir/$name.present" ]; then
+    copy_atomic "$state_dir/$name" "$destination"
+  else
+    remove_regular_file "$destination"
+  fi
+}
+
+remove_state() {
+  if [ -e "$state_dir" ] || [ -L "$state_dir" ]; then
+    fail_on_symlink "$state_dir"
+    rm -rf -- "$state_dir"
+  fi
+  rmdir -- "$state_parent" 2>/dev/null || true
+}
+
+restore_exact_state() {
+  restore_entry target "$target"
+  restore_entry backup "$backup"
+  restore_entry fragment "$fragment"
+}
+
+prepare_old_postinst() {
+  if state_available; then
+    if [ -f "$state_dir/fragment.present" ]; then
+      copy_atomic "$state_dir/fragment" "$fragment"
+
+      if [ -f "$state_dir/backup.present" ]; then
+        copy_atomic "$state_dir/backup" "$backup"
+        copy_atomic "$state_dir/backup" "$target"
+      elif [ -f "$state_dir/base.present" ]; then
+        remove_regular_file "$backup"
+        copy_atomic "$state_dir/base" "$target"
+      else
+        remove_regular_file "$backup"
+        restore_entry target "$target"
+      fi
+    else
+      restore_exact_state
+    fi
+    remove_state
+    return
+  fi
+
+  if [ -e "$backup" ] || [ -L "$backup" ]; then
+    require_regular_file "$backup"
+  fi
+  if [ -e "$fragment" ] || [ -L "$fragment" ]; then
+    require_regular_file "$fragment"
+  fi
+  if [ -f "$backup" ] && [ -f "$fragment" ]; then
+    copy_atomic "$backup" "$target"
+  fi
+}
+
+case "${1:-}" in
+  abort-upgrade)
+    prepare_old_postinst
+    ;;
+  abort-install)
+    if state_available; then
+      restore_exact_state
+      remove_state
+    fi
+    ;;
+  failed-upgrade)
+    printf 'xkb-qwerty-fr: old package cleanup failed; rolling back the upgrade\n' >&2
+    exit 1
+    ;;
+  remove|purge)
+    remove_state
+    ;;
+  *)
+    ;;
+esac

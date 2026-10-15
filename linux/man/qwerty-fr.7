@@ -1,4 +1,4 @@
-.TH xkb-qwerty-fr 7 "2023-12-10" 0.7.3 "Qwerty french keyboard"
+.TH xkb-qwerty-fr 7 "2026-10-14" 0.7.4 "Qwerty french keyboard"
 .SH "NAME"
 qwerty-fr - French qwerty keyboard mapping
 .SH "DESCRIPTION"
@@ -18,15 +18,21 @@ https://[FOO]/[BAR]VKW2Lnwd9hNDE0
 Replace [FOO] with t.me, and [BAR] with +Ta (spam bot protection).
 
 .SH "ENABLING THE QWERTY-FR KEYMAP"
-.SS "Command line"
-Use the command setxkbmap: setxkbmap us qwerty-fr
-.SS "Gnome"
-In menu System/Preferences, open Keyboard property. In this window, section Layout, click on the button add.
-Then select layout USA and choose variant "With french symbols" and set it as default keymap.
+The package exposes the variant us(qwerty-fr) through the system-wide
+libxkbcommon configuration path. Desktop environments that use libxkbregistry
+list it as "French (qwerty-fr; US with french symbols)" under the US layout.
+.SS "Verification"
+The following command compiles the layout and exits successfully when the
+installed libxkbcommon configuration can resolve it:
+
+xkbcli compile-keymap --layout us --variant qwerty-fr
 
 WARNING - Make sure to disable compose key support or the dead keys of the layout won't work. See https://askubuntu.com/a/1028964
-.SS "KDE"
-In control panel, select the layout USA and variant "With french symbols", set it as default keymap, then validate.
+.SS "Traditional X11 sessions"
+Traditional X11 servers do not search the libxkbcommon configuration path.
+Consequently this package does not make qwerty-fr available to setxkbmap or to
+X11-only desktop sessions. Supporting those sessions safely requires the layout
+to be included in the xkeyboard-config project and distributed by xkb-data.
 
 .SH "EXTENDED CHARACTERS"
 .SS "Direct characters"
@@ -114,10 +120,17 @@ You should be able to retype this french text without dead keys :
 
 .SH "FILES"
 .TP
-/etc/X11/xkb/symbols/us
-The file containing the mapping of characters.
+/etc/xkb/symbols/us
+The libxkbcommon symbols extension containing the qwerty-fr variant.
+.TP
+/etc/xkb/rules/evdev.xml
+The libxkbregistry metadata that lists the qwerty-fr variant.
+.TP
+/var/backups/xkb-qwerty-fr/
+Recovery copies retained when an upgrade finds legacy changes that cannot be
+restored unambiguously.
 .SH "SEE ALSO"
-setxkbmap(1)
+xkbcli(1)
 .SH "AUTHOR"
 This package is maintained by Paul <devnoname120@gmail.com>.
 All files of the package are released under GNU/GPL 2.0 License.

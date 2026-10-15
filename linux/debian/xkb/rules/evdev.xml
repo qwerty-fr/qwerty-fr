@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xkbConfigRegistry SYSTEM "xkb.dtd">
+<xkbConfigRegistry version="1.1">
+  <layoutList>
+    <layout>
+      <configItem>
+        <name>us</name>
+      </configItem>
+      <variantList>
+        <variant>
+          <configItem>
+            <name>qwerty-fr</name>
+            <shortDescription>fr</shortDescription>
+            <description>French (qwerty-fr; US with french symbols)</description>
+            <languageList>
+              <iso639Id>fra</iso639Id>
+            </languageList>
+          </configItem>
+        </variant>
+      </variantList>
+    </layout>
+  </layoutList>
+</xkbConfigRegistry>

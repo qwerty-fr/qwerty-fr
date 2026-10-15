@@ -1,0 +1,286 @@
+#!/bin/sh
+set -eu
+
+case "${1:-}" in
+  install|upgrade)
+    ;;
+  *)
+    exit 0
+    ;;
+esac
+
+root=${DPKG_ROOT:-}
+root=${root%/}
+case "$root" in
+  ""|/*) ;;
+  *)
+    printf 'xkb-qwerty-fr: invalid DPKG_ROOT: %s\n' "$root" >&2
+    exit 1
+    ;;
+esac
+
+xkb_root="$root/usr/share/X11/xkb"
+symbols="$xkb_root/symbols"
+rules="$xkb_root/rules"
+target="$symbols/us"
+backup="$symbols/us.qwerty-fr"
+fragment="$symbols/us_qwerty-fr"
+state_parent="$root/var/lib/xkb-qwerty-fr"
+state_dir="$state_parent/upgrade-state"
+recovery_dir="$root/var/backups/xkb-qwerty-fr"
+state_temp=
+work_file=
+next_file=
+recovery_temp=
+
+cleanup() {
+  if [ -n "$state_temp" ]; then
+    rm -rf -- "$state_temp"
+  fi
+  if [ -n "$work_file" ]; then
+    rm -f -- "$work_file"
+  fi
+  if [ -n "$next_file" ]; then
+    rm -f -- "$next_file"
+  fi
+  if [ -n "$recovery_temp" ]; then
+    rm -f -- "$recovery_temp"
+  fi
+}
+trap cleanup EXIT
+
+fail_on_symlink() {
+  path=$1
+  if [ -L "$path" ]; then
+    printf 'xkb-qwerty-fr: refusing to migrate symbolic link %s\n' "$path" >&2
+    exit 1
+  fi
+}
+
+require_regular_file() {
+  path=$1
+  fail_on_symlink "$path"
+  if [ ! -f "$path" ]; then
+    printf 'xkb-qwerty-fr: expected a regular file: %s\n' "$path" >&2
+    exit 1
+  fi
+}
+
+copy_atomic() {
+  source=$1
+  destination=$2
+
+  require_regular_file "$source"
+  fail_on_symlink "$destination"
+  mkdir -p -- "$(dirname "$destination")"
+
+  work_file=$(mktemp "$symbols/.xkb-qwerty-fr.XXXXXX")
+  cp -p -- "$source" "$work_file"
+  mv -f -- "$work_file" "$destination"
+  work_file=
+}
+
+strip_appended_fragment() {
+  file=$1
+  suffix=$2
+
+  require_regular_file "$file"
+  require_regular_file "$suffix"
+
+  suffix_size=$(wc -c < "$suffix" | tr -d '[:space:]')
+  if [ "$suffix_size" -eq 0 ]; then
+    printf 'xkb-qwerty-fr: refusing to migrate an empty legacy layout\n' >&2
+    exit 1
+  fi
+
+  stripped=false
+  while :; do
+    file_size=$(wc -c < "$file" | tr -d '[:space:]')
+    if [ "$file_size" -lt "$suffix_size" ]; then
+      break
+    fi
+
+    if ! tail -c "$suffix_size" "$file" | cmp -s - "$suffix"; then
+      break
+    fi
+
+    prefix_size=$((file_size - suffix_size))
+    next_file="$file.next"
+    cp -p -- "$file" "$next_file"
+    if [ "$prefix_size" -eq 0 ]; then
+      : > "$next_file"
+    else
+      dd if="$file" of="$next_file" bs=1 count="$prefix_size" 2>/dev/null
+    fi
+    mv -f -- "$next_file" "$file"
+    next_file=
+    stripped=true
+  done
+}
+
+snapshot_file() {
+  name=$1
+  path=$2
+
+  if [ ! -e "$path" ] && [ ! -L "$path" ]; then
+    return
+  fi
+
+  require_regular_file "$path"
+  cp -p -- "$path" "$state_temp/$name"
+  : > "$state_temp/$name.present"
+}
+
+validate_state() {
+  fail_on_symlink "$state_dir"
+  if [ ! -d "$state_dir" ] || [ ! -f "$state_dir/active" ]; then
+    printf 'xkb-qwerty-fr: invalid migration state: %s\n' "$state_dir" >&2
+    exit 1
+  fi
+  fail_on_symlink "$state_dir/active"
+
+  if [ -e "$state_dir/applied" ] || [ -L "$state_dir/applied" ]; then
+    require_regular_file "$state_dir/applied"
+  fi
+
+  if [ -f "$state_dir/base.present" ]; then
+    require_regular_file "$state_dir/base"
+  fi
+}
+
+preserve_recovery() {
+  if [ ! -f "$state_dir/recovery.present" ]; then
+    return
+  fi
+
+  require_regular_file "$state_dir/recovery"
+  require_regular_file "$state_dir/id"
+  state_id=$(cat "$state_dir/id")
+  case "$state_id" in
+    ""|*[!A-Za-z0-9._-]*)
+      printf 'xkb-qwerty-fr: invalid migration state identifier\n' >&2
+      exit 1
+      ;;
+  esac
+
+  if [ -L "$recovery_dir" ]; then
+    printf 'xkb-qwerty-fr: refusing to use symbolic link %s\n' "$recovery_dir" >&2
+    exit 1
+  fi
+  mkdir -p -- "$recovery_dir"
+
+  recovery_file="$recovery_dir/us.before-migration.$state_id"
+  if [ -e "$recovery_file" ] || [ -L "$recovery_file" ]; then
+    require_regular_file "$recovery_file"
+    if ! cmp -s "$state_dir/recovery" "$recovery_file"; then
+      printf 'xkb-qwerty-fr: recovery path already contains different data: %s\n' \
+        "$recovery_file" >&2
+      exit 1
+    fi
+  else
+    recovery_temp=$(mktemp "$recovery_dir/.us.before-migration.XXXXXX")
+    cp -p -- "$state_dir/recovery" "$recovery_temp"
+    chmod 0600 "$recovery_temp"
+    mv -- "$recovery_temp" "$recovery_file"
+    recovery_temp=
+    printf 'xkb-qwerty-fr: preserved ambiguous legacy symbols file as %s\n' \
+      "$recovery_file" >&2
+  fi
+
+}
+
+apply_state() {
+  validate_state
+  preserve_recovery
+
+  if [ ! -f "$state_dir/applied" ]; then
+    if [ -f "$state_dir/base.present" ]; then
+      copy_atomic "$state_dir/base" "$target"
+    fi
+    : > "$state_dir/applied"
+  fi
+
+  for path in "$backup" "$fragment"; do
+    if [ -e "$path" ] || [ -L "$path" ]; then
+      require_regular_file "$path"
+      rm -f -- "$path"
+    fi
+  done
+}
+
+remove_legacy_temporaries() {
+  for path in \
+    "$rules/evdev.extras.xml.qwerty-fr" \
+    "$rules/evdev.xml.qwerty-fr" \
+    "$rules/base.extras.xml.qwerty-fr" \
+    "$rules/base.xml.qwerty-fr" \
+    "$xkb_root/base.xml.qwerty-fr"
+  do
+    if [ -e "$path" ] || [ -L "$path" ]; then
+      require_regular_file "$path"
+      rm -f -- "$path"
+    fi
+  done
+}
+
+legacy_present=false
+for path in "$backup" "$fragment"; do
+  if [ -e "$path" ] || [ -L "$path" ]; then
+    require_regular_file "$path"
+    legacy_present=true
+  fi
+done
+
+remove_legacy_temporaries
+
+if [ -e "$state_dir" ] || [ -L "$state_dir" ]; then
+  apply_state
+  exit 0
+fi
+
+if [ "$legacy_present" != true ]; then
+  exit 0
+fi
+
+if [ -e "$target" ] || [ -L "$target" ]; then
+  require_regular_file "$target"
+fi
+
+mkdir -p -- "$state_parent"
+state_temp=$(mktemp -d "$state_parent/.upgrade-state.XXXXXX")
+chmod 0700 "$state_temp"
+state_id=$(basename "$state_temp")
+state_id=${state_id#.upgrade-state.}
+printf '%s\n' "$state_id" > "$state_temp/id"
+
+snapshot_file target "$target"
+snapshot_file backup "$backup"
+snapshot_file fragment "$fragment"
+
+stripped=false
+if [ -f "$state_temp/target.present" ]; then
+  cp -p -- "$state_temp/target" "$state_temp/base"
+  : > "$state_temp/base.present"
+
+  if [ -f "$state_temp/fragment.present" ]; then
+    strip_appended_fragment "$state_temp/base" "$state_temp/fragment"
+  fi
+
+  if [ -f "$state_temp/backup.present" ] && \
+     [ "$stripped" != true ] && \
+     ! cmp -s "$state_temp/base" "$state_temp/backup"; then
+    # The legacy fragment is missing or was not appended; retain unknown edits.
+    cp -p -- "$state_temp/target" "$state_temp/recovery"
+    : > "$state_temp/recovery.present"
+    cp -p -- "$state_temp/backup" "$state_temp/base"
+  fi
+elif [ -f "$state_temp/backup.present" ]; then
+  cp -p -- "$state_temp/backup" "$state_temp/base"
+  : > "$state_temp/base.present"
+fi
+
+: > "$state_temp/active"
+mv -- "$state_temp" "$state_dir"
+state_temp=
+
+apply_state

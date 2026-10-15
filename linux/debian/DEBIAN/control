@@ -1,10 +1,10 @@
 Package: xkb-qwerty-fr
-Version: 0.7.3
+Version: 0.7.4
 Section: x11
 Priority: optional
 Architecture: all
-Depends: xkb-data, perl
-Suggests: x11-xkb-utils
+Depends: xkb-data, libxkbcommon0 (>= 1.0.0), libxkbregistry0 (>= 1.0.0)
+Suggests: libxkbcommon-tools
 Conflicts: xkb-data-legacy
 Installed-Size: 100
 Homepage: https://github.com/qwerty-fr/qwerty-fr
@@ -14,3 +14,5 @@ Description: French qwerty keymap
  All French characters are directly accessible with AltGr and smartly mapped.
  You also can compose french characters using dead keys with AltGr to.
  A man page (man qwerty-fr) describes the keymap.
+ The package integrates with libxkbcommon-based desktop sessions. X11-only
+ sessions require the layout to be included in xkb-data itself.

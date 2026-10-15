@@ -1,224 +1,57 @@
-#!/usr/bin/perl
+#!/bin/sh
+set -eu
 
-use strict;
-use warnings;
+if [ "${1:-}" != configure ]; then
+  exit 0
+fi
 
-my $dir = "/usr/share/X11/xkb";
+root=${DPKG_ROOT:-}
+root=${root%/}
+case "$root" in
+  ""|/*) ;;
+  *)
+    printf 'xkb-qwerty-fr: invalid DPKG_ROOT: %s\n' "$root" >&2
+    exit 1
+    ;;
+esac
 
-my $xml_variant = "<configItem>\n<name>qwerty-fr</name>\n<description>French (qwerty-fr; US with french symbols)</description>\n".
-		"<languageList><iso639Id>fra</iso639Id></languageList>\n</configItem>\n";
+state_parent="$root/var/lib/xkb-qwerty-fr"
+state_dir="$state_parent/upgrade-state"
+recovery_dir="$root/var/backups/xkb-qwerty-fr"
 
-my ($mode) = @ARGV;
+if [ ! -e "$state_dir" ] && [ ! -L "$state_dir" ]; then
+  exit 0
+fi
 
-sub remove_variant
-{
-	my ($input, $output, $layout, $variant) = @_;
+if [ -L "$state_dir" ] || [ ! -d "$state_dir" ] || \
+   [ ! -f "$state_dir/active" ] || [ -L "$state_dir/active" ] || \
+   [ ! -f "$state_dir/applied" ] || [ -L "$state_dir/applied" ]; then
+  printf 'xkb-qwerty-fr: invalid migration state: %s\n' "$state_dir" >&2
+  exit 1
+fi
 
-	my $line;
-	my $level;
-	my $match;
+if [ -f "$state_dir/recovery.present" ]; then
+  if [ -L "$state_dir/recovery" ] || [ ! -f "$state_dir/recovery" ] || \
+     [ -L "$state_dir/id" ] || [ ! -f "$state_dir/id" ]; then
+    printf 'xkb-qwerty-fr: invalid recovery state: %s\n' "$state_dir" >&2
+    exit 1
+  fi
 
-	open (IN, $input) || return 0;
-	open (OUT, ">$output") || return 0;
+  state_id=$(cat "$state_dir/id")
+  case "$state_id" in
+    ""|*[!A-Za-z0-9._-]*)
+      printf 'xkb-qwerty-fr: invalid migration state identifier\n' >&2
+      exit 1
+      ;;
+  esac
+  recovery_file="$recovery_dir/us.before-migration.$state_id"
+  if [ -L "$recovery_file" ] || [ ! -f "$recovery_file" ] || \
+     ! cmp -s "$state_dir/recovery" "$recovery_file"; then
+    printf 'xkb-qwerty-fr: missing migration recovery file: %s\n' \
+      "$recovery_file" >&2
+    exit 1
+  fi
+fi
 
-	$level = 0;
-	$match = 0;
-	while ($line = <IN>)
-	{
-		if (($line =~ m/<layoutList>/) && ($level eq 0))
-		{
-			$level++;
-		}
-
-		if (($line =~ m/<layout>/) && ($level eq 1))
-		{
-			$level++;
-			$match = 0;
-		}
-
-		if (($line =~ m/<name>$layout<\/name>/) && ($level eq 2))
-		{
-			$match = 1;
-		}
-
-		if (($line =~ m/<variantList>/) && ($level eq 2))
-		{
-			$level++;
-		}
-
-		if (($line =~ m/<variant>/) && ($level eq 3))
-		{
-			# read completely next variant
-			while ($line !~ m/<\/variant>/)
-			{
-				my $line_cat;
-
-				unless ($line_cat = <IN>)
-				{
-					last;
-				}
-				else
-				{
-					$line .= $line_cat;
-				}
-			}
-
-			# correct entry
-			if ($line =~ m/<name>$variant<\/name>/)
-			{
-				# drop
-				$line = '';
-			}
-		}
-
-		print OUT $line;
-
-		if (($line =~ m/<\/variantList>/) && ($level eq 3))
-		{
-			$level--;
-		}
-
-		if (($line =~ m/<\/layout>/) && ($level eq 2))
-		{
-			$level--;
-		}
-	}
-
-	close(OUT);
-	close(IN);
-
-	return 1;
-}
-
-sub add_variant
-{
-	my ($input, $output, $layout, $variant) = @_;
-
-	my $line;
-	my $level;
-	my $match;
-
-	open (IN, $input) || return 0;
-	open (OUT, ">$output") || return 0;
-
-	$level = 0;
-	$match = 0;
-	while ($line = <IN>)
-	{
-		if (($line =~ m/<layoutList>/) && ($level eq 0))
-		{
-			$level++;
-		}
-
-		if (($line =~ m/<layout>/) && ($level eq 1))
-		{
-			$level++;
-			$match = 0;
-		}
-
-		if (($line =~ m/<name>$layout<\/name>/) && ($level eq 2))
-		{
-			$match = 1;
-		}
-
-		if (($line =~ m/<variantList>/) && ($level eq 2))
-		{
-			$level++;
-		}
-
-		if (($level eq 3) && $match)
-		{
-			# some stuff can be written on the same line after tag,
-			# so remove only tag in $line and still print $line after insertion
-			$line =~ s/<variantList>//; $line =~ s/\n//; print OUT "<variantList>\n";
-
-			print OUT "<variant>\n$variant</variant>\n";
-			$level++;
-		}
-
-		print OUT $line;
-
-
-		if (($line =~ m/<\/variantList>/) && ($level eq 3))
-		{
-			$level--;
-		}
-
-		if (($line =~ m/<\/layout>/) && ($level eq 2))
-		{
-			$level--;
-		}
-	}
-
-	close(OUT);
-	close(IN);
-
-	return 1;
-}
-
-sub process_xml
-{
-	my ($file, $variant) = @_;
-	
-	my $temp = "$file.qwerty-fr";
-
-	if ( ! -f "$file")
-	{
-		return 0;
-	}
-
-	&remove_variant($file, $temp, "us", "qwerty-fr") || die("Error configuring '$file'!");
-	&add_variant($temp, $file, "us", $variant) || die("Error configuring '$file'!");
-
-	unlink($temp);
-
-	return 1;
-}
-
-# add variant to us layout
-if (-f "$dir/symbols/us_qwerty-fr")
-{
-	if (($mode eq "triggered") && (-f "$dir/symbols/us.qwerty-fr"))
-	{
-		unlink("$dir/symbols/us.qwerty-fr");
-	}
-
- 	if ( ! -f "$dir/symbols/us.qwerty-fr")
-	{
-		`cp "$dir/symbols/us" "$dir/symbols/us.qwerty-fr"`;
-	}
-
-	`cat "$dir/symbols/us.qwerty-fr" "$dir/symbols/us_qwerty-fr" > "$dir/symbols/us"`;
-}
-else
-{
-	die("Error! File '$dir/symbols/us_qwerty-fr' not found!\n");
-}
-
-# evdev
-if (-f "$dir/rules/evdev.extra.xml")
-{
-	&process_xml("$dir/rules/evdev.extras.xml", $xml_variant);
-
-	print "Bug #1029979 workaround.\n";
-	&process_xml("$dir/rules/evdev.xml", $xml_variant);
-}
-elsif (-f "$dir/rules/evdev.xml")
-{
-	&process_xml("$dir/rules/evdev.xml", $xml_variant);
-}
-
-# base
-if (-f "$dir/rules/base.extras.xml")
-{
-	&process_xml("$dir/rules/base.extras.xml", $xml_variant);
-}
-elsif (-f "$dir/rules/base.xml")
-{
-	&process_xml("$dir/rules/base.xml", $xml_variant);
-}
-elsif (-f "$dir/base.xml")
-{
-	&process_xml("$dir/base.xml", $xml_variant);
-}
-
+rm -rf -- "$state_dir"
+rmdir -- "$state_parent" 2>/dev/null || true
